@@ -1,0 +1,37 @@
+{
+  "author": "Sascha Depold <sascha@depold.com> (http://depold.com)",
+  "name": "jquery-rss",
+  "description": "An easy-to-use rss plugin for jquery with templating.",
+  "version": "1.4.1",
+  "homepage": "https://github.com/sdepold/jquery-rss",
+  "keywords": ["rss", "jquery", "ender"],
+  "ender": "noop",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sdepold/jquery-rss.git"
+  },
+  "contributors": [
+    {
+      "name": "Sascha Depold",
+      "email": "sascha@depold.com"
+    },
+    {
+      "name": "Steffen Schröder",
+      "email": "steffen@schroeder-blog.de"
+    }
+  ],
+  "main": "src/jquery.rss.js",
+  "scripts": {
+    "test": "java -jar dist/compiler.jar src/jquery.rss.js --js_output_file=dist/jquery.rss.min.js && node_modules/.bin/buster-test"
+  },
+  "engines": {
+    "node": ">=v0.4.8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "buster": "~0.6.0"
+  },
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  }
+}
