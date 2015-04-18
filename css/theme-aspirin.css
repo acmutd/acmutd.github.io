@@ -3863,7 +3863,7 @@ footer.short-2 .contact-action:hover {
   margin-left: 32px;
 }
 .simple-bar .nav-menu {
-  padding-top: 44px;
+  padding-top: 54px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
@@ -3888,6 +3888,10 @@ footer.short-2 .contact-action:hover {
   right: 0px;
 }
 @media all and (max-width: 767px) {
+  .simple-bar .nav-menu {
+    padding-top: 44px;
+  }
+
   .logo-light {
     display: block !important;
     padding-left: 10px;
