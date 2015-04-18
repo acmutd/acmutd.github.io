@@ -441,7 +441,8 @@ nav hr {
   top: 0;
 }
 .nav {
-  padding-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 10px
 }
 .logotype {
   padding-bottom: 60px;
@@ -3852,8 +3853,8 @@ footer.short-2 .contact-action:hover {
 }
 .simple-bar .logo {
   max-width: 800px;
-  max-height: 40px;
-  bottom: 12px;
+  max-height: 70px;
+  bottom: 14px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
@@ -3862,7 +3863,7 @@ footer.short-2 .contact-action:hover {
   margin-left: 32px;
 }
 .simple-bar .nav-menu {
-  padding-top: 54px;
+  padding-top: 44px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
@@ -3887,12 +3888,35 @@ footer.short-2 .contact-action:hover {
   right: 0px;
 }
 @media all and (max-width: 767px) {
+  .logo-light {
+    display: block !important;
+    padding-left: 10px;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+
+  .scroll-for-more {
+    display: none
+  }
+
+  .hero-content-padding {
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+
+  .hero-content-button {
+    margin-left: 30px;
+  }
+
   .simple-bar .logo {
-    max-height: 30px;
+    max-height: 50px;
     bottom: 30px;
   }
   .simple-bar .menu li a {
     padding-bottom: 0px;
+    padding-left: 30px;
   }
   .simple-bar .text-right {
     text-align: left !important;
