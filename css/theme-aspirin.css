@@ -2862,10 +2862,6 @@ footer.short-2 .contact-action:hover {
   .top-bar .logo {
     bottom: 0px;
   }
-  .top-bar .logo.logo-wide {
-    bottom: 3px;
-    margin-bottom: 22px;
-  }
   .mobile-toggle {
     font-size: 32px;
     display: block;
@@ -3888,12 +3884,9 @@ footer.short-2 .contact-action:hover {
   right: 0px;
 }
 @media all and (max-width: 767px) {
-  .simple-bar .nav-menu {
-    margin-top: -10px;
-  }
 
   .logo-light {
-    display: block !important;
+    display: inline !important;
     padding-left: 10px;
   }
 
@@ -3916,7 +3909,7 @@ footer.short-2 .contact-action:hover {
 
   .simple-bar .logo {
     max-height: 50px;
-    bottom: 30px;
+    bottom: 40px;
   }
   .simple-bar .menu li a {
     padding-bottom: 0px;
