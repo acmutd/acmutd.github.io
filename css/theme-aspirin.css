@@ -3889,7 +3889,7 @@ footer.short-2 .contact-action:hover {
 }
 @media all and (max-width: 767px) {
   .simple-bar .nav-menu {
-    padding-top: 44px;
+    margin-top: -10px;
   }
 
   .logo-light {
