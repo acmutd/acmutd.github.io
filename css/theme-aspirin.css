@@ -49,6 +49,9 @@
 .text-white {
   color: #fff;
 }
+.text-gray {
+  color: #2f2f2f;
+}
 .text-primary {
   color: #eb7f00;
 }
@@ -536,7 +539,7 @@ nav hr {
 .menu li a:hover {
   color: #333333;
 }
-@media all and (max-width: 1050px) {
+@media all and (max-width: 1050px) {}
   .menu li {
     margin-right: 32px;
   }
@@ -3883,6 +3886,69 @@ footer.short-2 .contact-action:hover {
 .menu li:last-child .subnav-halfwidth {
   right: 0px;
 }
+
+@media all and (min-width: 1158px) {
+  .hide-lg {
+    display: none;
+  }
+
+  .only-sm {
+    display: none;
+  }
+
+  .only-md {
+    display: none;
+  }
+
+  .only-xs {
+    display: none;
+  }
+}
+
+@media all and (min-width: 992px) and (max-width: 1159px) {
+  .hide-md {
+    display: none;
+  }
+
+  .only-sm {
+    display: none;
+  }
+
+  .only-md {
+    display: inline;
+  }
+
+  .only-xs {
+    display: none;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 991px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .only-sm {
+    display: inline;
+  }
+
+  .only-md {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .only-xs {
+    display: none;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 767px) {
+  .only-xs {
+    display: inline;
+  }
+}
+
 @media all and (max-width: 767px) {
 
   .logo-light {
@@ -3899,12 +3965,12 @@ footer.short-2 .contact-action:hover {
   }
 
   .hero-content-padding {
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 40px;
   }
 
   .hero-content-button {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   .simple-bar .logo {
