@@ -443,8 +443,11 @@ nav hr {
   line-height: 0;
   top: 0;
 }
+.menu li {
+  padding-top: 5px !important;
+}
 .nav {
-  padding-top: 15px;
+  padding-top: 7px;
   padding-bottom: 10px
 }
 .logotype {
@@ -1755,7 +1758,7 @@ img.phone-portrait {
   background: #f4f4f4;
 }
 .team-1 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .team-1 h2 {
   margin-bottom: 8px;

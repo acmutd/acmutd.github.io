@@ -14,8 +14,8 @@ $(".presidentName").prepend("Izuchukwu Elechi");
 $(".presidentRole").prepend("President");
 $(".presidentImage").attr("src", "template/pivot/img/izu.png");
 //ENTER THE TYPE OF LINKS THE OFFICER WILL GET. 
-//ONLY ENTER icon-global (if website), social_linkedin or social_googleplus
-$(".presidentIcon1").addClass("icon-global");
+//ONLY ENTER icon_compass (if website), social_linkedin or social_googleplus
+$(".presidentIcon1").addClass("icon_compass");
 $(".presidentIcon2").addClass("social_linkedin");
 //Enter the url's for the links. make sure you have the http://. correspond them with the icons above. 
 //for emails, only change the email address don't touch the mailto: part
@@ -30,7 +30,7 @@ $(".presidentLink2").attr("href", "https://www.linkedin.com/in/izuchukwu");
 $(".vpName").prepend("Michael Raibick");
 $(".vpRole").prepend("Vice President");
 $(".vpImage").attr("src", "template/pivot/img/michael.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".vpIcon1").addClass("social_linkedin");
 $(".vpIcon2").addClass("social_googleplus");
 //URLS of links. 
@@ -43,7 +43,7 @@ $(".vpLink2").attr("href", "mailto:michael.raibick@utdallas.edu?Subject=ACM");
 $(".secretaryName").prepend("Connie Clark");
 $(".secretaryRole").prepend("Secretary");
 $(".secretaryImage").attr("src", "template/pivot/img/connie.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".secretaryIcon1").addClass("social_linkedin");
 $(".secretaryIcon2").addClass("social_googleplus");
 //Links
@@ -55,7 +55,7 @@ $(".secretaryLink2").attr("href", "mailto:connie.clark@utdallas.edu?Subject=ACM"
 $(".treasurerName").prepend("Michael Hankin");
 $(".treasurerRole").prepend("Treasurer");
 $(".treasurerImage").attr("src", "template/pivot/img/hankin.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".treasurerIcon1").addClass("social_linkedin");
 $(".treasurerIcon2").addClass("social_googleplus");
 //Links
@@ -67,7 +67,7 @@ $(".treasurerLink2").attr("href", "mailto:michael.hankin@utdallas.edu?Subject=AC
 $(".ecsName").prepend("Reuben Frank");
 $(".ecsRole").prepend("Treasurer");
 $(".ecsImage").attr("src", "template/pivot/img/reuben.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".ecsIcon1").addClass("social_linkedin");
 $(".ecsIcon2").addClass("social_googleplus");
 //Links
@@ -79,8 +79,8 @@ $(".ecsLink2").attr("href", "mailto:raf140130@utdallas.edu?Subject=ACM");
 $(".sigsName").prepend("Tahir Aziz");
 $(".sigsRole").prepend("Director of SIGs");
 $(".sigsImage").attr("src", "template/pivot/img/tahir.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
-$(".sigsIcon1").addClass("icon-global");
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
+$(".sigsIcon1").addClass("icon_compass");
 $(".sigsIcon2").addClass("social_linkedin");
 //Links
 $(".sigsLink1").attr("href", "http://tahir.io"); 
@@ -91,7 +91,7 @@ $(".sigsLink2").attr("href", "https://www.linkedin.com/in/tahiraziz4");
 $(".studentAffairsName").prepend("Grace Chow");
 $(".studentAffairsRole").prepend("Student Affairs");
 $(".studentAffairsImage").attr("src", "template/pivot/img/grace.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".studentAffairsIcon1").addClass("social_linkedin");
 $(".studentAffairsIcon2").addClass("social_googleplus");
 //Links
@@ -103,8 +103,8 @@ $(".studentAffairsLink2").attr("href", "mailto:grace.chow@utdallas.edu?Subject=A
 $(".industryName").prepend("Shaurya Arora");
 $(".industryRole").prepend("Industry Affairs");
 $(".industryImage").attr("src", "template/pivot/img/shaurya.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
-$(".industryIcon1").addClass("icon-global");
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
+$(".industryIcon1").addClass("icon_compass");
 $(".industryIcon2").addClass("social_linkedin");
 //Links
 $(".industryLink1").attr("href", "http://shaurya.me");
@@ -115,7 +115,7 @@ $(".industryLink2").attr("href", "http://www.linkedin.com/pub/shaurya-arora/68/1
 $(".pr1Name").prepend("Tej Gidvani");
 $(".pr1Role").prepend("Public Relations");
 $(".pr1Image").attr("src", "template/pivot/img/tej.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".pr1Icon1").addClass("social_linkedin");
 $(".pr1Icon2").addClass("social_googleplus");
 //Links
@@ -127,7 +127,7 @@ $(".pr1Link2").attr("href", "mailto:tej.gidvani@utdallas.edu?Subject=ACM");
 $(".pr2Name").prepend("Braden Herndon");
 $(".pr2Role").prepend("Public Relations");
 $(".pr2Image").attr("src", "template/pivot/img/braden.png");
-///ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
+///ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
 $(".pr2Icon1").addClass("social_linkedin");
 $(".pr2Icon2").addClass("social_googleplus");
 //Links 
@@ -139,8 +139,8 @@ $(".pr2Link2").attr("href", "mailto:braden.herndon@utdallas.edu?Subject=ACM");
 $(".hackathonName").prepend("Diem-Nhi Tran");
 $(".hackathonRole").prepend("Hackathon Affairs");
 $(".hackathonImage").attr("src", "template/pivot/img/diem-nhi.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
-$(".hackathonIcon1").addClass("icon-global");
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
+$(".hackathonIcon1").addClass("icon_compass");
 $(".hackathonIcon2").addClass("social_linkedin");
 //Links
 $(".hackathonLink1").attr("href", "http://diemnhi.com/"); 
@@ -151,8 +151,8 @@ $(".hackathonLink2").attr("href", "https://www.linkedin.com/in/diemnhitran");
 $(".sponsorName").prepend("John Cole");
 $(".sponsorRole").prepend("Faculty Sponsor");
 $(".sponsorImage").attr("src", "template/pivot/img/johnCole.png");
-////ONLY ENTER icon-global (if website), social_linkedin or social_googleplu2
-$(".sponsorIcon1").addClass("icon-global");
+////ONLY ENTER icon_compass (if website), social_linkedin or social_googleplu2
+$(".sponsorIcon1").addClass("icon_compass");
 $(".sponsorIcon2").addClass("social_googleplus");
 //Links
 $(".sponsorLink1").attr("href", "http://utd.edu/~john.cole/"); 
