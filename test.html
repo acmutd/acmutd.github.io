@@ -6,8 +6,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="rss/src/jquery.rss.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script>
+      jQuery(function($) {
+
+        $("#rss-feeds").rss("http://www.utdacm.com/tagged/events/rss", 
+         {
+    
+            limit: 2,
+            offsetStart: 3,
+            // offsetEnd: 5,
+            ssl: true,
+            layoutTemplate: "<div class='feed-container'>{entries}</div>",
+            entryTemplate: '<p>{title}</p>',
+            tokens: {
+                foo: 'bar',
+                bar: function(entry, tokens) { return entry.title }
+            },
+            outputMode: 'json_xml', 
+            dateFormat: 'MMMM Do, YYYY',
+            effect: 'slideFastSynced',
+            error: function(){},
+            success: function(){},
+            onData: function(){}
+        })
+
+      })
+    </script>
   </head>
   <body>
-    <div id="rss-feeds1"></div>
+     <div id="rss-feeds"></div>
   </body>
 </html>

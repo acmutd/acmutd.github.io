@@ -1,10 +1,31 @@
 $( document ).ready(function() {
-    /*$("#rss-feeds1").rss("http://www.utdacm.com/tagged/events/rss", {
-    	limit: 1,
-    	ssl: true,
-    	layoutTemplate: "<div class='feed-container1'>{entries}</div>",
-
-    })*/
+    //Event 1
+    $(".event1Title").rss("http://www.utdacm.com/tagged/events/rss", 
+        {
+            limit: 1,
+            offsetStart: 1,
+            entryTemplate: '{title}'
+        });
+    $(".event1Content").rss("http://www.utdacm.com/tagged/events/rss", 
+        {
+            limit: 1,
+           	offsetStart: 1,
+            entryTemplate: '{bodyPlain}'
+        });
+    //Event 2  OFFSET DOESNT WORK FOR SOME REASON
+    $(".event2Title").rss("http://www.utdacm.com/tagged/events/rss", 
+        {
+            limit: 1,
+            offsetStart: 2,
+            entryTemplate: '{title}'
+        });
+    $(".event2Content").rss("http://www.utdacm.com/tagged/events/rss", 
+        {
+            limit: 1,
+           	offsetStart: 2,
+            entryTemplate: '{bodyPlain}'
+        });
+    
 
 /*THIS IS WHERE THE OFFICERS ARE LISTED. MAKE SURE THE OFFICER IMAGES ARE 616x616px*/
 

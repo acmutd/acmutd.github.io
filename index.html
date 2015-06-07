@@ -157,7 +157,7 @@
 				</ul>
 			</section>
 			
-			<section class="text-banner">
+			<section class="text-banner" id="more">
 				<div class="container text-center">
 					<div class="row">
 						<div class="col-sm-12">
@@ -233,7 +233,7 @@
 				</div>
 			</section>
 			
-			<section class="blog-image-snippet">
+			<section class="blog-image-snippet" id="upcoming">
 				<div class="background-image-holder parallax-background">
 					<img alt="background image" class="background-image" src="png/eventhero1.png">
 				</div>
@@ -242,12 +242,10 @@
 					<div class="row">
 						<div class="col-sm-12 text-center">		
 								<span class="text-white alt-font">ACM Upcoming Event</span>
-								<h1 class="text-white">ACM + Apple</h1>
+								<h1 class="text-white event1Title"></h1> <!--RSS for event 1 plugged in-->
 								<div class="col-sm-10 col-sm-offset-1">
 									<br>
-									<p class="lead text-white">
-										Join ACM THURSDAY NIGHT at 8:30pm for our tech talk with Apple. The talk will be located in the Clark Center auditorium and will, of course, involve free pizza. Don't forget to bring your resume and Comet Card. RSVP at <a href="http://utdacm.com/apple">utdacm.com/apple</a>!
-									</p><br>
+									<p class="lead text-white event1Content"></p><br> <!--RSS for event 1 Plugged in-->
 									<a target="_blank" href="http://facebook.com/acmatutd" class="btn btn-primary btn-white">Visit ACM on Facebook for more</a>
 								</div>
 						</div>	
@@ -266,10 +264,8 @@
 						<div class="inner">
 							<br><br><br>
 							<span class="alt-font">ACM Upcoming Event</span>
-							<h1 class="text">ACM + Fort Work Hack Weekend</h1>
-							<p class="text">
-								Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
-							</p>
+							<h1 class="text event2Title"></h1> <!--RSS for event 2 plugged in-->
+							<p class="text event2Content"></p> <!--RSS for event 2 plugged in-->
 							<br><br><br>
 					</div>
 				</div>
@@ -404,6 +400,8 @@ In addition to that, there is an event coming up April 24-25: The Semi-Annual Cy
 		<script src="js/jquery.min.js"></script>
         <script src="js/jquery.plugin.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+       	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+        <script src="rss/src/jquery.rss.js"></script>
         <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/skrollr.min.js"></script>
@@ -414,6 +412,7 @@ In addition to that, there is an event coming up April 24-25: The Semi-Annual Cy
         <script src="js/lightbox.min.js"></script>
         <script src="js/jquery.countdown.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
 				
