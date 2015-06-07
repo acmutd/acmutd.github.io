@@ -1,29 +1,47 @@
 $( document ).ready(function() {
     //Event 1
-    $(".event1Title").rss("http://www.utdacm.com/tagged/events/rss", 
+    $(".event1Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
-            offsetStart: 1,
-            entryTemplate: '{title}'
+            header: true,
+            date: false,
+            content: false,
+            snippet: false,
+            media: false,
+            showerror: false
         });
-    $(".event1Content").rss("http://www.utdacm.com/tagged/events/rss", 
+    $(".event1Content").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
-           	offsetStart: 1,
-            entryTemplate: '{bodyPlain}'
+            header: false,
+            date: false,
+            content: true,
+           	snippet: false,
+            media: false,
+            showerror: false,
         });
-    //Event 2  OFFSET DOESNT WORK FOR SOME REASON
-    $(".event2Title").rss("http://www.utdacm.com/tagged/events/rss", 
+    //Event 2  
+    $(".event2Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
-            offsetStart: 2,
-            entryTemplate: '{title}'
+            offset: 2,
+            header: true,
+            date: false,
+            content: false,
+            snippet: false,
+            media: false,
+            showerror: false
         });
-    $(".event2Content").rss("http://www.utdacm.com/tagged/events/rss", 
+    $(".event2Content").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
-           	offsetStart: 2,
-            entryTemplate: '{bodyPlain}'
+            offset: 2,
+            header: false,
+            date: false,
+            content: true,
+            snippet: false,
+            media: false,
+            showerror: false
         });
     
 
