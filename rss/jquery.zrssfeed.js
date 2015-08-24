@@ -195,8 +195,8 @@
 			
 			
 				var parsedContent = entry.content;
-				// parsedContent=parsedContent.replace( /<[^p].*?>/g, '' );
-				// console.log(parsedContent);
+				// parsedContent= parsedContent.replace(/(<([^>]+)>)/ig,"");
+				parsedContent = parsedContent.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 			
 
 

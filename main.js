@@ -1,5 +1,16 @@
 $( document ).ready(function() {
     //Event 1
+    $(".event1Date").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    {
+        limit: 1,
+        header: false,
+        date: true,
+        dateformat: 'date',
+        content: false,
+        snippet: false,
+        media: false,
+        showerror: false
+    });
     $(".event1Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
