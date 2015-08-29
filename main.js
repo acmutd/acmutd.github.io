@@ -32,6 +32,18 @@ $( document ).ready(function() {
             showerror: false,
         });
     //Event 2  
+    $(".event2Date").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    {
+        limit: 1,
+        offset: 2,
+        header: false,
+        date: true,
+        dateformat: 'date',
+        content: false,
+        snippet: false,
+        media: false,
+        showerror: false
+    });
     $(".event2Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
