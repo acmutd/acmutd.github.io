@@ -1338,7 +1338,7 @@ img.phone-portrait {
 .client-row img {
   max-height: 60px;
   max-width: 140px;
-  opacity: 0.3;
+  opacity: 1;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
@@ -1375,7 +1375,7 @@ img.phone-portrait {
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
-  opacity: 0.4;
+  opacity: 1; /*change this to 0.3 or 0.4 if you dont want the logos to be blurry then focus on hover*/
 }
 .clients-2 img:hover {
   opacity: 1;
