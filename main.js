@@ -45,58 +45,52 @@ $(".vpLink2").attr("href", "https://www.linkedin.com/in/tahiraziz4");
 /*SECRETARY*/
 //Name, link to image
 $(".secretaryName").prepend("Jaswin Kohli");
-$(".secretaryRole").prepend("Secretary");
+$(".secretaryRole").prepend("Treasurer");
 $(".secretaryImage").attr("src", "png/jaswin.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".secretaryIcon1").addClass("icon_compass");
-$(".secretaryIcon2").addClass("social_linkedin");
+$(".secretaryIcon1").addClass("social_linkedin");
 //Links
-$(".secretaryLink1").attr("href", "#");
-$(".secretaryLink2").attr("href", "#"); 
+$(".secretaryLink1").attr("href", "https://www.linkedin.com/in/jaswinkohli");
 
 /*TREASURER*/
 //Name, link to image
-$(".treasurerName").prepend("Apply!");
-$(".treasurerRole").prepend("Treasurer");
-$(".treasurerImage").attr("src", "template/pivot/img/team-small-1.png");
+$(".treasurerName").prepend("Connie Clark");
+$(".treasurerRole").prepend("Director of Student Interest");
+$(".treasurerImage").attr("src", "png/connie.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".treasurerIcon1").addClass("icon_compass");
-$(".treasurerIcon2").addClass("social_linkedin");
+$(".treasurerIcon1").addClass("social_linkedin");
 //Links
-$(".treasurerLink1").attr("href", "#"); 
-$(".treasurerLink2").attr("href", "#");
+$(".treasurerLink1").attr("href", "https://www.linkedin.com/profile/view?id=364199321&trk=nav_responsive_tab_profile"); 
 
 /*ECS AFFAIRS*/
 //Name, image
-$(".ecsName").prepend("Reuben Frank");
-$(".ecsRole").prepend("Treasurer");
-$(".ecsImage").attr("src", "png/reuben.png");
+$(".ecsName").prepend("Braden Herndon");
+$(".ecsRole").prepend("Director of Student Events");
+$(".ecsImage").attr("src", "png/braden.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
 $(".ecsIcon1").addClass("social_linkedin");
 //Links
-$(".ecsLink1").attr("href", "https://www.linkedin.com/pub/reuben-frank/a3/32b/b2a"); 
+$(".ecsLink1").attr("href", "https://www.linkedin.com/in/bradenherndon"); 
 
 /*Student Interests*/
 //Name, image
-$(".siName").prepend("Connie Clark");
-$(".siRole").prepend("Student Interests");
-$(".siImage").attr("src", "png/connie.png");
+$(".siName").prepend("Grace Chow");
+$(".siRole").prepend("Co-Director of Marketing");
+$(".siImage").attr("src", "png/grace.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
 $(".siIcon1").addClass("social_linkedin");
 //Links
-$(".siLink1").attr("href", "https://www.linkedin.com/profile/view?id=364199321&trk=nav_responsive_tab_profile"); 
+$(".siLink1").attr("href", "https://www.linkedin.com/in/gracechow5"); 
 
 /*INDUSTRY AFFAIRS*/
 //Name,image
-$(".industryName").prepend("Apply!");
-$(".industryRole").prepend("Industry Affairs");
-$(".industryImage").attr("src", "template/pivot/img/team-small-2.png");
+$(".industryName").prepend("Tej Gidvani");
+$(".industryRole").prepend("Co-Director of Marketing");
+$(".industryImage").attr("src", "png/tej.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".industryIcon1").addClass("icon_compass");
-$(".industryIcon2").addClass("social_linkedin");
+$(".industryIcon1").addClass("social_linkedin");
 //Links
-$(".industryLink1").attr("href", "#");
-$(".industryLink2").attr("href", "#");
+$(".industryLink1").attr("href", "https://www.linkedin.com/pub/tej-gidvani/6b/266/1b8");
 
 /*Social Affairs*/
 //Name, image
@@ -144,7 +138,7 @@ $(".hackathonLink2").attr("href", "#");
 //Name,image
 $(".sponsorName").prepend("John Cole");
 $(".sponsorRole").prepend("Faculty Sponsor");
-$(".sponsorImage").attr("src", "png/johnCole.png");
+$(".sponsorImage").attr("src", "png/cole.png");
 ////ONLY ENTER icon_compass (if website) or social_linkedin
 $(".sponsorIcon1").addClass("icon_compass");
 //Links
