@@ -14,135 +14,165 @@ ex: presidentLink1 and presidentIcon1
 
 */
 
-/*PRESIDENT*/
+/*Officer 1*/
 //ONLY CHANGE THE NAME AND THE IMAGE URL HERE. DO NOT TOUCH THE "SRC" OR ANYTHING ELSE
-$('.presidentName').append('Izuchukwu Elechi');
-$(".presidentRole").prepend("President");
-$(".presidentImage").attr("src", "png/izu.png");
-//ENTER THE TYPE OF LINKS THE OFFICER WILL GET. 
-//ONLY ENTER icon_compass (if website), social_linkedin or social_googleplus
-$(".presidentIcon1").addClass("icon_compass");
-$(".presidentIcon2").addClass("social_linkedin");
-//Enter the url's for the links. make sure you have the http://. correspond them with the icons above. 
-//for emails, only change the email address don't touch the mailto: part
-$(".presidentLink1").attr("href", "http://izuchukwu.co");
-$(".presidentLink2").attr("href", "https://www.linkedin.com/in/izuchukwu");
+$(".officer1Image").attr("src", "png/izu.png");
+$('.officer1Name').append('Izuchukwu Elechi');
+$(".officer1Role").prepend("President");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons 
+//Don't mess with the href thing
+$(".officer1Link1").attr("href", "http://izuchukwu.co");
+$(".officer1Icon1").addClass("icon_compass");
+$(".officer1Link2").attr("href", "https://www.linkedin.com/in/izuchukwu");
+$(".officer1Icon2").addClass("social_linkedin");
 
 
-/*VICE PRESIDENT*/
-//Name, link to image
-$(".vpName").prepend("Tahir Aziz");
-$(".vpRole").prepend("Vice President");
-$(".vpImage").attr("src", "png/tahir.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".vpIcon1").addClass("icon_compass");
-$(".vpIcon2").addClass("social_linkedin");
-//URLS of links. 
-$(".vpLink1").attr("href", "http://tahir.io");
-$(".vpLink2").attr("href", "https://www.linkedin.com/in/tahiraziz4"); 
+/*Officer 2*/
+//ONLY CHANGE THE NAME AND THE IMAGE URL HERE. DO NOT TOUCH THE "SRC" OR ANYTHING ELSE
+$(".officer2Image").attr("src", "png/tahir.png");
+$(".officer2Name").prepend("Tahir Aziz");
+$(".officer2Role").prepend("Vice President");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+$(".officer2Link1").attr("href", "http://tahir.io");
+$(".officer2Icon1").addClass("icon_compass");
+$(".officer2Link2").attr("href", "https://www.linkedin.com/in/tahiraziz4"); 
+$(".officer2Icon2").addClass("social_linkedin");
 
 
-/*SECRETARY*/
-//Name, link to image
-$(".secretaryName").prepend("Jaswin Kohli");
-$(".secretaryRole").prepend("Treasurer");
-$(".secretaryImage").attr("src", "png/jaswin.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".secretaryIcon1").addClass("social_linkedin");
-//Links
-$(".secretaryLink1").attr("href", "https://www.linkedin.com/in/jaswinkohli");
-
-/*TREASURER*/
-//Name, link to image
-$(".treasurerName").prepend("Connie Clark");
-$(".treasurerRole").prepend("Director of Student Interest");
-$(".treasurerImage").attr("src", "png/connie.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".treasurerIcon1").addClass("social_linkedin");
-//Links
-$(".treasurerLink1").attr("href", "https://www.linkedin.com/profile/view?id=364199321&trk=nav_responsive_tab_profile"); 
-
-/*ECS AFFAIRS*/
+/*Officer 3*/
 //Name, image
-$(".ecsName").prepend("Braden Herndon");
-$(".ecsRole").prepend("Director of Student Events");
-$(".ecsImage").attr("src", "png/braden.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".ecsIcon1").addClass("social_linkedin");
-//Links
-$(".ecsLink1").attr("href", "https://www.linkedin.com/in/bradenherndon"); 
+$(".officer3Image").attr("src", "png/jaswin.png");
+$(".officer3Name").prepend("Jaswin Kohli");
+$(".officer3Role").prepend("Treasurer");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer3Link1").attr("href", "#");
+// $(".officer3Icon1").addClass("icon_compass");
+$(".officer3Link2").attr("href", "https://www.linkedin.com/in/jaswinkohli");
+$(".officer3Icon2").addClass("social_linkedin");
 
-/*Student Interests*/
+
+/*Officer 4*/
 //Name, image
-$(".siName").prepend("Grace Chow");
-$(".siRole").prepend("Co-Director of Marketing");
-$(".siImage").attr("src", "png/grace.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".siIcon1").addClass("social_linkedin");
-//Links
-$(".siLink1").attr("href", "https://www.linkedin.com/in/gracechow5"); 
+$(".officer4Image").attr("src", "png/connie.png");
+$(".officer4Name").prepend("Connie Clark");
+$(".officer4Role").prepend("Director of Student Interest");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer4Link1").attr("href", "#");
+// $(".officer4Icon1").addClass("icon_compass");
+$(".officer4Link2").attr("href", "https://www.linkedin.com/profile/view?id=364199321&trk=nav_responsive_tab_profile"); 
+$(".officer4Icon2").addClass("social_linkedin");
 
-/*INDUSTRY AFFAIRS*/
+
+/*Officer 5*/
+//Name, image
+$(".officer5Image").attr("src", "png/braden.png");
+$(".officer5Name").prepend("Braden Herndon");
+$(".officer5Role").prepend("Director of Student Events");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer5Link1").attr("href", "#");
+// $(".officer5Icon1").addClass("icon_compass");
+$(".officer5Link2").attr("href", "https://www.linkedin.com/in/bradenherndon"); 
+$(".officer5Icon2").addClass("social_linkedin");
+
+
+/*Officer 6*/
+//Name, image
+$(".officer6Image").attr("src", "png/grace.png");
+$(".officer6Name").prepend("Grace Chow");
+$(".officer6Role").prepend("Co-Director of Marketing");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer6Link1").attr("href", "#");
+// $(".officer6Icon1").addClass("icon_compass");
+$(".officer6Link2").attr("href", "https://www.linkedin.com/in/gracechow5"); 
+$(".officer6Icon2").addClass("social_linkedin");
+
+
+/*Officer 7*/
 //Name,image
-$(".industryName").prepend("Tej Gidvani");
-$(".industryRole").prepend("Co-Director of Marketing");
-$(".industryImage").attr("src", "png/tej.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".industryIcon1").addClass("social_linkedin");
-//Links
-$(".industryLink1").attr("href", "https://www.linkedin.com/pub/tej-gidvani/6b/266/1b8");
+$(".officer7Image").attr("src", "png/tej.png");
+$(".officer7Name").prepend("Tej Gidvani");
+$(".officer7Role").prepend("Co-Director of Marketing");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer7Link1").attr("href", "#");
+// $(".officer7Icon1").addClass("icon_compass");
+$(".officer7Link2").attr("href", "https://www.linkedin.com/pub/tej-gidvani/6b/266/1b8");
+$(".officer7Icon2").addClass("social_linkedin");
 
-/*Social Affairs*/
-//Name, image
-$(".socialAffairsName").prepend("Braden Herndon");
-$(".socialAffairsRole").prepend("Social Affairs");
-$(".socialAffairsImage").attr("src", "png/braden.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".socialAffairsIcon1").addClass("social_linkedin");
-//Links
-$(".socialAffairsLink1").attr("href", "https://www.linkedin.com/in/bradenherndon");
 
-/*Marketing #1*/
-//Name, image
-$(".marketing1Name").prepend("Tej Gidvani");
-$(".marketing1Role").prepend("Marketing");
-$(".marketing1Image").attr("src", "png/tej.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".marketing1Icon1").addClass("social_linkedin");
-//Links
-$(".marketing1Link1").attr("href", "https://www.linkedin.com/pub/tej-gidvani/6b/266/1b8");
+/*Officer 8*/
+//Name,image
+$(".officer8Image").attr("src", "png/tej.png");
+$(".officer8Name").prepend("TejGidvani");
+$(".officer8Role").prepend("CoDirectorofMarketing");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer8Link1").attr("href", "#");
+// $(".officer8Icon1").addClass("icon_compass");
+$(".officer8Link2").attr("href", "#");
+$(".officer8Icon2").addClass("social_linkedin");
 
-/*Marketing #2*/
-//Name, image
-$(".marketing2Name").prepend("Grace Chow");
-$(".marketing2Role").prepend("Marketing");
-$(".marketing2Image").attr("src", "png/grace.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".marketing2Icon1").addClass("social_linkedin");
-//Links
-$(".marketing2Link1").attr("href", "https://www.linkedin.com/in/gracechow5");
+/*Officer 9*/
+//Name,image
+$(".officer9Image").attr("src", "png/tej.png");
+$(".officer9Name").prepend("TejGidvani");
+$(".officer9Role").prepend("CoDirectorofMarketing");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer9Link1").attr("href", "#");
+// $(".officer9Icon1").addClass("icon_compass");
+$(".officer9Link2").attr("href", "#");
+$(".officer9Icon2").addClass("social_linkedin");
 
-/*HACKATHON AFFAIRS*/
-//Name, image
-$(".hackathonName").prepend("Apply!");
-$(".hackathonRole").prepend("Director of Hack_UTD");
-$(".hackathonImage").attr("src", "template/pivot/img/team-small-3.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".hackathonIcon1").addClass("icon_compass");
-$(".hackathonIcon2").addClass("social_linkedin");
-//Links
-$(".hackathonLink1").attr("href", "#"); 
-$(".hackathonLink2").attr("href", "#");
+/*Officer 10*/
+//Name,image
+$(".officer10Image").attr("src", "png/tej.png");
+$(".officer10Name").prepend("TejGidvani");
+$(".officer10Role").prepend("CoDirectorofMarketing");
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".officer10Link1").attr("href", "#");
+// $(".officer10Icon1").addClass("icon_compass");
+$(".officer10Link2").attr("href", "#");
+$(".officer10Icon2").addClass("social_linkedin");
+
 
 /*FACULTY SPONSOR*/
 //Name,image
+$(".sponsorImage").attr("src", "png/cole.png");
 $(".sponsorName").prepend("John Cole");
 $(".sponsorRole").prepend("Faculty Sponsor");
-$(".sponsorImage").attr("src", "png/cole.png");
-////ONLY ENTER icon_compass (if website) or social_linkedin
-$(".sponsorIcon1").addClass("icon_compass");
-//Links
-$(".sponsorLink1").attr("href", "http://utd.edu/~john.cole/"); 
+//Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
+//Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
+//Don't mess with the href thing
+/***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
+// $(".sponsorLink1").attr("href", "#");
+// $(".sponsorIcon1").addClass("icon_compass");
+$(".sponsorLink2").attr("href", "http://utd.edu/~john.cole/"); 
+$(".sponsorIcon2").addClass("icon_compass");
 
 
 
