@@ -2568,13 +2568,13 @@ input[type="submit"] {
   display: inline-block;
   font-size: 80px;
   margin-bottom: 24px;
-  -webkit-transition: all .3s ease;
+ /* -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
   -webkit-animation: spin 6s ease-in-out infinite alternate;
   -moz-animation: spin 6s ease-in-out infinite alternate;
   -o-animation: spin 6s ease-in-out infinite alternate;
-  animation: spin 6s ease-in-out infinite alternate;
+  animation: spin 6s ease-in-out infinite alternate;*/
 }
 .error-page .btn-text-only:hover {
   color: #333333;
