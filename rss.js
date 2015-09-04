@@ -1,18 +1,8 @@
 $( document ).ready(function() {
 
+/****HOME PAGE EVENTS*****/
 
 // Event 1
-    $(".event1Date").rssfeed("http://www.utdacm.com/tagged/events/rss", 
-    {
-        limit: 1,
-        header: false,
-        date: true,
-        dateformat: 'date',
-        content: false,
-        snippet: false,
-        media: false,
-        showerror: false
-    });
     $(".event1Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
@@ -34,18 +24,6 @@ $( document ).ready(function() {
             showerror: false,
         });
     // //Event 2  
-    $(".event2Date").rssfeed("http://www.utdacm.com/tagged/events/rss", 
-    {
-        limit: 1,
-        offset: 2,
-        header: false,
-        date: true,
-        dateformat: 'date',
-        content: false,
-        snippet: false,
-        media: false,
-        showerror: false
-    });
     $(".event2Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
         {
             limit: 1,
@@ -61,6 +39,79 @@ $( document ).ready(function() {
         {
             limit: 1,
             offset: 2,
+            header: false,
+            date: false,
+            content: true,
+            snippet: false,
+            media: false,
+            showerror: false
+        });
+
+
+
+
+
+    /****PARTNER PAGE EVENTS*****/
+    //Partner 1
+    $(".partner1Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            header: true,
+            date: false,
+            content: false,
+            snippet: false,
+            media: false,
+            showerror: false
+        });
+    $(".partner1Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            header: false,
+            date: false,
+            content: true,
+            snippet: false,
+            media: false,
+            showerror: false,
+        });
+    //Partner 2 
+    $(".partner2Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            offset: 2,
+            header: true,
+            date: false,
+            content: false,
+            snippet: false,
+            media: false,
+            showerror: false
+        });
+    $(".partner2Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            offset: 2,
+            header: false,
+            date: false,
+            content: true,
+            snippet: false,
+            media: false,
+            showerror: false
+        });
+    //Partner 3
+    $(".partner3Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            offset: 3,
+            header: true,
+            date: false,
+            content: false,
+            snippet: false,
+            media: false,
+            showerror: false
+        });
+    $(".partner3Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+        {
+            limit: 1,
+            offset: 3,
             header: false,
             date: false,
             content: true,
