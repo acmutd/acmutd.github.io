@@ -3,7 +3,7 @@ $( document ).ready(function() {
 /****HOME PAGE EVENTS*****/
 
 // Event 1
-    $(".event1Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    $(".event1Title").rssfeed("http://acmutd.tumblr.com/tagged/events/rss", 
         {
             limit: 1,
             header: true,
@@ -13,7 +13,7 @@ $( document ).ready(function() {
             media: false,
             showerror: false
         });
-    $(".event1Content").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    $(".event1Content").rssfeed("http://acmutd.tumblr.com/tagged/events/rss", 
         {
             limit: 1,
             header: false,
@@ -24,7 +24,7 @@ $( document ).ready(function() {
             showerror: false,
         });
     // //Event 2  
-    $(".event2Title").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    $(".event2Title").rssfeed("http://acmutd.tumblr.com/tagged/events/rss", 
         {
             limit: 1,
             offset: 2,
@@ -35,7 +35,7 @@ $( document ).ready(function() {
             media: false,
             showerror: false
         });
-    $(".event2Content").rssfeed("http://www.utdacm.com/tagged/events/rss", 
+    $(".event2Content").rssfeed("http://acmutd.tumblr.com/tagged/events/rss", 
         {
             limit: 1,
             offset: 2,
@@ -53,7 +53,7 @@ $( document ).ready(function() {
 
     /****PARTNER PAGE EVENTS*****/
     //Partner 1
-    $(".partner1Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner1Name").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             header: true,
@@ -63,7 +63,7 @@ $( document ).ready(function() {
             media: false,
             showerror: false
         });
-    $(".partner1Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner1Content").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             header: false,
@@ -74,7 +74,7 @@ $( document ).ready(function() {
             showerror: false,
         });
     //Partner 2 
-    $(".partner2Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner2Name").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             offset: 2,
@@ -85,7 +85,7 @@ $( document ).ready(function() {
             media: false,
             showerror: false
         });
-    $(".partner2Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner2Content").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             offset: 2,
@@ -97,7 +97,7 @@ $( document ).ready(function() {
             showerror: false
         });
     //Partner 3
-    $(".partner3Name").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner3Name").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             offset: 3,
@@ -108,7 +108,7 @@ $( document ).ready(function() {
             media: false,
             showerror: false
         });
-    $(".partner3Content").rssfeed("http://www.utdacm.com/tagged/partners/rss", 
+    $(".partner3Content").rssfeed("http://acmutd.tumblr.com/tagged/partners/rss", 
         {
             limit: 1,
             offset: 3,
