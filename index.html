@@ -232,41 +232,22 @@
 					<br><br><span class="alt-font">and more</span>
 				</div>
 			</section>
-			
-			<section class="blog-image-snippet" id="upcoming">
-				<div class="background-image-holder parallax-background">
-					<img alt="background image" class="background-image" src="png/eventhero1.png">
-				</div>
+
+			<section class="side-image clearfix" id="upcoming">
 				
-				<div class="container">			
+				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 text-center">		
-								<span class="text-white alt-font">Upcoming ACM Event</span><br>
-								<h1 class="text-white event2Title"></h1> <!--RSS for event 1 plugged in-->
-								<div class="col-sm-10 col-sm-offset-1">
-									<br>
-									<p class="lead text-white event2Content"></p><br> <!--RSS for event 1 Plugged in-->
-									<a target="_blank" href="http://facebook.com/acmatutd" class="btn btn-primary btn-white">Visit ACM on Facebook for more</a>
-								</div>
-						</div>	
+						<div class="col-md-6 content col-sm-8 clearfix">
+							<span class="alt-font">Fall 2015</span>
+							<h1>ACM Events</h1>
+							<div id="rss-feeds"></div>
+						</div>
 					</div>
 				</div>
-			</section>
-			
-			<section class="no-pad clearfix">
-
-				<div class="background-image-holder">
-							<img class="background-image" alt="Background Image" src="png/eventhero2.png">
-						</div>
 				
-				<div class="col-sm-6 col-sm-offset-3 text-center">
-										
-						<div class="inner">
-							<br><br><br>
-							<span class="alt-font">Coming Later</span>
-							<h1 class="text event1Title"></h1> <!--RSS for event 2 plugged in-->
-							<p class="text event1Content"></p> <!--RSS for event 2 plugged in-->
-							<br><br><br>
+				<div class="image-container col-md-5 col-sm-3 pull-right">
+					<div class="background-image-holder">
+						<img class="background-image" alt="Background Image" src="png/eventhero2.png">
 					</div>
 				</div>
 			</section>
@@ -308,42 +289,7 @@
 						</div>
 					</div><!--end of row-->
 				</div>
-			</section>
-
-			<section class="bg-white">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2">
-							<div class="testimonials-slider text-center">
-							<br>
-							<br>
-								<ul class="slides">
-									<li>
-										<span class="author text">Upcoming Partner Event</span>
-										<h1 class="center-block partner1Name">Events from Our Partners</h1>
-										<p class="text lead partner1Content">Come join our end of semester cookout! We want to close out this semester with a social event for all our members. So come down to phase 8 on April 16th for some food and fun! Please bring some food, like chips and soda, so everyone has something to eat! We will provide BBQ and games!</p>
-									</li>
-									
-									<li>
-										<span class="author text">Upcoming Partner Event</span>
-										<h1 class="center-block partner2Name">Events from Our Partners</h1>
-										<p class="text lead partner2Content">Come join as we discuss ways you can become more productive while programming (and doing other tasks). We'll discuss editors, window managers, and hardware, among other things. Pizza and drinks will be provided.</p>
-									</li>
-									
-									<li>
-										<span class="author text">Upcoming Partner Event</span>
-										<h1 class="center-block partner3Name">Events from Our Partners</h1>
-										<p class="text lead partner3Content">There will be an open lab this Saturday at 12pm in ECSS 4.619 as usual.
-In addition to that, there is an event coming up April 24-25: The Semi-Annual Cyber Security Conference, hosted by the North Texas ISSA. While not a CSG event, the conference will cover many security topics and might be worth checking out.</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="clients-2 bg-light">
+			</section><section class="clients-2 bg-light">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-12">
@@ -420,7 +366,17 @@ In addition to that, there is an event coming up April 24-25: The Semi-Annual Cy
         <script src="js/jquery.countdown.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="main.js"></script>
-        <script src="rss.js"></script>
+        <script src="src/jquery.rss.js"></script>
+        <script src="src/moment.js"></script>
+        <script>
+	      jQuery(function($) {
+	        $("#rss-feeds").rss("http://acmutd.tumblr.com/tagged/f15/rss", {
+	        	limit: 20,
+	        	layoutTemplate: "<ul class='blog-snippet-2'>{entries}</ul>",
+	        	entryTemplate: "<li><div class='icon'><i class='icon icon-ribbon'></i></div><div class='title'><strong>{title}</strong><p>{body}</p></div></li>"
+	        })
+	      })
+	    </script>
     </body>
 </html>
 				
