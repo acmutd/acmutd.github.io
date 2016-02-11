@@ -16,7 +16,7 @@ ex: presidentLink1 and presidentIcon1
 
 /*Officer 1*/
 //ONLY CHANGE THE NAME AND THE IMAGE URL HERE. DO NOT TOUCH THE "SRC" OR ANYTHING ELSE
-$(".officer1Image").attr("src", "png/izu.png");
+$(".officer1Image").attr("src", "png/team/izuchukwu.png");
 $('.officer1Name').append('Izuchukwu Elechi');
 $(".officer1Role").prepend("President");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -30,7 +30,7 @@ $(".officer1Icon2").addClass("social_linkedin");
 
 /*Officer 2*/
 //ONLY CHANGE THE NAME AND THE IMAGE URL HERE. DO NOT TOUCH THE "SRC" OR ANYTHING ELSE
-$(".officer2Image").attr("src", "png/tahir.png");
+$(".officer2Image").attr("src", "png/team/tahir.png");
 $(".officer2Name").prepend("Tahir Aziz");
 $(".officer2Role").prepend("Vice President");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -44,8 +44,8 @@ $(".officer2Icon2").addClass("social_linkedin");
 
 /*Officer 3*/
 //Name, image
-$(".officer3Image").attr("src", "png/anastasia.png");
-$(".officer3Name").prepend("Anastasia Kovanova");
+$(".officer3Image").attr("src", "png/team/cathy.png");
+$(".officer3Name").prepend("Cathy Tran");
 $(".officer3Role").prepend("Secretary");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
 //Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
@@ -53,13 +53,13 @@ $(".officer3Role").prepend("Secretary");
 /***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
 // $(".officer3Link1").attr("href", "#");
 // $(".officer3Icon1").addClass("icon_compass");
-$(".officer3Link2").attr("href", "https://www.linkedin.com/pub/anastasia-kovanova/79/992/8b6");
-$(".officer3Icon2").addClass("social_linkedin");
+$(".officer3Link2").attr("href", "http://acmutd.co");
+$(".officer3Icon2").addClass("icon_compass");
 
 
 /*Officer 4*/
 //Name, image
-$(".officer4Image").attr("src", "png/jaswin.png");
+$(".officer4Image").attr("src", "png/team/jaswin.png");
 $(".officer4Name").prepend("Jaswin Kohli");
 $(".officer4Role").prepend("Treasurer");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -74,9 +74,9 @@ $(".officer4Icon2").addClass("social_linkedin");
 
 /*Officer 5*/
 //Name, image
-$(".officer5Image").attr("src", "png/connie.png");
+$(".officer5Image").attr("src", "png/team/connie.png");
 $(".officer5Name").prepend("Connie Clark");
-$(".officer5Role").prepend("Director of Student Interests");
+$(".officer5Role").prepend("Director of Student Interest");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
 //Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
 //Don't mess with the href thing
@@ -88,7 +88,7 @@ $(".officer5Icon2").addClass("social_linkedin");
 
 /*Officer 6*/
 //Name, image
-$(".officer6Image").attr("src", "png/shounak.png");
+$(".officer6Image").attr("src", "png/team/shounak.png");
 $(".officer6Name").prepend("Shounak Kulkarni");
 $(".officer6Role").prepend("Director of Industry");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -102,37 +102,37 @@ $(".officer6Icon2").addClass("social_linkedin");
 
 /*Officer 7*/
 //Name, image
-$(".officer7Image").attr("src", "png/braden.png");
-$(".officer7Name").prepend("Braden Herndon");
-$(".officer7Role").prepend("Director of Student Events");
+$(".officer7Image").attr("src", "png/team/zakariya.png");
+$(".officer7Name").prepend("Zakariya Ahmed");
+$(".officer7Role").prepend("Director of HackUTD");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
 //Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
 //Don't mess with the href thing
 /***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
 // $(".officer7Link1").attr("href", "#");
 // $(".officer7Icon1").addClass("icon_compass");
-$(".officer7Link2").attr("href", "https://www.linkedin.com/in/bradenherndon"); 
+$(".officer7Link2").attr("href", "https://www.linkedin.com/pub/zakariya-ahmed/86/759/569"); 
 $(".officer7Icon2").addClass("social_linkedin");
 
 
 /*Officer 8*/
 //Name, image
-$(".officer8Image").attr("src", "png/grace.png");
-$(".officer8Name").prepend("Grace Chow");
-$(".officer8Role").prepend("Co-Director of Marketing");
+$(".officer8Image").attr("src", "png/team/cole.png");
+$(".officer8Name").prepend("John Cole");
+$(".officer8Role").prepend("Faculty Sponsor");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
 //Enter the url's for the links. make sure you have the http:// and correspond the linkss with the correct icons
 //Don't mess with the href thing
 /***Uncomment the Icon1 and Link1 here and in the about.html for the correct officer, if you want to add another icon.**/
 // $(".officer8Link1").attr("href", "#");
 // $(".officer8Icon1").addClass("icon_compass");
-$(".officer8Link2").attr("href", "https://www.linkedin.com/in/gracechow5"); 
-$(".officer8Icon2").addClass("social_linkedin");
+$(".officer8Link2").attr("href", "http://utd.edu/~john.cole/"); 
+$(".officer8Icon2").addClass("icon_compass");
 
 
 /*Officer 9*/
 //Name,image
-$(".officer9Image").attr("src", "png/tej.png");
+$(".officer9Image").attr("src", "png/team/tej.png");
 $(".officer9Name").prepend("Tej Gidvani");
 $(".officer9Role").prepend("Co-Director of Marketing");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -147,7 +147,7 @@ $(".officer9Icon2").addClass("social_linkedin");
 
 /*Officer 10*/
 //Name,image
-$(".officer10Image").attr("src", "png/zakariya.png");
+$(".officer10Image").attr("src", "png/team/zakariya.png");
 $(".officer10Name").prepend("Zakariya Ahmed");
 $(".officer10Role").prepend("Director of Hack_UTD");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
@@ -162,7 +162,7 @@ $(".officer10Icon2").addClass("social_linkedin");
 
 /*FACULTY SPONSOR*/
 //Name,image
-$(".sponsorImage").attr("src", "png/cole.png");
+$(".sponsorImage").attr("src", "png/team/cole.png");
 $(".sponsorName").prepend("John Cole");
 $(".sponsorRole").prepend("Faculty Sponsor");
 //Officer website/linked icons and links. For the icon, use icon_compass if website, social_linkedin if linkedin.
