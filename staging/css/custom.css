@@ -1,0 +1,69 @@
+.nav-1:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.nav-1 ul li {
+  border-right: 1px solid rgba(255, 255, 255, 0.0);
+}
+.nav-1 ul li:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+.nav-1 .logo {
+  max-height: 80px;
+  max-width: 100%;
+  margin-right: 64px;
+  margin-top: 19px;
+  padding-bottom: 20px;
+}
+
+.nav-1 ul > li:hover {
+  border-left: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+@media all and (max-width: 1023px) {
+    .nav-1 .logo {
+      max-height: 40px;
+      max-width: 100%;
+      margin-right: 64px;
+      margin-top: 19px;
+    }
+
+    .nav-1:hover {
+  background: rgba(30, 30, 30, 0.9);
+}
+}
+
+.nav-1 ul li a {
+  padding: 40px 24px;
+}
+
+.has-dropdown:before {
+  top: 40px;
+}
+
+.nav-1 .social-links a {
+  padding: 20px 0px;
+}
+
+.nav-1 {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+}
+
+.contrast-white-p {
+  color: #fff !important;
+  opacity: 0.6;
+}
+.contrast-white div{
+  color: #fff !important;
+  opacity: 0.8;
+}
+.contrast-white strong {
+  color: #fff !important;
+  opacity: 1.0;
+}
+.contrast-white-detail{
+  background: #fff !important;
+  opacity: 0.9;
+}
