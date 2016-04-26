@@ -1,119 +1,18 @@
+---
+layout: none
+---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
         <title>ACM · The Association for Computing Machinery at UTD</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/theme-charcoal.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+        <meta name="description" content="We're a team of thirty students with one goal — a greater, more collaborative engineering community at The University of Texas at Dallas. We run events, workshops, HackUTD, projets, and more.">
+        {% include common-head.html %}
     </head>
     <body>
-
-				
-		<div class="nav-container">
-			
-			
+		{% include common-nav.html %}
 		
-			<nav class="nav-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-						<a href="#" class="home-link">
-								<a href="#" class="home-link">
-									<img alt="Logo" class="logo" src="img/logo-square-light.png">
-								</a>
-							</a>
-							<ul class="menu">
-								<li class="has-dropdown"><a href="#">Events &amp; Activities</a>
-									<ul class="subnav">
-										<li><a href="#">ACM Industry Series</a></li>
-										<li><a href="#">HackUTD</a></li>
-										<li><a href="#">ACM Projects</a></li>
-										<li><a href="#">ACM Labs</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Team</a></li>
-								<li><a href="#">Partners</a></li>
-								<li><a href="#">Join</a></li>
-								<li><a href="#">Apply</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-							<ul class="social-links">
-									<li><a href="#"><i class="ti ti-facebook"></i></a></li>
-									<li><a href="#"><i class="icon ti ti-twitter-alt"></i></a></li>
-									<li><a href="#"><i class="icon ti ti-github"></i></a></li>
-								</ul>
-							<div class="nav-functions">
-							</div>
-						</div>
-					</div>
-				</div>
-			
-				<div class="mobile-toggle">
-					<div class="bar-1"></div>
-					<div class="bar-2"></div>
-				</div>
-			</nav>
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-			
-			
-		
-			
-		
-		</div>
-		
-		<div class="main-container">
-					
-			
-					
-			
-					
-			
-					
-			
-					
-			
-					
-			
-					
-			<section class="hero-slider large-image">
+		<div class="main-container"><section class="hero-slider large-image">
 				<ul class="slides">
 					<li>
 						<div class="background-image-holder overlay">
@@ -205,7 +104,7 @@
 									<div class="text-block">
 										<div class="detail-line contrast-white-detail"></div>
 										<h1 class="contrast-h1 contrast-white"><strong>We're the ACM.</strong>
-											<div class="contrast-white">We run open-source projects for the community.
+											<div class="contrast-white">We run in-house engineering building projects for the community.
 											</div>
 										</h1>
 									</div>
@@ -327,7 +226,7 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 				</div>
 			</section>
 
-			<section class="image-block">
+			<section class="image-block" id="industry">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5 col-sm-7 col-md-offset-7 col-sm-offset-5">
@@ -402,7 +301,7 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 				</div>
 			</section>
 			
-			<section class="wide-features">
+			<section class="wide-features" id="projectslabs">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
@@ -412,7 +311,7 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 								<p>
 									ACM Projects are ACM's semester-long guided projects for those new to software development, teaching collaborative tools, new technologies, and core development principles earlier and complimentary to curriculum.
 								</p>
-								<a class="text-link" href="#">Learn even more <i class="icon ti ti-arrow-right arrow_right"></i></a>
+								<a class="text-link" style="display: none;" href="#">Learn even more <i class="icon ti ti-arrow-right arrow_right"></i></a>
 							</div>
 						</div>
 					
@@ -423,14 +322,14 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 								<p>
 									ACM Labs is ACM's own in-house engineering team consisting of student project managers, developers, and designers referred internally and vetted with interviews working on a variety of new projects and platforms for the communnity at UT Dallas and beyond.
 								</p>
-								<a class="text-link" href="#">Learn even more <i class="icon ti ti-arrow-right arrow_right"></i></a>
+								<a class="text-link" style="display: none;" href="#">Learn even more <i class="icon ti ti-arrow-right arrow_right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			
-			<section class="hero-project">
+			<section class="hero-project" id="hackutd">
 				<div class="background-image-holder">
 					<img alt="Slide Background" class="background-image" src="png/hero-hackutd.png">
 				</div>
@@ -440,7 +339,7 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 						<div class="col-md-5 col-sm-7">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h2 class="text-white">ACM's HackUTD</h2>
+								<h2 class="text-white">ACM HackUTD</h2>
 							</div>
 							<p class="text-white">
 								HackUTD is the official student hackathon of UT Dallas and North Texas' largest university hackathon, run by ACM in partnership with Major League Hacking. HackUTD 16 brought over 400 students together for 24 hours of ideas, code, and design, and HackUTD 17's going even bigger.
@@ -457,62 +356,12 @@ Encore. Join us and a panel of engineers &amp; recruiters from Google to learn a
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
 							<p class="super-lead">
-								Let's build a better engineering community together. <a class="text-link" href="#">Join our team.</a></p>
+								Let's build a better engineering community together. <a class="text-link" href="/apply.html">Join our team.</a></p>
 						</div>
 					</div>
 				</div>
-			</section>
-			
-			<section class="twitter-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 col-sm-9">
-							<i class="icon ti ti-twitter-alt text-white"></i>
-							<div class="twitter-feed">
-								<div class="tweets-feed tweets-slider" data-widget-id="724864506065784836" id="tweets-4"><ul class="slides"><li><div class="user">
-		<div data-scribe="component:author">
-		  <a data-scribe="element:user_link" href="https://twitter.com/mrareweb" aria-label="Medium Rare (screen name: mrareweb)" target="_blank">
-		    <span>
-		      <img data-scribe="element:avatar" data-src-2x="https://pbs.twimg.com/profile_images/588890128409473024/6mECDeLZ_bigger.png" alt="" data-src-1x="https://pbs.twimg.com/profile_images/588890128409473024/6mECDeLZ_normal.png" src="https://pbs.twimg.com/profile_images/588890128409473024/6mECDeLZ_bigger.png">
-		    </span>
-		    <span title="Medium Rare" data-scribe="element:name">Medium Rare</span>
-		    
-		    <span title="‎@mrareweb" data-scribe="element:screen_name">‎@mrareweb</span>
-		  </a>
-		</div>
-		</div></li></ul></div>
-							</div>
-							<span class="text-white">Follow <a href="http://twitter.com/acm_utd">@acm_utd</a> for more updates</span>
-						</div>
-					</div>
-				</div>
-			</section>
-			<footer class="footer-5">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<a href="#">
-								<img alt="logo" class="logo" src="img/logo-square-light.png">
-							</a>
-						</div>
-					</div>
-			
-					<div class="row">
-						<div class="col-sm-6">
-							<span class="text-white">© Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> ACM UTD, All Rights Reserved</span>
-						</div>
-					
-						<div class="col-sm-6 text-right">
-							<ul>
-								<li><a href="#" class="text-link">@acm_utd <i class="icon ti ti-arrow-right arrow_right"></i></a></li>
-								<li><a href="#" class="text-link">acm on facebook <i class="icon ti ti-arrow-right arrow_right"></i></a></li>
-								<li><a href="#" class="text-link">officer openings <i class="icon ti ti-arrow-right arrow_right"></i></a></li>
-								<li><a href="#" class="text-link">contact us <i class="icon ti ti-arrow-right arrow_right"></i></a></li>
-							</ul>	
-						</div>
-					</div>
-				</div>	
-			</footer>
+			</section>Op
+			{% include common-footer.html %}
 		</div>
 		
 				
