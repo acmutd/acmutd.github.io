@@ -71,3 +71,7 @@
 .job-desc a {
    line-height: 32px;
 }
+
+.col-md-6:nth-child(odd) {
+  clear: left;
+}

@@ -1,3 +1,6 @@
+---
+layout: none
+---
 
 <!doctype html>
 <html lang="en">
@@ -340,6 +343,31 @@
 								</div>
 							</div>
 						</div>	
+					</li><li>
+						<div class="background-image-holder overlay">
+							<img alt="Slide Background" class="background-image" src="png/team-hero10.jpg">
+						</div>
+			
+						<div class="container vertical-align">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="text-block">
+										<div class="detail-line contrast-white-detail"></div>
+										<h1 class="contrast-h1 contrast-white"><strong>Apply to the team.</strong>
+											<div class="contrast-white">Let's build a greater engineering<br>community, together.
+											</div>
+										</h1>
+									</div>
+								</div>
+							</div>
+						
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="lead contrast-white-p">
+										We're a team of thirty students with one goal — a greater, more collaborative engineering community at The University of Texas at Dallas. Join us.</p>
+								</div>
+							</div>
+						</div>	
 					</li>
 				
 				</ul>
@@ -385,7 +413,7 @@
 								Multiple applications. One Form. 
 							</p>
 							<p>
-								We've streamlined our application process. After looking at the descriptions below for the spot you'd like to apply for, head over to <a href="http://acmutd.co/application">acmutd.co/application</a> to apply for positions across the ACM Board of Directors, Operations, Projects, Labs, &amp; HackUTD.
+								We've streamlined our application process. After looking at the descriptions below for the ACM Officer position you'd like to apply for, head over to <a href="http://acmutd.co/application">acmutd.co/application</a> to apply for positions across the ACM Board of Directors, Operations, Projects, Labs, &amp; HackUTD.<br><br>Note that ACM Staff openings (incl. Projects Mentors and Labs PMs, Devs, &amp; Designers) require a separate application. The links for these applications are available in the opening listing.
 							</p>
 						</div>
 					</div>
@@ -404,49 +432,33 @@
 						</div>
 					
 						<div class="col-sm-8">
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Slick &amp; Extensible</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% assign openings = site.openings | where: "team", "board" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>On Trend Design</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Tons of Options</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Dedicated Support Forum</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
+							    {% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -464,49 +476,33 @@
 						</div>
 					
 						<div class="col-sm-8">
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Slick &amp; Extensible</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% assign openings = site.openings | where: "team", "hackutd" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>On Trend Design</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Tons of Options</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Dedicated Support Forum</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
+							    {% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -524,49 +520,33 @@
 						</div>
 					
 						<div class="col-sm-8">
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Slick &amp; Extensible</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% assign openings = site.openings | where: "team", "projects" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>On Trend Design</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Tons of Options</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Dedicated Support Forum</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
+							    {% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -584,49 +564,33 @@
 						</div>
 					
 						<div class="col-sm-8">
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Slick &amp; Extensible</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% assign openings = site.openings | where: "team", "labs" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not actively hiring on this team at this time. Think you've got something we need on Labs? Contact us at <a href="mailto:labs@acmutd.co">labs@acmutd.co</a>.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>On Trend Design</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Tons of Options</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Dedicated Support Forum</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
+							    {% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -644,49 +608,33 @@
 						</div>
 					
 						<div class="col-sm-8">
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Slick &amp; Extensible</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% assign openings = site.openings | where: "team", "operations" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>On Trend Design</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Tons of Options</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-6 col-sm-12">
-								<div class="narrow-feature">
-									<div class="content">
-										<h5>Dedicated Support Forum</h5>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-										</p>
-									</div>
-								</div>
-							</div>
+							    {% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -759,7 +707,6 @@
         <script src="js/jquery.plugin.min.js"></script>
         <script src="js/placeholders.min.js"></script>
         <script src="js/countdown.min.js"></script>
-        <script src="js/parallax.js"></script>
     	<script src="js/scripts.js"></script>
     </body>
 </html>
