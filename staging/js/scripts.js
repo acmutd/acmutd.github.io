@@ -203,7 +203,7 @@ $(document).ready(function(){
     
     // Sliders
     
-    $('.hero-slider').flexslider({ directionNav: false });
+    $('.hero-slider').flexslider({ directionNav: false, slideshowSpeed: 4000 });
     $('.testimonials').flexslider({ directionNav: false });
     $('.image-slider').flexslider({ directionNav: false });
     
