@@ -150,31 +150,35 @@ layout: none
 				</ul>
 			</section>
 			
-			<section class="text-hero">
+			<section class="text-hero">          
+                {% assign events = site.events %}
+                {% for event in events %}
+                {% if event.featured %}
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>Spring Finale</h5>
-								<h1 class="contrast-h1"><strong>ACM + Twitter</h1>
+								<h5>{{ event.title }}</h5>
+								<h1 class="contrast-h1">{{ event.name }}</h1>
 							</div>
 						</div>
 					</div>
 				
 					<div class="row">
 						<div class="col-sm-4">
-							<p class="lead">April 18th, 2016<br>
-								8:30 PM  ·  Hoblitzelle Hall Auditorium<br>
-								Free pizza &amp; Twitter swag
+							<p class="lead">{{ event.date }}<br>
+								{{ event.location }}<br>
+								{{ event.extra }}
 							</p>
 						</div>
 						<div class="col-sm-6">
-							<p class="lead">
-								Join us &amp; Ibrahim Bashir, Director of Engineering at Twitter, for a talk on his career journey, a look inside Twitter, and career opportunities.</p>
+							<p class="lead">{{ event.description }}</p>
 						</div>
 					</div>
 				</div>
+                {% endif %}
+                {% endfor %}
 			</section>
 
 			<section class="col-3-text">
