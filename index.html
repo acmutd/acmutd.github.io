@@ -185,36 +185,19 @@ layout: none
 				<div class="container">
 				<h5>Spring Highlights</h5>
 					<div class="row">
+                        {% assign events = site.events %}
+                        {% for event in events %}
+                        {% if event.featured != true}
 						<div class="col-sm-4">
 							<div class="detail-line"></div>
-							<h5>ACM + Google</h5>
+							<h5>{{ event.name }}</h5>
 							<p>
-								Thurs, Jan 28th at 8:30 pm · ATEC Auditorium<br><br>
-
-Encore. Join us and a panel of engineers &amp; recruiters from Google to learn about the inner workings, internships, and careers at one of the world’s leaders in technology. Free pizza & Google swag. RSVP &amp; submit your questions at
-<a href="http://acmutd.co/google">acmutd.co/google</a>
+								{{ event.date }} · {{ event.location }}<br><br>
+                                {{ event.description | markdownify }}
 							</p>
 						</div>
-					
-						<div class="col-sm-4">
-							<div class="detail-line"></div>
-							<h5>HackUTD 16</h5>
-							<p>
-								March 26 &amp; 27 · University of Texas at Dallas<br><br>
-
-								500 students &amp; 24 hours of code, ideas, food, design, and more. North Texas' largest university hackathon, here at UT Dallas. Check it out at <a href="http://hackutd.co/">hackutd.co</a>
-							</p>
-						</div>
-					
-						<div class="col-sm-4">
-							<div class="detail-line"></div>
-							<h5>ACM HackUTD Android Workshop</h5>
-							<p>
-								Thurs, March 3rd at 8:30 pm · TI Auditorium<br><br>
-
-								Join us for our last workshop leading up to HackUTD — the ACM HackUTD Android Workshop. Learn how to build a basic Android app from start to finish. A laptop with Android Studio installed required. Free pizza.
-							</p>
-						</div>
+                        {% endif %}
+                        {% endfor %}
 					</div>
 					<h5><a style="display: none;" class="text-link text-right" href="https://www.facebook.com/acmatutd/events">View All Events</a></h5>
 				</div>
