@@ -1,7 +1,7 @@
 ---
 name: "John Kahn"
-role: "HackUTD Experience Co-Coordinator, Projects Operations Coordinator, Labs Android Developer"
+role: "Director of Projects, HackUTD Logistics Coordinator, Labs Android Developer"
 category: hackutd
-filter: "hackutd,projects,labs"
+filter: "board,hackutd,projects,labs"
 photo: "team-hackutd-johnkahn"
 ---
