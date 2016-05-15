@@ -167,7 +167,7 @@ layout: none
 				
 					<div class="row">
 						<div class="col-sm-4">
-							<p class="lead">{{ event.date }}<br>
+							<p class="lead">{{ event.date | date: '%B %-d %Y %I:%M %p' }}<br>
 								{{ event.location }}<br>
 								{{ event.extra }}
 							</p>
@@ -192,7 +192,7 @@ layout: none
 							<div class="detail-line"></div>
 							<h5>{{ event.name }}</h5>
 							<p>
-								{{ event.date }} · {{ event.location }}<br><br>
+								{{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{ event.location }}<br><br>
                                 {{ event.description | markdownify }}
 							</p>
 						</div>

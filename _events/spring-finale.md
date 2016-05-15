@@ -1,6 +1,6 @@
 ---
 name: "ACM + Twitter"
-date: "April 18th, 8:30 PM"
+date: "April 18 2016 8:30 PM"
 location: "Hoblitzelle Hall Auditorium"
 title: "Spring Finale"
 extra: "Free pizza & Twitter swag"
