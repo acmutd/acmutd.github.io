@@ -1,6 +1,6 @@
 ---
 name: "Tahir Aziz"
-role: "Vice President"
+role: "President"
 category: board
 filter: "board,hackutd,labs,operations,projects"
 link: "http://tahir.io"
