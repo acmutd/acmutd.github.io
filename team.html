@@ -310,7 +310,7 @@ layout: none
 						{% for officer in officers %}
 						<div class="col-md-3 col-sm-4 project team-2" data-filter="{{ officer.filter }}">
 							<div class="background-image-holder">
-								<<img alt="project image" class="background-image" src="png/{% if officer.photo %}{{ officer.photo }}{% else %}team-officer-default{% endif %}.jpg">
+								<img alt="project image" class="background-image" src="png/{% if officer.photo %}{{ officer.photo }}{% else %}team-officer-default{% endif %}.jpg">
 							</div>
 							<h3>{{ officer.name }}</h3>
 							<span>{{ officer.role }}</span>
