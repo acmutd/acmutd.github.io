@@ -1,6 +1,6 @@
 ---
 name: "Santhosh Paramasivan"
-role: "HackUTD Finance Co-Coordinator"
+role: "HackUTD Industry Co-Coordinator"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-santhosh"
