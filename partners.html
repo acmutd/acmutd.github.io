@@ -1,0 +1,143 @@
+---
+layout: none
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ACM Partners · The Association for Computing Machinery at UTD</title>
+        <meta name="description" content="Join our team. We're a team of thirty students with one goal — a greater, more collaborative engineering community at UT Dallas.">
+        <meta property="og:title" content="ACM Partners · The Association for Computing Machinery at UTD"/>
+        <meta property="og:description" content="Join our team. We're a team of thirty students with one goal — a greater, more collaborative engineering community at UT Dallas.">
+        <meta property="og:image" content="png/team-hero1.jpg"/>
+        {% include common-head.html %}
+    </head>
+    <body>
+		{% include common-nav.html %}
+		
+		<div class="main-container">
+			<section class="hero-slider large-image">
+				<ul class="slides">
+					<li>
+						<div class="background-image-holder overlay">
+							<img alt="Slide Background" class="background-image" src="png/team-hero10.jpg">
+						</div>
+			
+						<div class="container vertical-align">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="text-block">
+										<div class="detail-line contrast-white-detail"></div>
+										<h1 class="contrast-h1 contrast-white"><strong>Partners of the ACM</strong>
+											<div class="contrast-white">
+											</div>
+										</h1>
+									</div>
+								</div>
+							</div>
+						
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="lead contrast-white-p"></p>
+								</div>
+							</div>
+						</div>	
+					</li>
+				
+				</ul>
+			</section>
+            
+            
+			<section class="text-hero">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="text-block">
+								<div class="detail-line"></div>
+								<h5>Our Partners</h5>
+								<h1 class="contrast-h1"><strong>Community through Collaboration</h1>
+							</div>
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="col-sm-6">
+							<p class="lead">ACM works with a variety of partner organizations both within the Erik Jonsson School of Engineering, and throughout UTD at large, to put together bigger & better events for the community.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+            
+            <section class="large-pad">
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Codeburners" src="logo/partner-codeburners.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Computer Security Group" src="logo/partner-csg.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="HackersUTD" src="logo/partner-hckrsutd.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Linux Users Group" src="logo/partner-eclub.png">
+                        </div>
+                         <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Codeburners" src="logo/partner-ux.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Computer Security Group" src="logo/partner-wwc.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-2 col-xs-offset-2">
+                            <img alt="HackersUTD" src="logo/partner-mkrspc.png">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                            <img alt="Linux Users Group" src="logo/partner-lug.png">
+                        </div>
+                    </div>
+                    
+			</section>
+                
+			<section class="narrow-features">
+				<div class="container">
+					<div class="row">					
+						<div class="col-sm-12">
+							{% assign partners = site.partners %}
+								{% for partner in partners %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ partner.name }}</h5>
+												{{ partner.excerpt }}
+												
+												<p><a href="{{ partner.link }}" class="text-link">Visit {{ partner.name }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+											</div>
+										</div>
+									</div>
+							    {% endfor %}
+						</div>
+					</div>
+				</div>
+			</section>
+                
+			{% include common-footer.html %}
+		</div>
+		
+				
+		<script src="js/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/jquery.plugin.min.js"></script>
+        <script src="js/placeholders.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+    	<script src="js/scripts.js"></script>
+    </body>
+</html>
