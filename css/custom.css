@@ -45,7 +45,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
     .mobile-grid {
         width: 70%;
         margin-left: 15vw;
@@ -54,8 +54,8 @@
 
 @media (max-width: 400px) {
     .mobile-grid {
-        width: 90%;
-        margin-left: 7vw;
+        width: 100%;
+        margin-left: 0vw;
     }
 }
 
