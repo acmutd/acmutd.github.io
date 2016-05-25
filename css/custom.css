@@ -38,6 +38,18 @@
     .left-align-mobile {
         text-align: left;
     }
+  
+    .mobile-grid {
+        width: 66%;
+        margin-left: 16vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile-grid {
+        width: 100%;
+        margin-left: 0vw;
+    }
 }
 
 .nav-1 ul li a {
