@@ -3,5 +3,5 @@ name: "Pranjal Manchanda"
 role: "Projects Finance Coordinator"
 category: projects
 filter: "projects"
-photo: "team-officer-default"
+photo: "team-projects-pranjal"
 ---
