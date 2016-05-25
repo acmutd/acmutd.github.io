@@ -54,7 +54,7 @@ layout: none
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
 							<div class="text-block">
-								<div class="detail-line"></div>
+						        <div class="detail-line"></div>
 								<h5>Get in Touch</h5>
 								<p>Have any questions, want to sponsor us, or just want to say hi? Send us a message.</p>
 							</div>
@@ -71,12 +71,19 @@ layout: none
                         </div>
                         <div class="col-md-5 col-sm-12">
 							<form class="form-email" action="http://formspree.io/comet.acm@gmail.com"
-  method="POST" data-error="Please complete all fields correctly" data-success="Thanks for your enquiry">
-                                <input name="name" class="input-standard validate-required" type="text" placeholder="Your Name" name="name">
-                                <input name="email" class="input-standard validate-required validate-email" type="text" placeholder="Your Email Address">
-                                <textarea name="message" class="input-standard validate-required" placeholder="Your Message"></textarea>
+  method="POST" data-error="Please fill all fields correctly." data-success="Thanks for contacting us, we'll be in touch shortly.">
+                              <input name="name" class="input-standard" type="text" placeholder="Your Name" name="name">
+                              <input name="email" class="input-standard" type="text" placeholder="Your Email Address">
+                              <textarea name="message" class="input-standard" placeholder="Your Message"></textarea>
 
-                                <input type="submit" class="btn btn-sm" value="Send">
+                              <!--<input type="hidden" name="_next" value="thanks.html" />-->
+                              <input type="submit" class="btn btn-sm" value="Send">
+                              <div class="form-success">
+                                <span class="text-white">Message sent - Thanks for your enquiry</span>
+                              </div>
+                              <div class="form-error">
+                                <span class="text-white">Please complete all fields correctly</span>
+                              </div>
                             </form>
 						</div>
 					</div>

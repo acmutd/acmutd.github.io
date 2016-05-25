@@ -292,7 +292,7 @@ $(document).ready(function(){
     
     // Contact form code
 
-    $('form.form-email, form.form-newsletter, form.project-planner').submit(function(e) {
+    $(/*'form.form-email,*/ 'form.form-newsletter, form.project-planner').submit(function(e) {
 
         // return false so form submits through jQuery rather than reloading page.
         if (e.preventDefault) e.preventDefault();
