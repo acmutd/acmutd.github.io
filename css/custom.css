@@ -42,7 +42,7 @@
 
 @media all and (max-width: 767px) {
   .mobile-break {
-    display: block;
+    display: block !important;
   }
 }
 
