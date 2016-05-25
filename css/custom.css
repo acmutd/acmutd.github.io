@@ -40,6 +40,12 @@
     }
 }
 
+@media all and (max-width: 767px) {
+  .mobile-break {
+    display: block;
+  }
+}
+
 .nav-1 ul li a {
   padding: 40px 24px;
 }
