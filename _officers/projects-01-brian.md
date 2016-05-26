@@ -1,7 +1,7 @@
 ---
 name: "Brian Hoang"
-role: "Projects Logistics Co-Coordinator"
+role: "Projects Operations Coordinator, HackUTD Volunteer Coordinator"
 category: projects
-filter: "projects"
+filter: "projects,hackutd"
 photo: "team-projects-brian"
 ---

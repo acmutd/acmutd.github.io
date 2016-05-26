@@ -1,6 +1,6 @@
 ---
 name: "Umar Khalid"
-role: "Projects Logistics Co-Coordinator"
+role: "Projects Logistics Coordinator"
 category: projects
 filter: "projects"
 photo: "team-projects-umar"
