@@ -38,6 +38,25 @@
     .left-align-mobile {
         text-align: left;
     }
+  
+    .mobile-grid {
+        width: 50%;
+        margin-left: 22vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .mobile-grid {
+        width: 70%;
+        margin-left: 15vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile-grid {
+        width: 100%;
+        margin-left: 0vw;
+    }
 }
 
 @media all and (max-width: 767px) {
