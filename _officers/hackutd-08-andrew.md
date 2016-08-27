@@ -1,7 +1,7 @@
 ---
-name: "Suraj Poojary"
+name: "Andrew Chen"
 role: "HackUTD Assistant Logistics Coordinator"
 category: hackutd
 filter: "hackutd"
-photo: "team-ops-suraj"
+photo: "team-hackutd-andrew"
 ---
