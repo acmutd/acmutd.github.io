@@ -498,6 +498,50 @@ layout: none
 					</div>
 				</div>
 			</section>
+                
+            <section class="narrow-features">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="text-block">
+								<div class="detail-line"></div>
+								<h5>ACM Education</h5>
+								<h4>Openings for ACM's tutoring initiative</h4>
+							</div>
+						</div>
+					
+						<div class="col-sm-8">
+							{% assign openings = site.openings | where: "team", "education" %}
+							{% if openings.size == 0 %}
+								<div class="col-md-6 col-sm-12">
+									<div class="narrow-feature">
+										<div class="content">
+											<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not actively hiring on this team at this time.</p>
+										</div>
+									</div>
+								</div>
+							{% else %}
+								{% for opening in openings %}
+								    <div class="col-md-6 col-sm-12">
+										<div class="narrow-feature">
+											<div class="content">
+												<h5>{{ opening.title }}</h5>
+												{{ opening.excerpt }}
+												{% if opening.application %}
+												<p><a href="http://{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% else %}
+												<p><a href="http://acmutd.co/application" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												{% endif %}
+											</div>
+										</div>
+									</div>
+							    {% endfor %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<section class="narrow-features">
 				<div class="container">
