@@ -1,7 +1,7 @@
 ---
-name: "ACM + Google"
-date: "September 29 2016 8:30 PM"
-location: "ATC 1.102"
-description: "Join us and a panel of engineers & recruiters from Google to learn about the inner workings, internships, and careers at one of the world’s leaders in technology. Free pizza & Google swag. RSVP at acmutd.co/google"
-featured: false
+name: "#TwitterAtUTD"
+date: "January 19, 2017 8:30 PM"
+location: "SPN 1.2"
+description: "Come to our lit spring semester kick-off event to learn about resume building and engineering opportunities at Twitter presented by our very own UTD Alum!"
+featured: true
 ---
