@@ -2,4 +2,4 @@
 name: "UTD Computer Security Group"
 link: "https://csg.utdallas.edu/"
 ---
-The Computer Security Group is a student organization that strives to learn, research, and educate people in all areas of computer security. Members actively participate in learning and teaching in a hackerspace environment covering a multitude of security-based topics. 
+The CSG is a student organization open to all students. Our members range from those who are preparing for a career in the wide field of security, to those who are pursuing other careers in Computer Science and related fields but would like to know more about matters of security.
