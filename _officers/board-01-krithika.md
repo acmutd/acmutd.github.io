@@ -1,8 +1,8 @@
 ---
 name: "Krithika Suresh"
-role: "Director of Marketing, HackUTD Branding Coordinator"
+role: "President"
 category: board
-filter: "board,hackutd"
+filter: "board,hackutd,labs,operations,projects"
 photo: "team-board-krithika"
 link: "https://www.linkedin.com/in/krithikasuresh"
 ---

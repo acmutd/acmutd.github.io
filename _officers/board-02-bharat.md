@@ -1,8 +1,8 @@
 ---
 name: "Bharat Arimilli"
-role: "Director of ACM Labs, HackUTD Technology Coordinator"
+role: "Vice President"
 category: board
-filter: "board,hackutd,labs"
+filter: "board,hackutd,labs,operations,projects"
 photo: "team-board-bharat"
 link: "http://www.bharatarimilli.io"
 ---
