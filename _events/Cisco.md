@@ -1,6 +1,6 @@
 ---
 name: "ACM + Cisco"
-date: "Thursday, March 30th 2017 at 8:30 PM"
+date: "March 30th 2017 8:30 PM"
 location: "SLC 1.102"
 title: "Spring 2017"
 extra: "Bring your Comet Card for pizza!"
