@@ -1,9 +1,9 @@
 ---
 name: "ACM + Cisco"
-date: "March 30th 2017 8:30 PM"
-location: "SLC 1.102"
+date: ""
+location: "N/A"
 title: "Spring 2017"
-extra: "Bring your Comet Card for pizza!"
-description: "Join us for a talk with Cisco! They’ll bring an industry speaker who will talk about the important topics of Security, Software, and Collaboration. See you there!"
+extra: ""
+description: "Unfortunately, this event will be postponed. In the meantime, apply to an ACM officer at acmutd.co/apply! The application deadline is 11:59pm on April 3rd."
 featured: true
 ---
