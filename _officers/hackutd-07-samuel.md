@@ -1,7 +1,7 @@
 ---
-name: "Donghwan An"
+name: "Samuel Britton"
 role: "HackUTD Experience Coordinator"
 category: hackutd
 filter: "hackutd"
-photo: "team-hackutd-donghwan"
+photo: "team-hackutd-samuel"
 ---

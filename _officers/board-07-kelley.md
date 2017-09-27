@@ -1,7 +1,7 @@
 ---
 name: "Kelley Hoang"
-role: "Director of Projects"
+role: "Director of Design"
 category: board
-filter: "board,projects"
+filter: "board,hackutd"
 photo: "team-board-kelley"
 ---

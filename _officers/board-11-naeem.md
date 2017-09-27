@@ -1,7 +1,7 @@
 ---
 name: "Naeem Shaikh"
-role: "Director of Education, HackUTD Marketing Co-Coordinator"
+role: "Director of ACM Education"
 category: board
-filter: "board,hackutd"
+filter: "board,education"
 photo: "team-board-naeem"
 ---
