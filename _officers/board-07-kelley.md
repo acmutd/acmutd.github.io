@@ -2,6 +2,6 @@
 name: "Kelley Hoang"
 role: "Director of Design"
 category: board
-filter: "board"
+filter: "board,operations"
 photo: "team-board-kelley"
 ---
