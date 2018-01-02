@@ -1,7 +1,7 @@
 ---
-name: "Saman Attar"
+name: "Sai Pathuri"
 role: "Director of ACM Projects"
 category: board
 filter: "board,projects"
-photo: "team-board-saman"
+photo: "team-board-sai"
 ---

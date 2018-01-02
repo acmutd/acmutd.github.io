@@ -1,7 +1,7 @@
 ---
 name: "Jyh-Yih Yang"
-role: "Director of Finance"
+role: "Director of Finance, HackUTD Finance Coordinator"
 category: board
 filter: "board,hackutd"
-photo: "team-hackutd-frank"
+photo: "team-board-frank"
 ---

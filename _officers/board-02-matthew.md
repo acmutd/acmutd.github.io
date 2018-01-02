@@ -1,8 +1,8 @@
 ---
-name: "Bharat Arimilli"
+name: "Matthew Bierman"
 role: "Vice President"
 category: board
 filter: "board,hackutd,labs,operations,projects,education"
-photo: "team-board-bharat"
-link: "http://www.bharatarimilli.io"
+photo: "team-board-matthew"
+link: "http://bierman.io"
 ---

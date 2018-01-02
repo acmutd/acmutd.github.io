@@ -1,7 +1,7 @@
 ---
-name: "Wasim Abdalla"
+name: "Abhishaike Mahajan"
 role: "Projects Curriculum Coordinator"
 category: projects
 filter: "projects"
-photo: "team-projects-wasim"
+photo: "team-projects-abhishaike"
 ---

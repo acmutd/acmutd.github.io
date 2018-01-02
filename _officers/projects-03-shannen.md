@@ -1,7 +1,7 @@
 ---
-name: "Umar Khalid"
+name: "Shannen Barrameda"
 role: "Projects Industry Coordinator"
 category: projects
 filter: "projects"
-photo: "team-projects-umar"
+photo: "team-projects-shannen"
 ---

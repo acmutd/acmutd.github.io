@@ -1,7 +1,7 @@
 ---
-name: "Sai Pathuri"
+name: "Wasim Abdalla"
 role: "Projects Experience Coordinator"
 category: projects
 filter: "projects"
-photo: "team-projects-sai"
+photo: "team-projects-wasim"
 ---

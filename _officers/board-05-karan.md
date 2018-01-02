@@ -3,5 +3,5 @@ name: "Karan Shukla"
 role: "Director of Public Relations"
 category: board
 filter: "board"
-photo: "team-projects-karan"
+photo: "team-board-karan"
 ---

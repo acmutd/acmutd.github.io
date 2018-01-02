@@ -1,7 +1,7 @@
 ---
-name: "Shayan Monadjemi"
+name: "Humza Shazad"
 role: "Director of Industry"
 category: board
 filter: "board"
-photo: "team-board-shayan"
+photo: "team-board-humza"
 ---
