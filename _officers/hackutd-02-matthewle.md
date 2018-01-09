@@ -1,6 +1,6 @@
 ---
 name: "Matthew Le"
-role: "HackUTD Logistics Coordinator"
+role: "Director of HackUTD Junior"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-matthewle"

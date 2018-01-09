@@ -1,6 +1,6 @@
 ---
 name: "Aditi Panvelkar"
-role: "HackUTD Logistics Coordinator"
+role: "HackUTD Marketing Coordinator"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-aditi"
