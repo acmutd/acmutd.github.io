@@ -21,6 +21,27 @@
   border-left: 1px solid rgba(255, 255, 255, 0.0);
 }
 
+.main-hero {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.news-header {
+  margin-left: -15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.events-header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.featured-blog-image-holder {
+  background-color: gray !important;
+  background-blend-mode: multiply;
+}
+
 @media all and (max-width: 1023px) {
     .nav-1 .logo {
       max-height: 60px;

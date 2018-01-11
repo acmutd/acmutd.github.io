@@ -1,0 +1,123 @@
+---
+layout: none
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>The Association for Computing Machinery at UTD</title>
+    <meta name="description" content="We're thirty officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
+    <meta property="og:title" content="The Association for Computing Machinery at UTD"/>
+    <meta property="og:description" content="We're a team of thirty officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
+    <meta property="og:image" content="png/team-hero1.jpg"/>
+    {% include common-head.html %}
+  </head>
+  <body>
+		{% include common-nav.html %}
+		
+		<div class="main-container">
+      <section class="hero-slider large-image">
+        <ul class="slides">
+          <li>
+            <div class="background-image-holder overlay">
+              <img alt="Slide Background" class="background-image" src="png/team-hero1.jpg">
+            </div>
+            
+            <div class="container vertical-align">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="text-block">
+                    <div class="detail-line contrast-white-detail"></div>
+                    <h1 class="contrast-h1 contrast-white"><strong>Events.</strong></h1>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-8">
+                  <p class="lead contrast-white-p" style="font-size: 32px; line-height: 37px; font-weight: 300;">
+                    Here's what we're doing this semester.
+                  </p>
+                </div>
+              </div>
+            </div>            
+          </li>				
+        </ul>
+      </section>
+      
+      
+                
+      <section class="text-hero">          
+        {% assign events = site.events %}
+        {% for event in events %}
+        {% if event.featured %}
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="text-block">
+                  <div class="detail-line"></div>
+                  <h5>Featured Event</h5>
+                  <h1 class="contrast-h1">{{ event.name }}</h1>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col-sm-4">
+                <p class="lead">{{ event.date | date: '%B %-d %Y %I:%M %p' }}<br>
+                  {{ event.location }}<br>
+                  {{ event.extra }}
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="lead">{{ event.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {% endfor %}
+      </section>
+      
+      <section class="main-hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5 class="events-header">Events</h5>
+              {% assign events = site.events %}
+              {% for event in events %}
+                <ul>
+                  <li>
+                    <div>
+                      <h5>{{ event.name }}</h5>
+                      <p class="lead">{{ event.description }}</p>
+                      <p>
+                        {{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{ event.location }}<br><br>
+                      </p>
+                    </div>
+                  </li>
+                  <div class="detail-line"></div>
+                </ul>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+		  {% include common-footer.html %}
+		</div>
+				
+		<script src="js/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/placeholders.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+   	<script src="js/scripts.js"></script>
+  </body>
+</html>
