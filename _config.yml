@@ -28,6 +28,8 @@ defaults:
     values:
       layout: "post"
 
+excerpt_separator: <!--more-->
+
 collections:
 - events
 - officers
