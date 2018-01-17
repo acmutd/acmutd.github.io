@@ -81,22 +81,21 @@ layout: none
       <section class="main-hero">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
               <h5 class="events-header">Events</h5>
               {% assign events = site.events %}
               {% for event in events %}
-                <ul>
-                  <li>
-                    <div>
-                      <h5>{{ event.name }}</h5>
-                      <p class="lead">{{ event.description }}</p>
-                      <p>
-                        {{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{ event.location }}<br><br>
-                      </p>
-                    </div>
-                  </li>
-                  <div class="detail-line"></div>
-                </ul>
+              <div class="col-md-6 col-sm-12" style="height: 300px; float: right;">
+                <div class="narrow-feature">
+                  <div class="content">
+                    <h5>{{ event.name }}</h5>
+                    <p class="lead">{{ event.description }}</p>
+                    <p>
+                      {{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{ event.location }}<br><br>
+                    </p>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
             </div>
           </div>
