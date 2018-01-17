@@ -38,8 +38,20 @@
 }
 
 .featured-blog-image-holder {
-  background-color: gray !important;
+  background-color: transparent !important;
   background-blend-mode: multiply;
+}
+
+.featured-blog-image-holder::before {
+  background-color: black !important;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  content: "";
 }
 
 @media all and (max-width: 1023px) {
