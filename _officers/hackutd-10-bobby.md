@@ -1,8 +1,8 @@
 ---
 name: "Bobby Thakkar"
 role: "Assistant Director of HackUTD"
-category: board
-filter: "board,hackutd"
-photo: "team-board-bobby"
+category: hackutd
+filter: "hackutd"
+photo: "team-hackutd-bobby"
 link: "https://www.linkedin.com/in/bobbythakkarsg/"
 ---
