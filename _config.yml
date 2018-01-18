@@ -19,10 +19,21 @@ github_username:  acmutd
 # Build settings
 markdown: kramdown
 
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+excerpt_separator: <!--more-->
+
 collections:
-- openings
 - events
 - officers
-- alumni
-- press
+- openings
 - partners
+- posts
+- announcements
