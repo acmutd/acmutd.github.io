@@ -76,6 +76,14 @@
         width: 50%;
         margin-left: 22vw;
     }
+
+    .home-hero {
+      padding-left: 20px;
+    }
+
+    .events-section {
+      padding-left: 0px;
+    }
 }
 
 @media (max-width: 640px) {
