@@ -1,6 +1,6 @@
 ---
 title: "ACM's Spring Updates"
-date: "January 17, 2017 9:00 PM"
+date: "January 17, 2018 9:00 PM"
 categories: acm
 featured: true
 image: "http://www.utdallas.edu/campuslife/img/live-here.jpg"
