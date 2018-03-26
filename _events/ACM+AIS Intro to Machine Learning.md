@@ -1,4 +1,3 @@
-
 ---
 name: "ACM + AIS Intro to Machine Learning"
 date: "March 29, 2018 8:30 PM"
