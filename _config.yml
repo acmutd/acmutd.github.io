@@ -19,6 +19,11 @@ github_username:  acmutd
 # Build settings
 markdown: kramdown
 
+paginate: 3
+paginate_path: "/blog/page:num/"
+plugins:
+  - jekyll-paginate
+
 # Default values
 defaults:
   -
