@@ -58,7 +58,7 @@ layout: none
               
               <div class="row mb32 mb-xs-16">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                  <div class="post-image" style="background-image: url({{post.image}}"></div>
+                  <div class="blog-post-image" style="background-image: url({{post.image}}"></div>
                   <p class="lead">
                     {{ post.excerpt }}
                   </p>
@@ -77,7 +77,7 @@ layout: none
       </section>
 
       <section>
-        <div class="pagination">
+        <div class="blog-pagination">
           {% if paginator.previous_page %}
             <a class="text-link text-black previous-page" href="{{ paginator.previous_page_path }}">Previous</a>
           {% endif %}

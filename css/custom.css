@@ -54,7 +54,7 @@
   content: "";
 }
 
-.pagination {
+.blog-pagination {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -62,7 +62,7 @@
   text-align: center;
 }
 
-.post-image {
+.blog-post-image {
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
