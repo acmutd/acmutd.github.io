@@ -15,7 +15,7 @@ An interview with the Bitcoin App team of ACM Projects.
 Oliver Darne, Taaha Kamal, Devanshi Padsala are the members of ACM Project's Smart Lock team. Sai Pathuri, the director of ACM Projects, is their mentor through this process. I sat down with the team last build night to ask them a few questions.
 
 
-#### Why did you decide to join ACM Projcts?
+#### Why did you decide to join ACM Projects?
 
 Oliver: I wanted to have a project that encapsulates my skill set. It's a great talking point in a job interview.
 
