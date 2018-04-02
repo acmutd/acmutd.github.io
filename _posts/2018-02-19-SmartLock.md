@@ -42,7 +42,7 @@ Taaha: Our project is pretty practicle. I was looking up the prices of smartlock
 Dev: I feel like i learn something brand new every build night and that's been really exciting.
 
 
-#### What's your favourite videogame?
+#### What's your favorite videogame?
 
 Oliver: *Civilization V*
 
