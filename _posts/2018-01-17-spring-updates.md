@@ -3,7 +3,7 @@ title: "ACM's Spring Updates"
 date: "January 17, 2018 9:00 PM"
 categories: acm
 featured: true
-image: "http://www.utdallas.edu/campuslife/img/live-here.jpg"
+image: "https://www.utdallas.edu/campuslife/img/live-here.jpg"
 ---
 
 Welcome back to a chilly spring semester! We have a bunch of exciting updates to share with you for the new year.
