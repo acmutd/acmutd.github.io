@@ -114,9 +114,10 @@
     }
 }
 
-@media all and (max-width: 767px) {
-  .mobile-break {
-    display: block !important;
+@media all and (max-width: 767px) and (min-width: 450px) {
+  .officers {
+    width: 50% !important;
+    float: left;
   }
 }
 
