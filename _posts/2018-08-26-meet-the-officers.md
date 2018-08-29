@@ -6,7 +6,7 @@ featured: true
 image: "https://www.utdallas.edu/campuslife/img/live-here.jpg"
 ---
 
-Hello hello! Meet your lovely ACM Officers :^)
+Hello hello! Meet the incredible people behind ACM!
 
 <!--more-->
 
@@ -92,11 +92,28 @@ Be a genius or go to class
 ### Kelley Hoang - Design
 
 ### Krithika Suresh - Marketing
+--->
 
 ### Ritika Shrivastava - Public Relations
 
+![](/png/meet-ritika.jpg)
+
+#### *Tell us about yourself*
+Tell me about yourself (Major, year, experiences, where u from, color of your toothbrush, favorite dessert, etc.)?
+I am a junior studying Computer Science at UT Dallas. I am a 5 years trained Kathak dancer and I am super interested in screenplays. I LOVEEE authentic Asian food that is not too greasy. My favourite TV show is How to Get Away with Murder. I have read the screenplay of Gone Girl and the TV show Big Little Lies about 5 times each.  I tend to write in British English as I grew up in India. KAYAKING IS AWESOME!
+
+#### *What's at the top of your bucket list?*
+Get a license to scuba dive and then go scuba diving 😀
+
+#### *Advice for the fishies*
+Get over the fear of failing and give things a try any way 😀 You never know what could happen!
+
+#### *Anything else that's interesting?*
+Try to explore your creative sides as well as your technical and maybe combine the two 😀
+
+<!--
 ### Reena Suh - Communications
---->
+-->
 
 ### Bharat Arimilli - Labs
 
