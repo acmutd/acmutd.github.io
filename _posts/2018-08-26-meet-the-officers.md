@@ -3,7 +3,7 @@ title: "Meet the officers!"
 date: "August 23, 2018 9:00 PM"
 categories: acm
 featured: true
-image: "https://www.utdallas.edu/campuslife/img/live-here.jpg"
+image: "/png/meet-the-team.jpeg"
 ---
 
 Hello hello! Meet the incredible people behind ACM!
@@ -96,7 +96,7 @@ Be a genius or go to class
 
 ### Ritika Shrivastava - Public Relations
 
-![](/png/meet-ritika.jpg)
+![](/png/meet-ritika.JPG)
 
 #### *Tell us about yourself*
 Tell me about yourself (Major, year, experiences, where u from, color of your toothbrush, favorite dessert, etc.)?
