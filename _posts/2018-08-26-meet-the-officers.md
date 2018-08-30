@@ -76,7 +76,19 @@ Travel to every single continent. I've only been to 3 so far.
 #### *Advice for the fishies*
 Don't be afraid to talk to upperclassmen! and take risks even if they're quite scary! try everything! being a student is a blessing, so take advantage of every single moment.
 
-<!--- ### Matthew Le - HackUTD --->
+### Matthew Le - HackUTD
+
+![](/png/meet-matt.jpg)
+***I am not a hugger and I didn't realize how hairy Rafiki's beard was.***
+
+#### *Tell us about yourself*
+Heyo! My name is Matthew and I am a junior majoring in Computer Science. If I look familiar, it may because I work at the Computer Science Mentor Center and you probably asked me to help you with your homework. I was born in Florida and currently live in the far away land called Plano. I primarily go to hackathons to build dumb things and not win. Hackathon fact: the experience you get is the true prize.
+
+#### *What's at the top of your bucket list?*
+Go to New Zealand and re-enact the Lord of the Rings.
+
+#### *Advice for the fishies*
+As a freshman, you will have the most free time you will ever have in your college career. Use that time to get ahead in whatever goals you set out to do in college, whether that goal is academic, social, or professional. UT Dallas has plenty of opportunities and organizations to get involved with. Join the ones that interest you even if you feel like it may not give you a huge return initially.  Also, don't do drugs.
 
 ### Frank Yang - Finance
 #### *Tell us about yourself*
@@ -99,7 +111,6 @@ Be a genius or go to class
 ![](/png/meet-ritika.JPG)
 
 #### *Tell us about yourself*
-Tell me about yourself (Major, year, experiences, where u from, color of your toothbrush, favorite dessert, etc.)?
 I am a junior studying Computer Science at UT Dallas. I am a 5 years trained Kathak dancer and I am super interested in screenplays. I LOVEEE authentic Asian food that is not too greasy. My favourite TV show is How to Get Away with Murder. I have read the screenplay of Gone Girl and the TV show Big Little Lies about 5 times each.  I tend to write in British English as I grew up in India. KAYAKING IS AWESOME!
 
 #### *What's at the top of your bucket list?*
