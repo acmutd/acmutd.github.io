@@ -6,5 +6,5 @@ description: "Come learn how to put your best foot forward at the Crushing Your 
 - How to walk through an algorithm problem
 - How to brainstorm solutions
 - How to discuss the problem with your interviewer"
-featured: true
+featured: false
 ---
