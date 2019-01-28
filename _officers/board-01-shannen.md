@@ -1,8 +1,8 @@
 ---
 name: "Shannen Barrameda"
-role: "Director of ACM Projects"
+role: "President"
 category: board
-filter: "board,projects"
+filter: "board,hackutd,labs,operations,projects,education"
 photo: "team-board-shannen"
 link: "https://www.linkedin.com/in/shannen-barrameda/"
 ---

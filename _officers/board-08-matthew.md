@@ -1,8 +1,8 @@
 ---
 name: "Matthew Bierman"
-role: "Vice President"
+role: "Director of ACM Projects, Director of ACM Ignite"
 category: board
-filter: "board,hackutd,labs,operations,projects,education"
+filter: "board,projects,ignite"
 photo: "team-board-matthew"
 link: "http://bierman.io"
 ---

@@ -342,6 +342,18 @@ layout: none
 						</div>
 						{% endfor %}
 
+						{% assign officers = site.officers | where: "category", "ignite" %}
+						{% for officer in officers %}
+						<div class="col-md-3 col-sm-4 project team-2 officers" data-filter="{{ officer.filter }}">
+							<div class="background-image-holder">
+								<img alt="project image" class="background-image" src="png/{% if officer.photo %}{{ officer.photo }}{% else %}team-officer-default{% endif %}.jpg">
+							</div>
+							<h3>{{ officer.name }}</h3>
+							<span>{{ officer.role }}</span>
+							{% if officer.link %}<h4><a href="{{ officer.link }}"><i class="ti ti-link"></i></a></h4>{% endif %}
+						</div>
+						{% endfor %}
+
 						{% assign officers = site.officers | where: "category", "operations" %}
 						{% for officer in officers %}
 						<div class="col-md-3 col-sm-4 project team-2 officers" data-filter="{{ officer.filter }}">
@@ -354,7 +366,7 @@ layout: none
 						</div>
 						{% endfor %}
                         
-                        {% assign officers = site.officers | where: "category", "education" %}
+            {% assign officers = site.officers | where: "category", "education" %}
 						{% for officer in officers %}
 						<div class="col-md-3 col-sm-4 project team-2 officers" data-filter="{{ officer.filter }}">
 							<div class="background-image-holder">

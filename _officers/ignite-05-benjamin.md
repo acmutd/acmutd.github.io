@@ -1,8 +1,8 @@
 ---
 name: "Benjamin Hill"
-role: "Projects Officer"
-category: projects
-filter: "projects"
+role: "ACM Ignite Officer"
+category: ignite
+filter: "ignite"
 photo: "team-projects-benjamin"
 link: "https://www.linkedin.com/in/benjaminjhill/"
 ---
