@@ -1,6 +1,6 @@
 ---
-name: "ACM + Google"
-date: "September 17, 2018 8:30 PM"
+name: "Intern Panel"
+date: "January 31, 2019 8:30 PM"
 location: "TBD"
 description: "TBD"
 featured: false
