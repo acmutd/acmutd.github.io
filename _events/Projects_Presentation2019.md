@@ -1,4 +1,3 @@
-
 ---
 name: "Projects Presentation Night"
 date: "April 25, 2019 8:30 PM"

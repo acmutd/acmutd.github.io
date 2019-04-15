@@ -1,4 +1,3 @@
-
 ---
 name: "HackUTD C# Unity Workshop"
 date: "April 23, 2019 8:30 PM"
