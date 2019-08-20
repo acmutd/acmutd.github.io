@@ -384,8 +384,10 @@ layout: none
 								<div class="col-md-6 col-sm-12">
 									<div class="narrow-feature">
 										<div class="content">
-											<h5>No openings</h5>
-											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
+											<!--<h5>No openings</h5>
+											<p>Thanks for your interest, but we're not hiring on this team at this time.</p> --->
+											<h5>Learn more here!</h5>
+											<p><a href="https://www.hackutd.co" class="text-link"> HackUTD Website</a></p>
 										</div>
 									</div>
 								</div>
@@ -461,7 +463,7 @@ layout: none
 						<div class="col-sm-4">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>ACM Ignite Program</h5>
+								<h5>ACM Ignite</h5>
 								<h4>Apply for ACM's Ignite program designed for more advanced students</h4>
 							</div>
 						</div>
@@ -485,7 +487,7 @@ layout: none
 												<h5>{{ opening.title }}</h5>
 												{{ opening.content }}
 												{% if opening.application %}
-												<p><a href={{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												<p><a href="{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
 												{% else %}
 												<p><a href="/applications" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
 												{% endif %}
@@ -529,7 +531,7 @@ layout: none
 												<h5>{{ opening.title }}</h5>
 												{{ opening.content }}
 												{% if opening.application %}
-												<p><a href={{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
+												<p><a href="{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
 												{% else %}
 												<p><a href="/applications" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
 												{% endif %}
