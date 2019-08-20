@@ -461,13 +461,13 @@ layout: none
 						<div class="col-sm-4">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>ACM Mentor Program</h5>
-								<h4>Apply for ACM's mentor program designed for incoming freshmen</h4>
+								<h5>ACM Ignite Program</h5>
+								<h4>Apply for ACM's Ignite program designed for more advanced students</h4>
 							</div>
 						</div>
 					
 						<div class="col-sm-8">
-							{% assign openings = site.openings | where: "team", "mentor" %}
+							{% assign openings = site.openings | where: "team", "ignite" %}
 							{% if openings.size == 0 %}
 								<div class="col-md-6 col-sm-12">
 									<div class="narrow-feature">
@@ -505,13 +505,13 @@ layout: none
 						<div class="col-sm-4">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>ACM Ignite Program</h5>
-								<h4>Apply for ACM's Ignite program designed for more advanced students</h4>
+								<h5>ACM Mentor Program</h5>
+								<h4>Apply for ACM's mentor program designed for incoming freshmen</h4>
 							</div>
 						</div>
 					
 						<div class="col-sm-8">
-							{% assign openings = site.openings | where: "team", "ignite" %}
+							{% assign openings = site.openings | where: "team", "mentor" %}
 							{% if openings.size == 0 %}
 								<div class="col-md-6 col-sm-12">
 									<div class="narrow-feature">
