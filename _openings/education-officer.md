@@ -7,4 +7,4 @@ We are looking for officers to help with our growing ACM Education branch! ACM E
 
 Applicants should have initiative, work well in a team, understand the logistics of event planning, and want to give back to the ECS community!
 
-The deadline for this application is Dec 13th, 2019 at 11:59 CST.
+The deadline for this application is Sunday, Dec 15th, 2019 at 11:59 CST.
