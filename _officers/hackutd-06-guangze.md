@@ -1,6 +1,6 @@
 ---
 name: "Guangze Zu"
-role: "HackUTD Experience Coordinator"
+role: "HackUTD Experience Lead"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-guangze"
