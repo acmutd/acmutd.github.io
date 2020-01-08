@@ -166,3 +166,11 @@
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
+
+.zoom {
+  transition: .1s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
