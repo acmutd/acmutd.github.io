@@ -3,6 +3,5 @@ title:  "Ignite Participants"
 team: ignite
 application: /applications/ignite
 ---
-ACM Ignite is a semester long business & tech development program to help experienced students build a marketable product. 
-Ignite will be largely self-guided, so we're looking for people with past projects and/or work experience. See ACM Projects for beginners.
-The deadline for this application is Aug 28th, 2019 at 11:59 CST.
+ACM Ignite is a semester-long, project-based competition for students to build something cool with a team of awesome people. It is meant for students who already have some experience under their belts and want to experiment, learn, and collaborate.
+The deadline for this application is January 28, 2019 at 11:59 CST.
