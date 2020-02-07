@@ -1,6 +1,6 @@
 ---
 name: "Alexander Osypov"
-role: "HackUTD Expereince Coordinator"
+role: "HackUTD Experience Coordinator"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-alex"
