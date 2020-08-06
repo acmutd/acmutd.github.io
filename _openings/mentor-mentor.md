@@ -1,6 +1,6 @@
 ---
 title:  "Mentor Application"
-team: mentor
+team: education
 application: /applications/mentor
 ---
 We are currently looking for Mentors for our Mentor Program! 
