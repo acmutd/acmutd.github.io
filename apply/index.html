@@ -549,7 +549,7 @@ layout: none
 						<div class="col-sm-4">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>ACM Ignite</h5>
+								<h5>ACM Industry</h5>
 								<h4>Apply for ACM's Ignite program designed for more advanced students</h4>
 							</div>
 						</div>
@@ -593,51 +593,7 @@ layout: none
 						<div class="col-sm-4">
 							<div class="text-block">
 								<div class="detail-line"></div>
-								<h5>ACM Mentor Program</h5>
-								<h4>Apply for ACM's mentor program designed for incoming freshmen</h4>
-							</div>
-						</div>
-					
-						<div class="col-sm-8">
-							{% assign openings = site.openings | where: "team", "mentor" %}
-							{% if openings.size == 0 %}
-								<div class="col-md-12 col-sm-12">
-									<div class="narrow-feature">
-										<div class="content">
-											<h5>No openings</h5>
-											<p>Thanks for your interest, but we're not hiring on this team at this time.</p>
-										</div>
-									</div>
-								</div>
-							{% else %}
-								{% for opening in openings %}
-								    <div class="col-md-12 col-sm-12">
-										<div class="narrow-feature">
-											<div class="content">
-												<h5>{{ opening.title }}</h5>
-												{{ opening.content }}
-												{% if opening.application %}
-												<p><a href="{{ opening.application }}" class="text-link">Apply at {{ opening.application }} <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
-												{% else %}
-												<p><a href="/applications" class="text-link">Apply <i class="icon ti ti-arrow-right arrow_right"></i></a></p>
-												{% endif %}
-											</div>
-										</div>
-									</div>
-							    {% endfor %}
-							{% endif %}
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="narrow-features">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="text-block">
-								<div class="detail-line"></div>
-								<h5>ACM Labs</h5>
+								<h5>ACM Development</h5>
 								<h4>Openings for ACM's research &amp; development team</h4>
 							</div>
 						</div>
