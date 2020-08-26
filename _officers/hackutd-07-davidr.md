@@ -1,8 +1,8 @@
 ---
 name: "David Richey"
-role: "HackUTD Technical Coordinator, Ignite Officer"
+role: "HackUTD Technical Lead"
 category: hackutd
-filter: "hackutd,ignite"
+filter: "hackutd"
 photo: "team-hackutd-davidr"
 link: "https://www.linkedin.com/in/darichey/"
 ---
