@@ -1,7 +1,7 @@
 ---
-name: "TI X IEEE X ACM Technical Workshop"
-date: "October 2, 2020 7:00 PM"
+name: "Samsung Ask Me Anything"
+date: "October 14, 2020 6:00 PM"
 location: "Online"
-description: "TI Technical workshop in collaboration with IEEE. IEEE will lead in the collaboration and ACM will help with marketing the event"
+description: "Ask Samsung Anything! Sign up for a chance to win a saamsung tablet. Collaboration effort with SWE UTD & IEEE UTD"
 featured: false
 ---
