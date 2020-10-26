@@ -1,5 +1,5 @@
 ---
-title: "ACM Hacktoberfest"
-description: "Celebrate open source by attending talks, workshops and community events. Sign up at https://hacktoberfest.acmutd.co"
+title: "ACM Scholarship"
+description: "ACM has launched a new scholarship! More info will be posted soon!"
 featured: true
 ---
