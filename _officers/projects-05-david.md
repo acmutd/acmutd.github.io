@@ -1,8 +1,8 @@
 ---
 name: "David Ochoa"
-role: "ACM Projects Officer, HackUTD Technical Coordinator"
+role: "ACM Projects Officer"
 category: projects
-filter: "projects,hackutd"
+filter: "projects"
 photo: "team-projects-david"
 link: "https://www.linkedin.com/in/davidaochoa/"
 ---
