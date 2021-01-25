@@ -106,7 +106,7 @@ layout: none
 						<div class="row">
 							<div class="col-sm-4">
 								<p class="lead">{{ event.date | date: '%B %-d %Y %I:%M %p' }}<br>
-									{{ event.location }}<br>
+									<a href={{event.link}} target="_blank" rel="noopener noreferrer">{{ event.location }}</a><br>
 									{{ event.extra }}
 								</p>
 							</div>
@@ -125,7 +125,6 @@ layout: none
 						<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
 							<p class="super-lead left-align-mobile">
 								We're the Association for Computing Machinery at UT Dallas. <br>We're focused on giving back to the engineering community here at UT Dallas and beyond through events, projects, HackUTD, and more. <a class="text-link" href="/about.html">Learn more. <i class="icon ti ti-arrow-right arrow_right"></i></a> 
-								As featured by the NY Times, we're the next up and coming Beyonce!!
 							</p>
 						</div>
 					</div>
