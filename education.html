@@ -159,53 +159,95 @@ layout: none
       </section>
 
       <!-- to be added later on -->
-      {% assign openings = site.workshops | where: "team", "development" %} 
+      {% assign openings = site.workshops | where: "semester", "fall2020" %} 
       {% for opening in openings %}
       <section class="narrow-features">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-8">
               <div class="text-block">
                 <div class="detail-line"></div>
-                <h5>ACM Workshops</h5>
-                <h4>Checkout our amazing workshops and learn more during your free time</h4>
+                <h5>{{ opening.title }}</h5>
+                {{ opening.description }}
+                <!-- <h4>Checkout our amazing workshops and learn more during your free time</h4> -->
               </div>
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <div class="col-md-12 col-sm-12">
                 <div class="narrow-feature">
                   <div class="content">
-                    <h5>{{ opening.title }}</h5>
-                    {{ opening.content }} {% if opening.application %}
+                    {% if opening.github %}
                     <p>
-                      <a href="{{ opening.application }}" class="text-link"
-                        >GitHub<i class="icon ti ti-arrow-right arrow_right"></i
-                      ></a>
-                    </p>
-                    {% if opening.data-link %}
-                    <p>
-                      <a href="{{ opening.data-link }}" class="text-link"
-                        >Position Details<i
+                      <a href="{{ opening.github }}" class="text-link"
+                        >Github<i
                           class="icon ti ti-arrow-right arrow_right"
                         ></i
                       ></a>
                     </p>
-                    {% endif %} {% else %}
+                    {% endif %}
+                    {% if opening.stream %}
                     <p>
-                      <a href="/applications" class="text-link"
-                        >Apply <i class="icon ti ti-arrow-right arrow_right"></i
+                      <a href="{{ opening.stream }}" class="text-link"
+                        >Recording<i
+                          class="icon ti ti-arrow-right arrow_right"
+                        ></i
+                      ></a>
+                    </p>
+                    {% endif %}
+                    {% if opening.trackit %}
+                    <p>
+                      <a href="https://trackit.acmutd.co" class="text-link"
+                        >TrackIT: {{opening.trackit}}<i
+                          class="icon ti ti-arrow-right arrow_right"
+                        ></i
+                      ></a>
+                    </p>
+                    {% endif %}
+                    {% if opening.custom-text %}
+                    <p>
+                      <a href="{{ opening.custom-link }}" class="text-link"
+                        >{{opening.custom-text}}<i
+                          class="icon ti ti-arrow-right arrow_right"
+                        ></i
                       ></a>
                     </p>
                     {% endif %}
                   </div>
                 </div>
               </div>
-              {% endfor %}
             </div>
+
+            <!-- <div class="col-sm-4">
+              <div class="col-md-12 col-sm-12">
+                <div class="narrow-feature">
+                  <div class="content">
+                    {% if opening.trackit %}
+                    <p>
+                      <a href="https://trackit.acmutd.co" class="text-link"
+                        >TrackIT: {{opening.trackit}}<i
+                          class="icon ti ti-arrow-right arrow_right"
+                        ></i
+                      ></a>
+                    </p>
+                    {% endif %}
+                    {% if opening.custom-text %}
+                    <p>
+                      <a href="{{ opening.custom-link }}" class="text-link"
+                        >{{opening.custom-text}}<i
+                          class="icon ti ti-arrow-right arrow_right"
+                        ></i
+                      ></a>
+                    </p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
       </section>
+      {% endfor %}
       {% include common-footer.html %}
     </div>
 
