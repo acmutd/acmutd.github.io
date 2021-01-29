@@ -72,9 +72,9 @@ layout: none
                 ACM Education helps give students valuable skills needed for the
                 workforce. While college degrees may be more theory based, we
                 aim to give students knowledge not typically attained in the
-                classroom. We run the Interview Prep Series, Mentor Program, and
-                various technical workshops during the school year. Feel free to
-                reach us at
+                classroom. We run the Technical Interview Prep Program (TIP),
+                Mentor Program, and various technical workshops during the
+                school year. Feel free to reach us at
                 <a href="mailto:education@acmutd.co">education@acmutd.co</a>
               </p>
             </div>
@@ -159,8 +159,8 @@ layout: none
       </section>
 
       <!-- to be added later on -->
-      {% assign openings = site.workshops | where: "semester", "fall2020" %} 
-      {% for opening in openings %}
+      {% assign openings = site.workshops | where: "semester", "fall2020" %} {%
+      for opening in openings %}
       <section class="narrow-features">
         <div class="container">
           <div class="row">
@@ -180,13 +180,10 @@ layout: none
                     {% if opening.github %}
                     <p>
                       <a href="{{ opening.github }}" class="text-link"
-                        >Github<i
-                          class="icon ti ti-arrow-right arrow_right"
-                        ></i
+                        >Github<i class="icon ti ti-arrow-right arrow_right"></i
                       ></a>
                     </p>
-                    {% endif %}
-                    {% if opening.stream %}
+                    {% endif %} {% if opening.stream %}
                     <p>
                       <a href="{{ opening.stream }}" class="text-link"
                         >Recording<i
@@ -194,8 +191,7 @@ layout: none
                         ></i
                       ></a>
                     </p>
-                    {% endif %}
-                    {% if opening.trackit %}
+                    {% endif %} {% if opening.trackit %}
                     <p>
                       <a href="https://trackit.acmutd.co" class="text-link"
                         >TrackIT: {{opening.trackit}}<i
@@ -203,8 +199,7 @@ layout: none
                         ></i
                       ></a>
                     </p>
-                    {% endif %}
-                    {% if opening.custom-text %}
+                    {% endif %} {% if opening.custom-text %}
                     <p>
                       <a href="{{ opening.custom-link }}" class="text-link"
                         >{{opening.custom-text}}<i
@@ -247,8 +242,7 @@ layout: none
           </div>
         </div>
       </section>
-      {% endfor %}
-      {% include common-footer.html %}
+      {% endfor %} {% include common-footer.html %}
     </div>
 
     <script src="js/jquery.min.js"></script>
