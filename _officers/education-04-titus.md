@@ -3,5 +3,6 @@ name: "Titus Varghese"
 role: "Education Officer"
 category: education
 filter: "education"
-photo: "education-placeholder"
+photo: "team-education-titus"
+link: "http://linkedin.com/in/titus-g-varghese"
 ---
