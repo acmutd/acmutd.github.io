@@ -1,7 +1,8 @@
 ---
-name: "Data Mining Workshop"
-date: "February 2, 2021 7:00 PM"
+name: "Introduction to Data Analysis"
+date: "February 23, 2021 7:00 PM"
 location: "MS Teams"
-description: "Learn data mining with the hackutd team in preparation for HackUTD VII!"
-featured: true
+description: "Learn data analysis with the hackutd team in preparation for HackUTD VII!"
+link: https://workshop.hackutd.co/datamining
+featured: false
 ---

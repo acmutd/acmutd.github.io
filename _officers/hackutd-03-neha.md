@@ -1,6 +1,6 @@
 ---
 name: "Neha Rode"
-role: "HackUTD Marketing Coordinator"
+role: "HackUTD Marketing Lead"
 category: hackutd
 filter: "hackutd"
 photo: "team-hackutd-neha"
