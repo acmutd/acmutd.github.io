@@ -1,6 +1,6 @@
 ---
 name: "Bea Agron"
-role: "Director of Design"
+role: "Co-Director of Media"
 category: board
 filter: "board"
 photo: "team-board-bea"

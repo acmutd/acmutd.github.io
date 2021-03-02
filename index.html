@@ -2,175 +2,238 @@
 layout: none
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>ACM · The Association for Computing Machinery at UTD</title>
-        <meta property="og:title" content="ACM · The Association for Computing Machinery at UTD"/>
-        <meta name="description" content="We're a team of students with one goal — a greater, more collaborative engineering community at UT Dallas. We run events, workshops, HackUTD, projets, and more.">
-        <meta property="og:description" content="We're a team of students with one goal — a greater, more collaborative engineering community at UT Dallas. We run events, workshops, HackUTD, projets, and more.">
-        {% include common-head.html %}
-    </head>
-    <body>
-		{% include common-nav.html %}
-		
-		<div class="main-container">
-			{% include common-slider.html %}
-			<section class="main-hero home-hero">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-8">
-							<h5 class="news-header">Here's What's New</h5>
-							<div class="row">
-								{% assign announcements = site.announcements %}
-								{% for announcement in announcements limit:3 %}
-								{% if announcement.featured %}
-									<div class="col-sm-4">
-										<div class="detail-line"></div>
-										<h5>{{ announcement.title }}</h5>
-										<p>
-											{{ announcement.description | markdownify }}
-										</p>
-									</div>
-								{% endif %}
-								{% endfor %}
-							</div>
-						</div>
+  <head>
+    <title>ACM · The Association for Computing Machinery at UTD</title>
+    <meta
+      property="og:title"
+      content="ACM · The Association for Computing Machinery at UTD"
+    />
+    <meta
+      name="description"
+      content="We're a team of students with one goal — a greater, more collaborative engineering community at UT Dallas. We run events, workshops, HackUTD, projets, and more."
+    />
+    <meta
+      property="og:description"
+      content="We're a team of students with one goal — a greater, more collaborative engineering community at UT Dallas. We run events, workshops, HackUTD, projets, and more."
+    />
+    {% include common-head.html %}
+  </head>
+  <body>
+    {% include common-nav.html %}
 
-						<div class="col-sm-4 events-section">
-							<h5 class="events-header">Events</h5>
-							{% assign events = site.events %}
-							{% for event in events limit:2 %}
-								<ul>
-									<li>
-										<div>
-											<h5>{{ event.name }}</h5>
-											<p>
-												{{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{ event.location }}<br><br>
-											</p>
-											<p><a href="{{ event.link }}" target="_blank">
-												{{ event.link }}
-											  </a></p>
-										</div>
-									</li>
-									<div class="detail-line"></div>
-								</ul>
-							{% endfor %}
-							<h5><a class="text-link text-right" href="/events.html">View All Events</a></h5>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div class="main-container">
+      {% include common-slider.html %}
+      <section class="main-hero home-hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <h5 class="news-header">Here's What's New</h5>
+              <div class="row">
+                {% assign announcements = site.announcements %} {% for
+                announcement in announcements limit:3 %} {% if
+                announcement.featured %}
+                <div class="col-sm-4">
+                  <div class="detail-line"></div>
+                  <h5>{{ announcement.title }}</h5>
+                  <p>{{ announcement.description | markdownify }}</p>
+                </div>
+                {% endif %} {% endfor %}
+              </div>
+            </div>
 
-			<section class="hero-project" id="blog-container">
-					{% assign posts = site.posts %}
-					{% for post in posts limit:1 %}
-					{% if post.featured %}
+            <div class="col-sm-4 events-section">
+              <h5 class="events-header">Events</h5>
+              {% assign events = site.events %} {% for event in events limit:2
+              %}
+              <ul>
+                <li>
+                  <div>
+                    <h5>{{ event.name }}</h5>
+                    <p>
+                      {{ event.date | date: '%B %-d %Y %I:%M %p' }} · {{
+                      event.location }}<br /><br />
+                    </p>
+                    <p>
+                      <a href="{{ event.link }}" target="_blank">
+                        {{ event.link }}
+                      </a>
+                    </p>
+                  </div>
+                </li>
+                <div class="detail-line"></div>
+              </ul>
+              {% endfor %}
+              <h5>
+                <a class="text-link text-right" href="/events.html"
+                  >View All Events</a
+                >
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
 
-					<div class="background-image-holder featured-blog-image-holder">
-						<img alt="Slide Background" class="background-image" src="{{ post.image }}">
-					</div>
-				
-					<div class="container">
-						<div class="row">
-							<div class="col-md-5 col-sm-7">
-								<div class="text-block">
-									<div class="detail-line"></div>
-									<h2 class="text-white"><strong>From the ACM Blog</strong> <br> {{ post.title }}</h2>
-								</div>
-								<h5 class="text-white">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</h5>
-								<a class="text-link text-white" href="{{ post.url }}">Read <i class="icon ti ti-arrow-right arrow_right"></i></a>
-							</div>
-						</div>
-					</div>
-				
-					{% endif %}
-					{% endfor %}
-				</section>
-            
-			<section class="text-hero">          
-				{% assign events = site.events %}
-				{% for event in events %}
-				{% if event.featured %}
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="text-block">
-									<div class="detail-line"></div>
-									<h5>Featured Event</h5>
-									<h1 class="contrast-h1">{{ event.name }}</h1>
-								</div>
-							</div>
-						</div>
-					
-						<div class="row">
-							<div class="col-sm-4">
-								<p class="lead">{{ event.date | date: '%B %-d %Y %I:%M %p' }}<br>
-									<a href={{event.link}} target="_blank" rel="noopener noreferrer">{{ event.location }}</a><br>
-									{{ event.extra }}
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<p class="lead">{{ event.description }}</p>
-							</div>
-						</div>
-					</div>
-				{% endif %}
-				{% endfor %}
-			</section>
+      <section class="hero-project" id="blog-container">
+        {% assign posts = site.posts %} {% for post in posts limit:1 %} {% if
+        post.featured %}
 
-			<section class="large-pad">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-							<p class="super-lead left-align-mobile">
-								We're the Association for Computing Machinery at UT Dallas. <br>We're focused on giving back to the engineering community here at UT Dallas and beyond through events, projects, HackUTD, and more. <a class="text-link" href="/about.html">Learn more. <i class="icon ti ti-arrow-right arrow_right"></i></a> 
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+        <div class="background-image-holder featured-blog-image-holder">
+          <img
+            alt="Slide Background"
+            class="background-image"
+            src="{{ post.image }}"
+          />
+        </div>
 
-			<section>
-				<div class="container">
-					<h2 style="text-align: center; font-weight: 600; font-size: 24px;">Sponsors</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-sm-7">
+              <div class="text-block">
+                <div class="detail-line"></div>
+                <h2 class="text-white">
+                  <strong>From the ACM Blog</strong> <br />
+                  {{ post.title }}
+                </h2>
+              </div>
+              <h5 class="text-white">
+                {{ post.excerpt | remove: '
+                <p>' | remove: '</p>
+                ' }}
+              </h5>
+              <a class="text-link text-white" href="{{ post.url }}"
+                >Read <i class="icon ti ti-arrow-right arrow_right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
 
-					 <div class="row mobile-grid">
-							<div class="col-md-2 col-sm-3 col-xs-6 h-100 d-inline-block col-md-offset-1">
-									<a href="https://paycom.com"><img alt="Paycom" src="logo/sponsor-paycom.png"></a>
-							</div>
-							<div class="col-md-2 col-sm-3 col-xs-6 h-100">
-									<a href="https://www.cbre.us/"><img alt="CBRE" src="logo/sponsor-cbre.png"></a>
-							</div>
-							<div class="col-md-2 col-sm-3 col-xs-6 h-100">
-									<a href="https://www.credera.com/"><img alt="Credera" src="logo/sponsor-credera.png"></a>
-							</div>
-							<div class="col-md-2 col-sm-3 col-xs-6 h-100">
-									<a href="https://www.cisco.com/"><img alt="Cisco" src="logo/sponsor-cisco.png"></a>
-							</div>
-							<div class="col-md-2 col-sm-3 col-xs-6 h-100">
-								<a href="https://www.ti.com/"><img alt="Texas Instruments" src="logo/sponsor-texas-instruments.jpg"></a>
-						</div>
-					</div>	 
-			</section>
-			
-			{% include common-footer.html %}
-		</div>
-		
-		<script src="js/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/flexslider.min.js"></script>
-		<script src="js/lightbox.min.js"></script>
-		<script src="js/twitterfetcher.min.js"></script>
-		<script src="js/spectragram.min.js"></script>
-		<script src="js/smooth-scroll.min.js"></script>
-		<script src="js/jquery.plugin.min.js"></script>
-		<script src="js/placeholders.min.js"></script>
-		<script src="js/countdown.min.js"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+        {% endif %} {% endfor %}
+      </section>
+
+      <section class="text-hero">
+        {% assign events = site.events %} {% for event in events %} {% if
+        event.featured %}
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text-block">
+                <div class="detail-line"></div>
+                <h5>Featured Event</h5>
+                <h1 class="contrast-h1">{{ event.name }}</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <p class="lead">
+                {{ event.date | date: '%B %-d %Y %I:%M %p' }}<br />
+                <a
+                  href="{{event.link}}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ event.location }}</a
+                ><br />
+                {{ event.extra }}
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="lead">{{ event.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+      </section>
+
+      <section class="large-pad">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
+              <p class="super-lead left-align-mobile">
+                We're the Association for Computing Machinery at UT Dallas.
+                <br />We're focused on giving back to the engineering community
+                here at UT Dallas and beyond through events, projects, HackUTD,
+                and more.
+                <a class="text-link" href="/about.html"
+                  >Learn more. <i class="icon ti ti-arrow-right arrow_right"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 style="text-align: center; font-weight: 600; font-size: 24px">
+            Sponsors
+          </h2>
+
+          <div class="row mobile-grid">
+            <div
+              class="col-md-2 col-sm-3 col-xs-6 h-100 d-inline-block col-md-offset-1"
+            >
+              <a href="https://paycom.com"
+                ><img alt="Paycom" src="logo/sponsor-paycom.png"
+              /></a>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 h-100">
+              <a href="https://www.cbre.us/"
+                ><img alt="CBRE" src="logo/sponsor-cbre.png"
+              /></a>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 h-100">
+              <a href="https://www.credera.com/"
+                ><img alt="Credera" src="logo/sponsor-credera.png"
+              /></a>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 h-100">
+              <a href="https://www.cisco.com/"
+                ><img alt="Cisco" src="logo/sponsor-cisco.png"
+              /></a>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 h-100">
+              <a href="https://www.ti.com/"
+                ><img
+                  alt="Texas Instruments"
+                  src="logo/sponsor-texas-instruments.jpg"
+              /></a>
+            </div>
+			<div class="col-md-2 col-sm-3 col-xs-6 h-100 d-inline-block col-md-offset-1">
+				<a href="https://mule.to/p1k2"
+				  ><img
+					alt="Sticker Mule"
+					src="logo/stickermule.png"
+				/></a>
+			  </div>
+			  <div class="col-md-2 col-sm-3 col-xs-6 h-100">
+				<a href="https://www.postman.com"
+				  ><img
+					alt="Sticker Mule"
+					src="https://www.postman.com/assets/logos/postman-logo-stacked.svg"
+				/></a>
+			  </div>
+          </div>
+        </div>
+      </section>
+
+      {% include common-footer.html %}
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/placeholders.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
-
-				
