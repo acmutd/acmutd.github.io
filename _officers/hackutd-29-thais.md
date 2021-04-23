@@ -1,7 +1,7 @@
 ---
-name: "Michael Xu"
+name: "Thais Campanac-Climent"
 role: "HackUTD Technical Coordinator"
 category: hackutd
 filter: "hackutd"
-photo: "team-hackutd-michael"
+photo: "dallas"
 ---

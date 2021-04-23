@@ -1,8 +1,8 @@
 ---
 name: "Harsha Srikara"
-role: "Director of Development"
+role: "Strategic Advisor"
 category: board
-filter: "board,development"
+filter: "board,hackutd,development"
 photo: "team-hackutd-harsha"
 link: "https://www.linkedin.com/in/harshasrikara/"
 ---
