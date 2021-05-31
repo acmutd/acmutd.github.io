@@ -1,6 +1,6 @@
 ---
 name: "Samriddhi Sangraula"
-role: "Co-Director of Media"
+role: "Director of Marketing"
 category: board
 filter: "board"
 photo: "team-board-sam"
