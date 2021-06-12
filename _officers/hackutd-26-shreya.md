@@ -1,6 +1,6 @@
 ---
 name: "Shreya Singh Parihar"
-role: "HackUTD Marketing Officer"
+role: "HackUTD Marketing Coordinator"
 category: hackutd
 filter: "hackutd"
 photo: "dallas"
