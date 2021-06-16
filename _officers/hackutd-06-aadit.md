@@ -1,7 +1,7 @@
 ---
 name: "Aadit Meenege"
-role: "HackUTD Logistics/Industry Coordinator"
-category: hackutd
-filter: "hackutd,industry"
+role: "HackUTD Industry Coordinator"
+category: industry
+filter: "industry,industry"
 photo: "dallas"
 ---

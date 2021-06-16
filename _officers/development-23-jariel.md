@@ -1,7 +1,7 @@
 ---
 name: "Jariel Gojar"
 role: "Development Officer"
-category: develpment
+category: development
 filter: "development"
-photo: "team-development-jariel"
+photo: "dallas"
 ---
