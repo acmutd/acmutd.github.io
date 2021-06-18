@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 1em;
+    color: white;
+}
+.logo {
+    --width: 3em;
+    --factor: calc(165 / 240);
+    width: var(--width);
+    height: calc(var(--factor) * var(--width));
+}
+.footitem {
+    margin: 20px;
+    font-weight: 700;
+}
+.footitem:hover {
+    cursor: pointer;
+}
+.footunderline {
+    margin: 0 auto;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    opacity: 0;
+    transition: width 0.2s, opacity 0.75s;
+}
+.footitem:hover .footunderline {
+    width: 100%;
+    opacity: 1;
+}
