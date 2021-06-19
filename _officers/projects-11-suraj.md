@@ -1,7 +1,7 @@
 ---
-name: "Samuel Nitsch"
+name: "Suraj Khosla"
 role: "ACM Projects Officer"
 category: projects
 filter: "projects"
-photo: "team-projects-samuel"
+photo: "dallas"
 ---

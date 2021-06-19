@@ -1,7 +1,7 @@
 ---
-name: "Adham Kassem"
+name: "Erik Rodriguez"
 role: "ACM Projects Officer"
 category: projects
 filter: "projects"
-photo: "team-projects-adham"
+photo: "dallas"
 ---

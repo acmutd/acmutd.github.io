@@ -1,8 +1,6 @@
 ---
-name: "Shreya Singh Parihar"
+name: "Dylan Nguyen"
 role: "HackUTD Marketing Coordinator"
 category: hackutd
 filter: "hackutd"
 photo: "dallas"
-link: "https://www.linkedin.com/in/shreyasinghparihar"
----
