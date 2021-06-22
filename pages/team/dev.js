@@ -31,7 +31,7 @@ export default class DevPage extends Component {
                     {
                         name: 'Nick Burnett',
                         position: 'Dev Officer',
-                        image: 'https://cdn.hundred.org/uploads/user/avatar/7047/big_Headshot.jpg',
+                        image: 'https://github.com/acmutd/acmutd.github.io/blob/master/png/dallas.jpg?raw=true',
                         github: 'https://github.com/NickBurnett',
                         linkedin: 'https://www.linkedin.com/in/nicolasaburnett/',
                         website: 'https://nickburnett.dev/'

@@ -78,9 +78,9 @@
 }
 .profile_name {
     font-size: 0.95em;
+    font-weight: 700;
 }
 .profile_position {
-    font-weight: 700;
     font-size: 0.95em;
 }
 .profile_socials {
