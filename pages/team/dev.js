@@ -1,7 +1,7 @@
-import { Component } from 'react'
-import TeamPage from '../../components/TeamPage'
-import DevProject from '../../components/DevProject'
-import { teams } from '../index'
+import { Component } from 'react';
+import TeamPage from '../../components/TeamPage';
+import DevProject from '../../components/DevProject';
+import { teams } from '../index';
 
 export default class DevPage extends Component {
     constructor(props) {

@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
-    --bg-color: #161616;
-    --accent: gray;
+  --bg-color: #161616;
+  --accent: gray;
 }
 body::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 body::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 15px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background-color: var(--bg-color);
-    font-family: 'Poppins';
-    color: white;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: 'Poppins';
+  color: white;
 }

@@ -1,65 +1,71 @@
 .events {
-    --diamond: 8vw;
-    --diamond-size: 2.5vw;
-    --margin-vert: 100px;
-    --diamond-margin-horiz: 2vw;
+  --diamond: 8vw;
+  --diamond-size: 2.5vw;
+  --margin-vert: 100px;
+  --diamond-margin-horiz: 2vw;
 }
 .container {
-    position: relative;
-    margin: var(--margin-vert) 0;
-    display: flex;
-    align-items: center;
-    font-family: 'Poppins';
-    color: white;
+  position: relative;
+  margin: var(--margin-vert) 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins';
+  color: white;
 }
 .diamond {
-    margin: 0 2vw;
-    width: var(--diamond-size);
-    height: var(--diamond-size);
-    background-color: white;
-    transform: rotateZ(45deg);
+  margin: 0 2vw;
+  width: var(--diamond-size);
+  height: var(--diamond-size);
+  background-color: white;
+  transform: rotateZ(45deg);
 }
 .content {
-    display: flex;
-    min-width: 50vw;
-    max-width: 50vw;
+  display: flex;
+  min-width: 50vw;
+  max-width: 50vw;
 }
 .textcontent {
-    min-width: 40%;
+  min-width: 40%;
 }
 .mediacontent {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 60%;
-    max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 60%;
+  max-width: 60%;
 }
 .media {
-    margin: 10px 20px;
+  margin: 10px 20px;
 }
 .semester {
-    text-align: right;
-    font-weight: 800;
-    min-width: var(--diamond);
-    max-width: var(--diamond);
+  text-align: right;
+  font-weight: 800;
+  min-width: var(--diamond);
+  max-width: var(--diamond);
 }
 .title {
-    font-size: 1em;
-    font-weight: 800;
+  font-size: 1em;
+  font-weight: 800;
 }
 .description {
-    font-size: 0.85em;
+  font-size: 0.85em;
 }
-.connectorup, .connectordown {
-    --width: 2px;
-    position: absolute;
-    width: var(--width);
-    height: calc(50% - (var(--diamond) / 2) + (var(--margin-vert) / 2));
-    background-color: white;
-    transform: translateX(calc(var(--diamond) + var(--diamond-margin-horiz) + (var(--diamond-size) / 2) - (var(--width) / 2)));
+.connectorup,
+.connectordown {
+  --width: 2px;
+  position: absolute;
+  width: var(--width);
+  height: calc(50% - (var(--diamond) / 2) + (var(--margin-vert) / 2));
+  background-color: white;
+  transform: translateX(
+    calc(
+      var(--diamond) + var(--diamond-margin-horiz) + (var(--diamond-size) / 2) -
+        (var(--width) / 2)
+    )
+  );
 }
 .connectorup {
-    bottom: calc(50% + (var(--diamond) / 2));
+  bottom: calc(50% + (var(--diamond) / 2));
 }
 .connectordown {
-    top: calc(50% + (var(--diamond) / 2));
+  top: calc(50% + (var(--diamond) / 2));
 }
