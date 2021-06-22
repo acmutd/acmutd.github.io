@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import styles from '../styles/Calendar.module.css'
+import styles from '../styles/component/Calendar.module.css'
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -62,10 +62,32 @@ export default class Calendar extends Component {
                     color: '#fa4d4dad'
                 }
             ]
-        } else if (date.getDate() === 30 && date.getMonth() === 6) {
+        } else if (date.getDate() === 22 && date.getMonth() === 5 && date.getFullYear() === 2021) {
             return [
                 {
-                    event: 'Nick Birthday !!',
+                    event: 'Board Meeting',
+                    color: '#9b43ffa2'
+                }
+            ]
+        } else if (date.getDate() === 23 && date.getMonth() === 5 && date.getFullYear() === 2021) {
+            return [
+                {
+                    event: 'An Event',
+                    color: '#fa4d4dad'
+                },
+                {
+                    event: 'Another Event',
+                },
+                {
+                    event: 'A Third Event',
+                    color: '#55ff9c'
+                },
+                {
+                    event: 'Overflow Yet?',
+                    color: '#9b43ffa2'
+                },
+                {
+                    event: 'Now it did',
                     color: '#fa4d4dad'
                 }
             ]

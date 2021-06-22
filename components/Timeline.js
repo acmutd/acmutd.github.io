@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import styles from '../styles/Timeline.module.css'
+import styles from '../styles/component/Timeline.module.css'
 
 export class Event extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ export class Event extends Component {
     }
     render() {
         const media = []
-        Array.from(this.props.media).forEach(m => media.push(<img key={m.url} className={styles.media} style={{ width: m.width || '6em', height: m.height || '6em' }} src={m.url}></img>))
+        Array.from(this.props.media).forEach(m => media.push(<img key={m.url} className={styles.media} style={m.style} src={m.url}></img>))
         const connectup = (this.props.connectup) ? <div className={styles.connectorup}></div> : <div />
         const connectdown = (this.props.connectdown) ? <div className={styles.connectordown}></div> : <div />
         return (

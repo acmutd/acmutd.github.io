@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import styles from '../styles/DevProject.module.css'
+import styles from '../styles/component/DevProject.module.css'
 
 export default class DevProject extends Component {
     constructor(props) {

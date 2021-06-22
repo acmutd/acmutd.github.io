@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: #161616;
+    background-color: var(--bg-color);
     color: var(--color);
     fill: var(--color);
     font-family: 'Poppins';
@@ -62,12 +62,12 @@
     padding: 10px;
     width: 40%;
     height: fit-content;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: background-color 0.3s;
 }
 .teamnav svg:hover {
     cursor: pointer;
-    background-color: #292828c4;
+    background-color: #202020c4;
 }
 .navunderline {
     margin: 0 auto;

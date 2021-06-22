@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import styles from '../styles/Footer.module.css'
+import styles from '../styles/component/Footer.module.css'
 
 export default class Footer extends Component {
     constructor(props) {

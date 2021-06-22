@@ -1,7 +1,7 @@
 .calendar {
     /* change these to modify the calendar */
-    --size: 80vw;
-    font-size: 1.5em;
+    --size: calc(80vw * 8 / 8);
+    font-size: calc(1.5em * 8 / 8);
 
     width: var(--size);
     font-family: 'Poppins';
@@ -41,6 +41,12 @@
 .right {
     transform: rotateZ(90deg);
 }
+.left:hover {
+    transform: rotateZ(-90deg) scale(110%);
+}
+.right:hover {
+    transform: rotateZ(90deg) scale(110%);
+}
 .weekdays {
     display: flex;
     width: var(--size);
@@ -49,8 +55,8 @@
     color: white;
 }
 .weekday {
-    margin: calc((var(--size) - (7 * (var(--size) / 8))) / 14);
-    width: calc(var(--size) / 8);
+    margin: calc((var(--size) - (7 * (var(--size) / 7.5))) / 14); /* lol i have do some math here but I can do it */
+    width: calc(var(--size) / 7.5);
     text-align: center;
 }
 .days {
@@ -58,9 +64,9 @@
     flex-wrap: wrap;
 }
 .daycontainer {
-    margin: calc((var(--size) - (7 * (var(--size) / 8))) / 14);
-    width: calc(var(--size) / 8);
-    height: calc(var(--size) / 8);
+    margin: calc((var(--size) - (7 * (var(--size) / 7.5))) / 14);
+    width: calc(var(--size) / 7.5);
+    height: calc(var(--size) / 7.5);
     font-family: 'Poppins';
     font-size: 1em;
     color: black;
@@ -78,7 +84,7 @@
     display: flex;
     flex-direction: column;
     height: calc(var(--size) * (8 / 100));
-    font-size: 0.8em;
+    font-size: 0.9em;
     overflow: auto;
     border-radius: 0.5vw;
 }
@@ -92,9 +98,9 @@
 }
 .event {
     margin: 0.1em 0.2em;
-    padding: 0.2em;
+    padding: 0.2em 0.3em;
     font-size: 0.7em;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
     background-color: var(--color);
     border-radius: 7px;

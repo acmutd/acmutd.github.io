@@ -1,0 +1,28 @@
+.title {
+    margin-top: 20px;
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+}
+.tagline {
+    font-size: 1.7em;
+    font-weight: 700;
+    text-align: center;
+}
+.infocontainer {
+    margin: 6vh auto 10vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.infocontainer * {
+    max-width: 30em;
+}
+
+#images {
+    width: 60%;
+    margin: 5vh auto;
+    border-radius: 15px;
+}

@@ -44,13 +44,13 @@ export default function Test() {
                         },
                         {
                             url: 'https://wolf-wallpapers.pro/images/cool-wolf-backgrounds-11071-hd-wallpapers-in-animals-1-4-wolf-wallpapers.pro.jpg',
-                            width: '40%',
-                            height: '70%'
+                            width: '20em',
+                            height: '15em'
                         },
                         {
                             url: 'https://wolf-wallpapers.pro/images/cool-wolf-backgrounds-11071-hd-wallpapers-in-animals-1-4-wolf-wallpapers.pro.jpg',
-                            width: '50%',
-                            height: '50%'
+                            width: '25em',
+                            height: '20em'
                         }
                     ]
                 },
