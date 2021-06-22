@@ -1,0 +1,124 @@
+.calendar {
+  /* change these to modify the calendar */
+  --size: calc(80vw * 8 / 8);
+  font-size: calc(1.5em * 8 / 8);
+
+  width: var(--size);
+  font-family: 'Poppins';
+  margin: auto;
+}
+.calendartitle {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+.controldate {
+  font-size: 1.8em;
+  text-align: center;
+}
+.left,
+.right {
+  margin: 0 2em;
+  --size: 2em;
+  width: var(--size);
+  height: var(--size);
+  transition: color 0.15s;
+}
+.left:hover,
+.right:hover {
+  cursor: pointer;
+  color: gray;
+}
+.left {
+  transform: rotateZ(-90deg);
+}
+.right {
+  transform: rotateZ(90deg);
+}
+.left:hover {
+  transform: rotateZ(-90deg) scale(110%);
+}
+.right:hover {
+  transform: rotateZ(90deg) scale(110%);
+}
+.weekdays {
+  display: flex;
+  width: var(--size);
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+.weekday {
+  margin: calc(
+    (var(--size) - (7 * (var(--size) / 7.5))) / 14
+  ); /* lol i have do some math here but I can do it */
+  width: calc(var(--size) / 7.5);
+  text-align: center;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.daycontainer {
+  margin: calc((var(--size) - (7 * (var(--size) / 7.5))) / 14);
+  width: calc(var(--size) / 7.5);
+  height: calc(var(--size) / 7.5);
+  font-family: 'Poppins';
+  font-size: 1em;
+  color: black;
+  background-color: #f1f1f1;
+  border-radius: 0.8vw;
+}
+.daydate {
+  padding: 0.2vw 0.5vw;
+  padding-bottom: 0.1vw;
+  width: fit-content;
+  font-weight: 900;
+  font-size: 1.3em;
+}
+.events {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--size) * (8 / 100));
+  font-size: 0.9em;
+  overflow: auto;
+  border-radius: 0.5vw;
+}
+.events::-webkit-scrollbar {
+  overflow: scroll;
+  width: 0.2vw;
+}
+.events::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 150px;
+}
+.event {
+  margin: 0.1em 0.2em;
+  padding: 0.2em 0.3em;
+  font-size: 0.7em;
+  text-align: left;
+  font-weight: 600;
+  background-color: var(--color);
+  border-radius: 7px;
+  transition: filter 0.25s;
+}
+.event:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+@keyframes myfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

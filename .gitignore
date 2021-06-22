@@ -1,6 +1,5 @@
-_site/
-.sass-cache/
-.jekyll-metadata
-docker-compose.yml
-.jekyll-cache
-.vscode
+node_modules
+.next
+build
+out
+package-lock.json

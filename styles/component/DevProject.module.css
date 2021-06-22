@@ -1,0 +1,64 @@
+.card {
+  --width: 15em;
+  position: relative;
+  margin: 20px;
+  padding: 1vw;
+  font-size: 1.7em;
+  font-family: 'Poppins';
+  color: white;
+  background-color: #000000a0;
+  width: var(--width);
+  height: calc(0.9 * var(--width));
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+.title {
+  font-size: 0.9em;
+  font-weight: 900;
+  text-align: center;
+}
+.tag {
+  margin-top: 5px;
+  font-size: 0.65em;
+  font-weight: 700;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 5px;
+  font-size: 0.6em;
+  height: 70%;
+}
+.contributors {
+  font-size: 1em;
+  min-width: 40%;
+}
+.description {
+  font-size: 0.9em;
+}
+.repocontainer {
+  display: flex;
+  align-items: center;
+}
+.github {
+  margin: 0 0.5vw;
+  --size: 0.9em;
+  width: var(--size);
+  height: var(--size);
+}
+.repo {
+  margin: 0 0.5vw;
+  font-size: 0.6em;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+.repo:hover {
+  color: var(--accent);
+  cursor: pointer;
+}

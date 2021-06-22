@@ -1,0 +1,104 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo svg {
+  aspect-ratio: 889 / 200;
+  width: 30em;
+}
+.officers {
+  margin: 50px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: clamp(60%, 70em, 90%);
+}
+.info_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#team_info {
+  width: 70%;
+}
+#team_info:nth-child(2) {
+  text-align: left;
+}
+#images {
+  width: 60%;
+  margin: 9vh auto;
+  border-radius: 15px;
+}
+.projects_container {
+  margin: auto;
+  width: clamp(50%, 70%, 90%);
+}
+.projects_title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+}
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  width: calc(100% / 6);
+  text-align: center;
+  font-size: 0.9em;
+}
+.profile_image {
+  margin-bottom: 10px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1000vw;
+  width: 100%;
+}
+.profile_image img {
+  aspect-ratio: 1;
+  width: 100%;
+}
+.profile_name {
+  font-size: 0.95em;
+  font-weight: 700;
+}
+.profile_position {
+  font-size: 0.95em;
+}
+.profile_socials {
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.profile_socials svg {
+  margin: auto 5px;
+  aspect-ratio: 1;
+  width: 1.5em;
+  color: white;
+  fill: white;
+  transition: color 0.25s, fill 0.25s;
+}
+.profile_socials svg:hover {
+  cursor: pointer;
+  color: var(--accent);
+  fill: var(--accent);
+}
