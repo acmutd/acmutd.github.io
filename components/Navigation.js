@@ -8,7 +8,7 @@ export default class Navigation extends Component {
         this.state = {}
     }
     render() {
-        const teamList = [<Link key='team-dev' href='/team/dev'>{teams.dev}</Link>, teams.projects, <Link key='team-education' href='/team/education'>{teams.education}</Link>, teams.research, teams.media, teams.community, teams.industry, teams.hackutd]
+        const teamList = [<Link key='team-dev' href='/team/dev'>{teams.dev}</Link>, teams.projects, <Link key='team-education' href='/team/education'>{teams.education}</Link>, teams.research, <Link key='team-media' href='/team/media'>{teams.media}</Link>, teams.community, <Link key='team-industry' href='/team/industry'>{teams.industry}</Link>, teams.hackutd]
         return (
             <div id='navigation'>
                 <ul className={styles.navbar}>

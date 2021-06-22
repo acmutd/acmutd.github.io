@@ -55,15 +55,20 @@ export default class Calendar extends Component {
                     color: '#9b43ffa2'
                 },
                 {
-                    event: 'Bad Batch Episode'
-                },
-                {
-                    event: '3 Dev things Due',
+                    event: '3 Dev things Due xD',
                     color: '#fa4d4dad'
                 }
             ]
         } else if (date.getDate() === 22 && date.getMonth() === 5 && date.getFullYear() === 2021) {
             return [
+                {
+                    event: 'Skip Work',
+                    color: '#fa4d4dad'
+                },
+                {
+                    event: 'Do Website',
+                    color: '#55ff9c'
+                },
                 {
                     event: 'Board Meeting',
                     color: '#9b43ffa2'
