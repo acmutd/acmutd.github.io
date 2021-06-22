@@ -134,9 +134,9 @@ export default class AboutPage extends Component {
                 <div className={styles.title}>Association for Computing Machinery</div>
                 <div className={styles.tagline}>We're just a group of people...</div>
                 <ImageCarousel id={styles.images} images={[
-                    'https://lh4.googleusercontent.com/d-Edumlj9Ss98mwqu6pO0DetsI9znoRKdqpf_M27a73D_53Ay1dwqSoDdX1reyd6UgyjgaCSdUaqSxFgvlnP=w3073-h1688-rw',
-                    'https://lh3.google.com/u/1/d/1Iitd8TX9afjmXlzF4QgTrr9QJkh1_6WD=w3073-h1688-iv1',
-                    'https://lh3.google.com/u/1/d/1diRdOd8YWunJRb1UytNJ0SUXHc6uAsXl=w2563-h1688-iv1'
+                    '/assets/carousel/a.png',
+                    '/assets/carousel/b.png',
+                    '/assets/carousel/c.png'
                 ]}/>
                 <div className={styles.infocontainer}>
                     <Info title='Who we are' body='The Association for Computing Machinery is an international organization that involves itself in all things Computer Science and Engineering. The UTD chapter expands on the core values by providing UT Dallas students with opportunities to engage with and participate in real-world opportunities in Computer Science.' />

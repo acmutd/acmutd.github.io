@@ -29,7 +29,7 @@ export class Profile extends Component {
         const socials = [this.github(this.props.github), this.linkedin(this.props.linkedin), this.website(this.props.website)]
         return (
             <div className={styles.profile}>
-                <div className={styles.profile_image}><img src={this.props.image} /></div>
+                <div className={styles.profile_image}><img src={`/assets/officers/${this.props.image || 'default'}.png`} /></div>
                 <div className={styles.profile_name}>{this.props.name}</div>
                 <div className={styles.profile_position}>{this.props.position}</div>
                 <div className={styles.profile_socials}>{socials}</div>
