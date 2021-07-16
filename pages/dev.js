@@ -1,8 +1,8 @@
-import DevProject from '../components/DevProject';
-import Navigation from '../components/Navigation';
-import Timeline from '../components/Timeline';
-import Calendar from '../components/Calendar';
-import Footer from '../components/Footer';
+import DevProject from '../components/DevProject'
+import Navigation from '../components/Navigation'
+import Timeline from '../components/Timeline'
+import Calendar from '../components/Calendar'
+import Footer from '../components/Footer'
 export default function Test() {
   return (
     <div
@@ -76,5 +76,5 @@ export default function Test() {
       <Calendar />
       <Footer />
     </div>
-  );
+  )
 }

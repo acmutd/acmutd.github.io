@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import styles from '../styles/component/Calendar.module.css';
+import { Component } from 'react'
+import styles from '../styles/component/Calendar.module.css'
 
 const months = [
   'January',
@@ -14,8 +14,8 @@ const months = [
   'October',
   'November',
   'December',
-];
-const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+]
+const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 const daysOfWeek = [
   'Sunday',
   'Monday',
@@ -24,11 +24,11 @@ const daysOfWeek = [
   'Thursday',
   'Friday',
   'Saturday',
-];
+]
 export class Event extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
     return (
@@ -38,16 +38,16 @@ export class Event extends Component {
       >
         {this.props.event}
       </div>
-    );
+    )
   }
 }
 export class Day extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
-    const events = [];
+    const events = []
     if (this.props.events)
       Array.from(this.props.events).forEach((e) =>
         events.push(
@@ -57,7 +57,7 @@ export class Day extends Component {
             color={e.color}
           />,
         ),
-      );
+      )
     return (
       <div
         className={styles.daycontainer}
@@ -66,99 +66,37 @@ export class Day extends Component {
         <div className={styles.daydate}>{this.props.date}</div>
         <div className={styles.events}>{events}</div>
       </div>
-    );
+    )
   }
 }
 export default class Calendar extends Component {
   constructor(props) {
-    super(props);
-    const data = new Date().getMonth();
-    this.state = { offset: data, month: data };
+    super(props)
+    const data = new Date().getMonth()
+    this.state = { offset: data, month: data }
   }
   getDate() {
-    const date = new Date();
+    const date = new Date()
     return `${months[this.state.month]} ${
       date.getFullYear() + Math.floor(this.state.offset / 12)
-    }`;
+    }`
   }
   getEvents(day, month, year) {
-    const date = new Date();
-    date.setMonth(month);
-    date.setFullYear(year);
-    date.setDate(day);
-    if (
-      date.getDate() === 18 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Dev Meeting',
-          color: '#9b43ffa2',
-        },
-        {
-          event: '3 Dev things Due xD',
-          color: '#fa4d4dad',
-        },
-      ];
-    } else if (
-      date.getDate() === 22 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Skip Work',
-          color: '#fa4d4dad',
-        },
-        {
-          event: 'Do Website',
-          color: '#55ff9c',
-        },
-        {
-          event: 'Board Meeting',
-          color: '#9b43ffa2',
-        },
-      ];
-    } else if (
-      date.getDate() === 23 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'An Event',
-          color: '#fa4d4dad',
-        },
-        {
-          event: 'Another Event',
-        },
-        {
-          event: 'A Third Event',
-          color: '#55ff9c',
-        },
-        {
-          event: 'Overflow Yet?',
-          color: '#9b43ffa2',
-        },
-        {
-          event: 'Now it did',
-          color: '#fa4d4dad',
-        },
-      ];
-    } else if (
-      date.getDate() === 1 &&
-      date.getMonth() === 7 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Doomsday :((',
-          color: '#55ff9c',
-        },
-      ];
+    const date = new Date()
+    date.setMonth(month)
+    date.setFullYear(year)
+    date.setDate(day)
+    const cur = `${date.getFullYear()}-${Math.floor((date.getMonth() + 1) / 10)}${(date.getMonth() + 1) % 10}-${Math.floor((date.getDate()) / 10)}${(date.getDate()) % 10}`
+    const events = []
+    for (const [key, value] of Object.entries(this.props.events)) {
+      if (value.start.startsWith(cur)) {
+        events.push({
+          event: value.name,
+          color: '#9b43ffa2'
+        })
+      }
     }
-    return [];
+    return events
   }
   render() {
     const svg = (c, f) => (
@@ -178,22 +116,22 @@ export default class Calendar extends Component {
           d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"
         ></path>
       </svg>
-    );
-    const weekdays = [];
+    )
+    const weekdays = []
     Array.from(daysOfWeek).forEach((d) =>
       weekdays.push(
         <div key={d} className={styles.weekday}>
           {d}
         </div>,
       ),
-    );
-    const days = [];
-    const date = new Date();
-    date.setFullYear(date.getFullYear() + Math.floor(this.state.offset / 12));
-    date.setMonth(Math.abs(this.state.month % 12));
-    date.setDate(1);
+    )
+    const days = []
+    const date = new Date()
+    date.setFullYear(date.getFullYear() + Math.floor(this.state.offset / 12))
+    date.setMonth(Math.abs(this.state.month % 12))
+    date.setDate(1)
     for (let i = 0; i < date.getDay(); i++)
-      days.push(<Day key={Math.random()} hidden />);
+      days.push(<Day key={Math.random()} hidden />)
     for (let i = 0; i < daysInMonth[this.state.month]; i++)
       days.push(
         <Day
@@ -201,7 +139,7 @@ export default class Calendar extends Component {
           date={`${i + 1}`}
           events={this.getEvents(i + 1, date.getMonth(), date.getFullYear())}
         />,
-      );
+      )
     return (
       <div className={styles.calendar}>
         <div className={styles.calendartitle}>Event Calendar</div>
@@ -253,6 +191,6 @@ export default class Calendar extends Component {
           {days}
         </div>
       </div>
-    );
+    )
   }
 }

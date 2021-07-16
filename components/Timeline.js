@@ -1,17 +1,17 @@
-import { Component } from 'react';
-import styles from '../styles/component/Timeline.module.css';
+import { Component } from 'react'
+import styles from '../styles/component/Timeline.module.css'
 
 export class Event extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   test() {
-    this.testVar = 'test text';
+    this.testVar = 'test text'
   }
   render() {
-    const media = [];
-    Array.from(this.props.media).forEach((m) =>
+    const media = []
+    Array.from(this.props.media || []).forEach((m) =>
       media.push(
         <img
           key={m.url}
@@ -20,17 +20,17 @@ export class Event extends Component {
           src={m.url}
         ></img>,
       ),
-    );
+    )
     const connectup = this.props.connectup ? (
       <div className={styles.connectorup}></div>
     ) : (
       <div />
-    );
+    )
     const connectdown = this.props.connectdown ? (
       <div className={styles.connectordown}></div>
     ) : (
       <div />
-    );
+    )
     return (
       <div className={styles.container}>
         <div className={styles.semester}>
@@ -47,17 +47,17 @@ export class Event extends Component {
           <div className={styles.mediacontent}>{media}</div>
         </div>
       </div>
-    );
+    )
   }
 }
 
 export default class Timeline extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
-    const events = [];
+    const events = []
     Array.from(this.props.events).forEach((e, i, a) => {
       events.push(
         <Event
@@ -69,8 +69,8 @@ export default class Timeline extends Component {
           connectup={i === 0 ? false : true}
           connectdown={i === a.length - 1 ? false : true}
         />,
-      );
-    });
-    return <div className={styles.events}>{events}</div>;
+      )
+    })
+    return <div className={styles.events}>{events}</div>
   }
 }

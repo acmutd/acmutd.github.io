@@ -4,11 +4,6 @@
   font-weight: 900;
   text-align: center;
 }
-.tagline {
-  font-size: 1.7em;
-  font-weight: 700;
-  text-align: center;
-}
 .infocontainer {
   margin: 6vh auto 10vh;
   display: flex;

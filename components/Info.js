@@ -1,10 +1,10 @@
-import { Component } from 'react';
-import styles from '../styles/component/Info.module.css';
+import { Component } from 'react'
+import styles from '../styles/component/Info.module.css'
 
 export default class Info extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
     return (
@@ -12,6 +12,6 @@ export default class Info extends Component {
         <div className={styles.title}>{this.props.title}</div>
         <div className={styles.body}>{this.props.body}</div>
       </div>
-    );
+    )
   }
 }

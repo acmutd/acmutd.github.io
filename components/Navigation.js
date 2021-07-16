@@ -1,31 +1,25 @@
-import { Component } from 'react';
-import Link from 'next/link';
-import { teams } from '../pages/index';
-import styles from '../styles/component/Navigation.module.css';
+import { Component } from 'react'
+import Link from 'next/link'
+import { teams } from '../pages/index'
+import styles from '../styles/component/Navigation.module.css'
 export default class Navigation extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
-    const teamList = [
-      <Link key="team-dev" href="/team/dev">
-        {teams.dev}
-      </Link>,
-      teams.projects,
-      <Link key="team-education" href="/team/education">
-        {teams.education}
-      </Link>,
-      teams.research,
-      <Link key="team-media" href="/team/media">
-        {teams.media}
-      </Link>,
-      teams.community,
-      <Link key="team-industry" href="/team/industry">
-        {teams.industry}
-      </Link>,
-      teams.hackutd,
-    ];
+    const teamList = []
+    Array.from(this.props.registeredTeams || []).forEach((team) => {
+      team = team.team.toLowerCase()
+      teamList.push(
+        <Link
+          key={`team-${team}`}
+          href={`/team/${team === 'development' ? 'dev' : team}`}
+        >
+          {teams[team]}
+        </Link>,
+      )
+    })
     return (
       <div id="navigation">
         <ul className={styles.navbar}>
@@ -36,7 +30,9 @@ export default class Navigation extends Component {
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Join</div>
+            <Link href="/join">
+              <div className={styles.navtext}>Join</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
@@ -77,7 +73,9 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Events</div>
+            <Link href="/events">
+              <div className={styles.navtext}>Events</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
@@ -94,6 +92,6 @@ export default class Navigation extends Component {
           </li>
         </ul>
       </div>
-    );
+    )
   }
 }

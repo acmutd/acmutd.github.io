@@ -1,10 +1,10 @@
-import { Component } from 'react';
-import styles from '../styles/component/Footer.module.css';
+import { Component } from 'react'
+import styles from '../styles/component/Footer.module.css'
 
 export default class Footer extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
     return (
@@ -48,6 +48,6 @@ export default class Footer extends Component {
           GitHub<div className={styles.footunderline}></div>
         </div>
       </div>
-    );
+    )
   }
 }
