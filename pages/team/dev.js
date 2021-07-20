@@ -52,12 +52,15 @@ export async function getStaticProps() {
       '*[_type == "team" && lower(team) == "development"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}',
     )
     .then((teams) => (data = teams[0]))
-  console.log(data.artifacts[1].overlay_description)
   let registeredTeams
   await client
     .fetch('*[_type == "team"]{team}')
     .then((teams) => (registeredTeams = teams))
+  let registeredPrograms
+  await client
+    .fetch('*[_type == "program"]{program}')
+    .then((programs) => (registeredPrograms = programs))
   return {
-    props: { data, registeredTeams },
+    props: { data, registeredTeams, registeredPrograms },
   }
 }

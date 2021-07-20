@@ -107,6 +107,10 @@ export async function getStaticProps() {
   await client
     .fetch('*[_type == "team"]{team}')
     .then((teams) => (registeredTeams = teams))
+  let registeredPrograms
+  await client
+    .fetch('*[_type == "program"]{program}')
+    .then((programs) => (registeredPrograms = programs))
   let data
   await client
     .fetch('*[_type == "eventspage"]{who, where, "images": images[].asset->url}')
@@ -124,6 +128,6 @@ export async function getStaticProps() {
       })
     }
   return {
-    props: { events, data, registeredTeams }
+    props: { events, data, registeredTeams, registeredPrograms }
   }
 }

@@ -1,0 +1,99 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo svg {
+  aspect-ratio: 889 / 200;
+  width: 30em;
+}
+.info_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join {
+  margin: 20px 5vw 10em;
+  padding: 0.5em 0;
+  min-width: 15vw;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 10vw;
+  background: linear-gradient(90.12deg, var(--left) 0.1%, var(--right) 99.39%);;
+  transition: filter 0.25s;
+}
+.join:hover {
+  cursor: pointer;
+  filter: brightness(140%);
+}
+
+#images {
+  width: 60%;
+  margin: 9vh auto;
+  border-radius: 15px;
+}
+.projects_container {
+  margin: auto;
+  margin-bottom: 10em;
+  width: clamp(50%, 70%, 90%);
+}
+.projects_title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+}
+
+.testimonials_title {
+  margin: 0;
+  margin-top: 4em;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.testimonials {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.testimonial {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: top;
+  font-size: 1.3em;
+  min-width: 80%;
+  max-width: 80%;
+}
+.testimonial_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+.testimonial_image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1000vw;
+  width: 15%;
+  margin-right: 15px;
+}
+.testimonial_image img {
+  aspect-ratio: 1;
+  width: 100%;
+}
+.testimonial_name {
+  font-size: 1em;
+  font-weight: 900;
+}
+.testimonial_description {
+  font-size: 0.75em;
+}
+

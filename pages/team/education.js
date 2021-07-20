@@ -39,7 +39,11 @@ export async function getStaticProps() {
   await client
     .fetch('*[_type == "team"]{team}')
     .then((teams) => (registeredTeams = teams))
+  let registeredPrograms
+  await client
+    .fetch('*[_type == "program"]{program}')
+    .then((programs) => (registeredPrograms = programs))
   return {
-    props: { data, registeredTeams },
+    props: { data, registeredTeams, registeredPrograms },
   }
 }

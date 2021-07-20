@@ -9,6 +9,7 @@ export default class Navigation extends Component {
   }
   render() {
     const teamList = []
+    const programList = []
     Array.from(this.props.registeredTeams || []).forEach((team) => {
       team = team.team.toLowerCase()
       teamList.push(
@@ -18,6 +19,14 @@ export default class Navigation extends Component {
         >
           {teams[team]}
         </Link>,
+      )
+    })
+    Array.from(this.props.registeredPrograms || []).forEach((program) => {
+      program = program.program.toLowerCase()
+      programList.push(
+        <Link key={`program-${program}`} href={`/program/${program}`}>
+          {teams[program]}
+        </Link>
       )
     })
     return (
@@ -37,6 +46,7 @@ export default class Navigation extends Component {
           </li>
           <li className={styles.navitem}>
             <div className={styles.navtext}>Programs</div>
+            <div className={styles.programnav}>{programList}</div>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
@@ -79,15 +89,21 @@ export default class Navigation extends Component {
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Sponsors</div>
+            <Link href='/sponsors'>
+              <div className={styles.navtext}>Sponsors</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Scholarship</div>
+            <Link href='/scholarship'>
+              <div className={styles.navtext}>Scholarship</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Contact</div>
+            <Link href='/contact'>
+              <div className={styles.navtext}>Contact</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
         </ul>
