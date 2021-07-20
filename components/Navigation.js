@@ -1,17 +1,17 @@
-import { Component } from 'react'
-import Link from 'next/link'
-import { teams } from '../pages/index'
-import styles from '../styles/component/Navigation.module.css'
+import { Component } from 'react';
+import Link from 'next/link';
+import { teams } from '../pages/index';
+import styles from '../styles/component/Navigation.module.css';
 export default class Navigation extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   render() {
-    const teamList = []
-    const programList = []
+    const teamList = [];
+    const programList = [];
     Array.from(this.props.registeredTeams || []).forEach((team) => {
-      team = team.team.toLowerCase()
+      team = team.team.toLowerCase();
       teamList.push(
         <Link
           key={`team-${team}`}
@@ -19,16 +19,16 @@ export default class Navigation extends Component {
         >
           {teams[team]}
         </Link>
-      )
-    })
+      );
+    });
     Array.from(this.props.registeredPrograms || []).forEach((program) => {
-      program = program.program.toLowerCase()
+      program = program.program.toLowerCase();
       programList.push(
         <Link key={`program-${program}`} href={`/program/${program}`}>
           {teams[program]}
         </Link>
-      )
-    })
+      );
+    });
     return (
       <div id="navigation">
         <ul className={styles.navbar}>
@@ -108,6 +108,6 @@ export default class Navigation extends Component {
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }

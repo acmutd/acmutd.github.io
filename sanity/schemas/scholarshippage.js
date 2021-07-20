@@ -19,4 +19,4 @@ export default {
       type: 'text'
     }
   ]
-}
+};

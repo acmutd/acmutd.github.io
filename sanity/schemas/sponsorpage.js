@@ -15,4 +15,4 @@ export default {
       of: [{ type: 'image' }]
     }
   ]
-}
+};

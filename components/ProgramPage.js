@@ -1,11 +1,11 @@
-import { Component } from 'react'
-import Info from '../components/Info'
-import ImageCarousel from './ImageCarousel'
-import styles from '../styles/component/ProgramPage.module.css'
+import { Component } from 'react';
+import Info from '../components/Info';
+import ImageCarousel from './ImageCarousel';
+import styles from '../styles/component/ProgramPage.module.css';
 export class Testimonial extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   render() {
     if (this.props.right) {
@@ -24,7 +24,7 @@ export class Testimonial extends Component {
             <img src={this.props.image} />
           </div>
         </div>
-      )
+      );
     }
     return (
       <div className={styles.testimonial}>
@@ -38,18 +38,18 @@ export class Testimonial extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 export default class ProgramPage extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   render() {
-    const testimonials = []
-    let i = 0
+    const testimonials = [];
+    let i = 0;
     Array.from(this.props.testimonials || []).forEach((t) => {
       testimonials.push(
         <Testimonial
@@ -59,9 +59,9 @@ export default class ProgramPage extends Component {
           description={t.description}
           image={t.image}
         />
-      )
-      i += 1
-    })
+      );
+      i += 1;
+    });
     return (
       <div style={{ '--accent': this.props.accent || '#ff00ff' }}>
         <div className={styles.logo}>{this.props.program}</div>
@@ -103,6 +103,6 @@ export default class ProgramPage extends Component {
         <div className={styles.testimonials_title}>Testimonials</div>
         <div className={styles.testimonials}>{testimonials}</div>
       </div>
-    )
+    );
   }
 }

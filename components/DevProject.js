@@ -1,24 +1,24 @@
-import { Component } from 'react'
-import styles from '../styles/component/DevProject.module.css'
+import { Component } from 'react';
+import styles from '../styles/component/DevProject.module.css';
 
 export default class DevProject extends Component {
   constructor(props) {
-    super(props)
-    this.state = { overlay: false }
+    super(props);
+    this.state = { overlay: false };
   }
   overlay() {
-    const contributors = []
-    const description = []
+    const contributors = [];
+    const description = [];
     Array.from(this.props.contributors).forEach((i) =>
       contributors.push(<div key={i}>{i}</div>)
-    )
+    );
     Array.from(this.props.overlay_description || []).forEach((d) =>
       description.push(
         <div key={d} className={styles.overlay_about_paragraph}>
           {d}
         </div>
       )
-    )
+    );
     return (
       <div className={styles.overlay}>
         <div className={styles.overlay_card}>
@@ -84,16 +84,16 @@ export default class DevProject extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
   render() {
     if (this.state.overlay) {
-      return this.overlay()
+      return this.overlay();
     }
-    const contributors = []
+    const contributors = [];
     Array.from(this.props.contributors).forEach((i) =>
       contributors.push(<div key={i}>{i}</div>)
-    )
+    );
     return (
       <div
         onClick={() => this.setState({ overlay: true })}
@@ -129,6 +129,6 @@ export default class DevProject extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

@@ -1,13 +1,13 @@
-import { Component } from 'react'
-import Info from '../components/Info'
-import styles from '../styles/page/Scholarship.module.css'
+import { Component } from 'react';
+import Info from '../components/Info';
+import styles from '../styles/page/Scholarship.module.css';
 export default class ScholarshipPage extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   render() {
-    const { events, data } = this.props
+    const { events, data } = this.props;
     return (
       <div>
         <div className={styles.title}>ACM Scholarship</div>
@@ -34,31 +34,31 @@ export default class ScholarshipPage extends Component {
           <Info title="Inspiration" body={data.inspiration} />
         </div>
       </div>
-    )
+    );
   }
 }
 export async function getStaticProps() {
-  const sanity = require('@sanity/client')
+  const sanity = require('@sanity/client');
   const client = sanity({
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
     useCdn: false
-  })
-  let registeredTeams
+  });
+  let registeredTeams;
   await client
     .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams))
-  let registeredPrograms
+    .then((teams) => (registeredTeams = teams));
+  let registeredPrograms;
   await client
     .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs))
-  let data
+    .then((programs) => (registeredPrograms = programs));
+  let data;
   await client
     .fetch('*[_type == "scholarshippage"]{who, how, inspiration}')
-    .then((page) => (data = page[0]))
+    .then((page) => (data = page[0]));
 
   return {
     props: { data, registeredTeams, registeredPrograms }
-  }
+  };
 }
