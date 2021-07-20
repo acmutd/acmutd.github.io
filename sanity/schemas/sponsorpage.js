@@ -12,7 +12,7 @@ export default {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
-    },
-  ],
+      of: [{ type: 'image' }]
+    }
+  ]
 }

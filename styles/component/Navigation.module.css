@@ -24,7 +24,8 @@
 .navitem:hover {
   cursor: pointer;
 }
-.navitem:hover .teamnav, .navitem:hover .programnav {
+.navitem:hover .teamnav,
+.navitem:hover .programnav {
   cursor: default;
   opacity: 1;
   transform: scale(100%) translateY(2.5em);

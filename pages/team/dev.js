@@ -22,8 +22,8 @@ export default class DevPage extends Component {
           repo={p.repo.display}
           link={p.repo.url}
           overlay_description={p.overlay_description}
-        />,
-      ),
+        />
+      )
     )
     return (
       <TeamPage
@@ -44,12 +44,12 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false,
+    useCdn: false
   })
   let data
   await client
     .fetch(
-      '*[_type == "team" && lower(team) == "development"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}',
+      '*[_type == "team" && lower(team) == "development"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}'
     )
     .then((teams) => (data = teams[0]))
   let registeredTeams
@@ -61,6 +61,6 @@ export async function getStaticProps() {
     .fetch('*[_type == "program"]{program}')
     .then((programs) => (registeredPrograms = programs))
   return {
-    props: { data, registeredTeams, registeredPrograms },
+    props: { data, registeredTeams, registeredPrograms }
   }
 }

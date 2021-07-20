@@ -6,23 +6,23 @@ export default {
     {
       title: 'Project Name',
       name: 'project',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Tag',
       name: 'tag',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Contributors',
       name: 'contributors',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [{ type: 'string' }]
     },
     {
       title: 'Description',
       name: 'description',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'GitHub Repository',
@@ -32,14 +32,14 @@ export default {
         {
           title: 'Repo Display',
           name: 'display',
-          type: 'string',
+          type: 'string'
         },
         {
           title: 'Repo URL',
           name: 'url',
-          type: 'url',
-        },
-      ],
+          type: 'url'
+        }
+      ]
     },
     {
       title: 'Overlay Description',
@@ -47,5 +47,5 @@ export default {
       type: 'array',
       of: [{ type: 'text' }]
     }
-  ],
+  ]
 }

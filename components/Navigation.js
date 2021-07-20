@@ -18,7 +18,7 @@ export default class Navigation extends Component {
           href={`/team/${team === 'development' ? 'dev' : team}`}
         >
           {teams[team]}
-        </Link>,
+        </Link>
       )
     })
     Array.from(this.props.registeredPrograms || []).forEach((program) => {
@@ -89,19 +89,19 @@ export default class Navigation extends Component {
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <Link href='/sponsors'>
+            <Link href="/sponsors">
               <div className={styles.navtext}>Sponsors</div>
             </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <Link href='/scholarship'>
+            <Link href="/scholarship">
               <div className={styles.navtext}>Scholarship</div>
             </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <Link href='/contact'>
+            <Link href="/contact">
               <div className={styles.navtext}>Contact</div>
             </Link>
             <div className={styles.navunderline}></div>

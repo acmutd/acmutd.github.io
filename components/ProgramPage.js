@@ -10,10 +10,15 @@ export class Testimonial extends Component {
   render() {
     if (this.props.right) {
       return (
-        <div className={styles.testimonial} style={{ alignSelf: 'flex-end', justifyContent: 'flex-end' }}>
+        <div
+          className={styles.testimonial}
+          style={{ alignSelf: 'flex-end', justifyContent: 'flex-end' }}
+        >
           <div className={styles.testimonial_container}>
             <div className={styles.testimonial_name}>{this.props.name}</div>
-            <div className={styles.testimonial_description}>{this.props.description}</div>
+            <div className={styles.testimonial_description}>
+              {this.props.description}
+            </div>
           </div>
           <div className={styles.testimonial_image}>
             <img src={this.props.image} />
@@ -28,7 +33,9 @@ export class Testimonial extends Component {
         </div>
         <div className={styles.testimonial_container}>
           <div className={styles.testimonial_name}>{this.props.name}</div>
-          <div className={styles.testimonial_description}>{this.props.description}</div>
+          <div className={styles.testimonial_description}>
+            {this.props.description}
+          </div>
         </div>
       </div>
     )
@@ -44,18 +51,22 @@ export default class ProgramPage extends Component {
     const testimonials = []
     let i = 0
     Array.from(this.props.testimonials || []).forEach((t) => {
-      testimonials.push(<Testimonial right={i % 2 !== 0} key={t.name} name={t.name} description={t.description} image={t.image} />)
+      testimonials.push(
+        <Testimonial
+          right={i % 2 !== 0}
+          key={t.name}
+          name={t.name}
+          description={t.description}
+          image={t.image}
+        />
+      )
       i += 1
     })
     return (
       <div style={{ '--accent': this.props.accent || '#ff00ff' }}>
         <div className={styles.logo}>{this.props.program}</div>
         <div className={styles.info_container}>
-          <Info
-            id={styles.team_info}
-            title="Why us?"
-            body={this.props.why}
-          />
+          <Info id={styles.team_info} title="Why us?" body={this.props.why} />
         </div>
         <div className={styles.info_container}>
           <Info
@@ -73,12 +84,22 @@ export default class ProgramPage extends Component {
           />
         </div>
         <div className={styles.info_container}>
-          <div onClick={() => window.open(this.props.link)}className={styles.join} style={{ '--left': this.props.left, '--right': this.props.right }}>Apply now!</div>
+          <div
+            onClick={() => window.open(this.props.link)}
+            className={styles.join}
+            style={{ '--left': this.props.left, '--right': this.props.right }}
+          >
+            Apply now!
+          </div>
         </div>
-        {this.props.projects ? <div className={styles.projects_container}>
-          <div className={styles.projects_title}>Projects</div>
-          <div className={styles.projects}>{this.props.projects}</div>
-        </div> : <div />}
+        {this.props.projects ? (
+          <div className={styles.projects_container}>
+            <div className={styles.projects_title}>Projects</div>
+            <div className={styles.projects}>{this.props.projects}</div>
+          </div>
+        ) : (
+          <div />
+        )}
         <div className={styles.testimonials_title}>Testimonials</div>
         <div className={styles.testimonials}>{testimonials}</div>
       </div>

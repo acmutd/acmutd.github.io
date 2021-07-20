@@ -6,32 +6,32 @@ export default {
     {
       title: 'Name',
       name: 'name',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Position',
       name: 'position',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Profile Image',
       name: 'image',
-      type: 'image',
+      type: 'image'
     },
     {
       title: 'LinkedIn',
       name: 'linkedin',
-      type: 'url',
+      type: 'url'
     },
     {
       title: 'GitHub',
       name: 'github',
-      type: 'url',
+      type: 'url'
     },
     {
       title: 'Personal Website',
       name: 'website',
-      type: 'url',
-    },
-  ],
+      type: 'url'
+    }
+  ]
 }

@@ -6,18 +6,18 @@ export default {
     {
       title: 'How to join',
       name: 'how',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'When to join',
       name: 'when',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
-    },
-  ],
+      of: [{ type: 'image' }]
+    }
+  ]
 }

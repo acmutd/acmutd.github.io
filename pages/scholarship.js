@@ -11,9 +11,20 @@ export default class ScholarshipPage extends Component {
     return (
       <div>
         <div className={styles.title}>ACM Scholarship</div>
-        <div className={styles.tagline}>Dr. Gopal Gupta Undergraduate Scholarship for Computer Science...</div>
+        <div className={styles.tagline}>
+          Dr. Gopal Gupta Undergraduate Scholarship for Computer Science...
+        </div>
         <div className={styles.buttons}>
-          <div onClick={() => window.open('https://williecubed.me/')} className={styles.button} style={{ background: 'linear-gradient(90.12deg, #2400FF 0.1%, #00FFC2 99.39%)' }}>Apply now!</div>
+          <div
+            onClick={() => window.open('https://williecubed.me/')}
+            className={styles.button}
+            style={{
+              background:
+                'linear-gradient(90.12deg, #2400FF 0.1%, #00FFC2 99.39%)'
+            }}
+          >
+            Apply now!
+          </div>
         </div>
         <div className={styles.infocontainer}>
           <Info title="Who it's for" body={data.who} />
@@ -32,7 +43,7 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false,
+    useCdn: false
   })
   let registeredTeams
   await client

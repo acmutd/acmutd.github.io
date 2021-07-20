@@ -60,7 +60,7 @@ export class Profile extends Component {
     const socials = [
       this.github(this.props.github),
       this.linkedin(this.props.linkedin),
-      this.website(this.props.website),
+      this.website(this.props.website)
     ]
     return (
       <div className={styles.profile}>
@@ -92,8 +92,8 @@ export default class TeamPage extends Component {
           github={o.github}
           linkedin={o.linkedin}
           website={o.website}
-        />,
-      ),
+        />
+      )
     )
     return (
       <div style={{ '--accent': this.props.accent || '#ff00ff' }}>
@@ -107,10 +107,14 @@ export default class TeamPage extends Component {
           />
         </div>
         <ImageCarousel id={styles.images} images={this.props.images} />
-        {this.props.projects ? <div className={styles.projects_container}>
-          <div className={styles.projects_title}>Projects</div>
-          <div className={styles.projects}>{this.props.projects}</div>
-        </div> : <div />}
+        {this.props.projects ? (
+          <div className={styles.projects_container}>
+            <div className={styles.projects_title}>Projects</div>
+            <div className={styles.projects}>{this.props.projects}</div>
+          </div>
+        ) : (
+          <div />
+        )}
         <div className={styles.timeline}>
           <Timeline events={this.props.events} />
         </div>

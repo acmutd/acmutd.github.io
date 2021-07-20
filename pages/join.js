@@ -20,8 +20,25 @@ export default class AboutPage extends Component {
           <Info title="When to join" body={data.when} />
         </div>
         <div className={styles.buttons}>
-          <div onClick={() => window.open('https://acmutd.co/discord')} className={styles.button} style={{ background: 'linear-gradient(90.12deg, #8B00E1 0.1%, #E500EA 99.39%)' }}>Join our Discord</div>
-          <div className={styles.button} style={{ background: 'linear-gradient(90.12deg, #FF0000 0.1%, #FFB800 99.39%)' }}>Join our Newsletter</div>
+          <div
+            onClick={() => window.open('https://acmutd.co/discord')}
+            className={styles.button}
+            style={{
+              background:
+                'linear-gradient(90.12deg, #8B00E1 0.1%, #E500EA 99.39%)'
+            }}
+          >
+            Join our Discord
+          </div>
+          <div
+            className={styles.button}
+            style={{
+              background:
+                'linear-gradient(90.12deg, #FF0000 0.1%, #FFB800 99.39%)'
+            }}
+          >
+            Join our Newsletter
+          </div>
         </div>
       </div>
     )
@@ -33,7 +50,7 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false,
+    useCdn: false
   })
   let registeredTeams
   await client
@@ -48,6 +65,6 @@ export async function getStaticProps() {
     .fetch('*[_type == "joinpage"]{how, when, "images": images[].asset->url}')
     .then((page) => (data = page[0]))
   return {
-    props: { data, registeredTeams, registeredPrograms },
+    props: { data, registeredTeams, registeredPrograms }
   }
 }

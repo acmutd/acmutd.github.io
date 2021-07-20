@@ -31,12 +31,12 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false,
+    useCdn: false
   })
   let data
   await client
     .fetch(
-      '*[_type == "program" && lower(program) == "tip"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
+      '*[_type == "program" && lower(program) == "tip"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}'
     )
     .then((teams) => (data = teams[0]))
   let registeredTeams
@@ -48,6 +48,6 @@ export async function getStaticProps() {
     .fetch('*[_type == "program"]{program}')
     .then((programs) => (registeredPrograms = programs))
   return {
-    props: { data, registeredTeams, registeredPrograms },
+    props: { data, registeredTeams, registeredPrograms }
   }
 }

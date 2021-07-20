@@ -9,7 +9,8 @@
   font-weight: 700;
   text-align: center;
 }
-.infocontainer, .infocontainer_2 {
+.infocontainer,
+.infocontainer_2 {
   margin: 6vh auto 10vh;
   display: flex;
   flex-wrap: nowrap;

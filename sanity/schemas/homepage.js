@@ -6,18 +6,18 @@ export default {
     {
       title: 'Who we are',
       name: 'who',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'What we do',
       name: 'what',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
-    },
-  ],
+      of: [{ type: 'image' }]
+    }
+  ]
 }

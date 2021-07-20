@@ -13,7 +13,7 @@ const months = [
   'September',
   'October',
   'November',
-  'December',
+  'December'
 ]
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 const daysOfWeek = [
@@ -23,7 +23,7 @@ const daysOfWeek = [
   'Wednesday',
   'Thursday',
   'Friday',
-  'Saturday',
+  'Saturday'
 ]
 export class Event extends Component {
   constructor(props) {
@@ -51,12 +51,8 @@ export class Day extends Component {
     if (this.props.events)
       Array.from(this.props.events).forEach((e) =>
         events.push(
-          <Event
-            key={`${e.event}${e.color}`}
-            event={e.event}
-            color={e.color}
-          />,
-        ),
+          <Event key={`${e.event}${e.color}`} event={e.event} color={e.color} />
+        )
       )
     return (
       <div
@@ -86,7 +82,11 @@ export default class Calendar extends Component {
     date.setMonth(month)
     date.setFullYear(year)
     date.setDate(day)
-    const cur = `${date.getFullYear()}-${Math.floor((date.getMonth() + 1) / 10)}${(date.getMonth() + 1) % 10}-${Math.floor((date.getDate()) / 10)}${(date.getDate()) % 10}`
+    const cur = `${date.getFullYear()}-${Math.floor(
+      (date.getMonth() + 1) / 10
+    )}${(date.getMonth() + 1) % 10}-${Math.floor(date.getDate() / 10)}${
+      date.getDate() % 10
+    }`
     const events = []
     for (const [key, value] of Object.entries(this.props.events)) {
       if (value.start.startsWith(cur)) {
@@ -122,8 +122,8 @@ export default class Calendar extends Component {
       weekdays.push(
         <div key={d} className={styles.weekday}>
           {d}
-        </div>,
-      ),
+        </div>
+      )
     )
     const days = []
     const date = new Date()
@@ -138,7 +138,7 @@ export default class Calendar extends Component {
           key={i}
           date={`${i + 1}`}
           events={this.getEvents(i + 1, date.getMonth(), date.getFullYear())}
-        />,
+        />
       )
     return (
       <div className={styles.calendar}>
@@ -147,15 +147,15 @@ export default class Calendar extends Component {
           {svg(styles.left, () =>
             this.setState({
               offset: this.state.month - 1,
-              month: this.state.month - 1 < 0 ? 11 : this.state.month - 1,
-            }),
+              month: this.state.month - 1 < 0 ? 11 : this.state.month - 1
+            })
           )}
           <div className={styles.controldate}>{this.getDate()}</div>
           {svg(styles.right, () =>
             this.setState({
               offset: this.state.month + 1,
-              month: this.state.month + 1 > 11 ? 0 : this.state.month + 1,
-            }),
+              month: this.state.month + 1 > 11 ? 0 : this.state.month + 1
+            })
           )}
         </div>
         <div className={styles.weekdays}>{weekdays}</div>

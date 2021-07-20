@@ -6,12 +6,12 @@ export default {
     {
       title: 'Program Name',
       name: 'program',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Accent',
       name: 'accent',
-      type: 'string',
+      type: 'string'
     },
     {
       title: 'Gradient Left',
@@ -26,12 +26,12 @@ export default {
     {
       title: 'Why us',
       name: 'why',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'Program Benefits',
       name: 'benefits',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'How to join',
@@ -47,36 +47,40 @@ export default {
       title: 'Artifcats',
       name: 'artifacts',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'project' }] }],
+      of: [{ type: 'reference', to: [{ type: 'project' }] }]
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
+      of: [{ type: 'image' }]
     },
     {
       title: 'Testimonials',
       name: 'testimonials',
       type: 'array',
-      of: [{
-        type: 'object', fields: [
-          {
-            title: 'Name',
-            name: 'name',
-            type: 'string'
-          },
-          {
-            title: 'Description',
-            name: 'description',
-            type: 'text'
-          },
-          {
-            title: 'Image',
-            name: 'image',
-            type: 'image'
-          }
-      ]}]
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              title: 'Name',
+              name: 'name',
+              type: 'string'
+            },
+            {
+              title: 'Description',
+              name: 'description',
+              type: 'text'
+            },
+            {
+              title: 'Image',
+              name: 'image',
+              type: 'image'
+            }
+          ]
+        }
+      ]
     }
-  ],
+  ]
 }

@@ -6,18 +6,18 @@ export default {
     {
       title: 'Who can attend',
       name: 'who',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'Where to attend',
       name: 'where',
-      type: 'text',
+      type: 'text'
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
-    },
-  ],
+      of: [{ type: 'image' }]
+    }
+  ]
 }

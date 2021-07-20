@@ -20,7 +20,7 @@
   text-align: center;
   font-weight: 800;
   border-radius: 10vw;
-  background: linear-gradient(90.12deg, var(--left) 0.1%, var(--right) 99.39%);;
+  background: linear-gradient(90.12deg, var(--left) 0.1%, var(--right) 99.39%);
   transition: filter 0.25s;
 }
 .join:hover {
@@ -96,4 +96,3 @@
 .testimonial_description {
   font-size: 0.75em;
 }
-

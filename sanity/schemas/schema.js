@@ -12,5 +12,15 @@ import officer from './officer'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([homepage, joinpage, eventspage, sponsorpage, scholarshippage, team, program, officer, project]),
+  types: schemaTypes.concat([
+    homepage,
+    joinpage,
+    eventspage,
+    sponsorpage,
+    scholarshippage,
+    team,
+    program,
+    officer,
+    project
+  ])
 })
