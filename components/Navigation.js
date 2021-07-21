@@ -18,7 +18,7 @@ export default class Navigation extends Component {
           href={`/team/${team === 'development' ? 'dev' : team}`}
         >
           {teams[team]}
-        </Link>
+        </Link>,
       );
     });
     Array.from(this.props.registeredPrograms || []).forEach((program) => {
@@ -26,7 +26,7 @@ export default class Navigation extends Component {
       programList.push(
         <Link key={`program-${program}`} href={`/program/${program}`}>
           {teams[program]}
-        </Link>
+        </Link>,
       );
     });
     return (

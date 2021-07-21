@@ -4,6 +4,15 @@ import ImageCarousel from './ImageCarousel';
 import Timeline from './Timeline';
 import styles from '../styles/component/TeamPage.module.css';
 
+/**
+ * Component for an individual Officer on each team page.
+ * image: string (image url)
+ * name: string (name, obviously)
+ * position: string (role in acm)
+ * github?: string (github url)
+ * linkedin?: string (linkedin url)
+ * website?: string (personal website url)
+ */
 export class Profile extends Component {
   constructor(props) {
     super(props);
@@ -60,7 +69,7 @@ export class Profile extends Component {
     const socials = [
       this.github(this.props.github),
       this.linkedin(this.props.linkedin),
-      this.website(this.props.website)
+      this.website(this.props.website),
     ];
     return (
       <div className={styles.profile}>
@@ -92,8 +101,8 @@ export default class TeamPage extends Component {
           github={o.github}
           linkedin={o.linkedin}
           website={o.website}
-        />
-      )
+        />,
+      ),
     );
     return (
       <div style={{ '--accent': this.props.accent || '#ff00ff' }}>

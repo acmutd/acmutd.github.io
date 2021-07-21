@@ -2,6 +2,13 @@ import { Component } from 'react';
 import Info from '../components/Info';
 import ImageCarousel from './ImageCarousel';
 import styles from '../styles/component/ProgramPage.module.css';
+/**
+ * Component for an individual testimonial on a program page.
+ * right?: bool (is it right or left)
+ * name: string
+ * description: string
+ * image: string (image url)
+ */
 export class Testimonial extends Component {
   constructor(props) {
     super(props);
@@ -42,6 +49,16 @@ export class Testimonial extends Component {
   }
 }
 
+/**
+ * Component for an individual program page.
+ * why: string (why do this program)
+ * how: string (how to join)
+ * benefits: string (program benefits)
+ * images: string[] (image urls for carousel)
+ * link: string (application url)
+ * testimonials?: TestimonialObject[] (grabbed from CMS)
+ * projects?: ProjectObject[] (grabbed from CMS)
+ */
 export default class ProgramPage extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +75,7 @@ export default class ProgramPage extends Component {
           name={t.name}
           description={t.description}
           image={t.image}
-        />
+        />,
       );
       i += 1;
     });

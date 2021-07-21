@@ -6,13 +6,13 @@ export default {
     {
       title: 'Description',
       name: 'description',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }]
-    }
-  ]
+      of: [{ type: 'image' }],
+    },
+  ],
 };

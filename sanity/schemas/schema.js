@@ -21,6 +21,6 @@ export default createSchema({
     team,
     program,
     officer,
-    project
-  ])
+    project,
+  ]),
 });

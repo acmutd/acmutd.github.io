@@ -6,17 +6,17 @@ export default {
     {
       title: 'Who can apply',
       name: 'who',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'How to apply',
       name: 'how',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'Inspiration',
       name: 'inspiration',
-      type: 'text'
-    }
-  ]
+      type: 'text',
+    },
+  ],
 };

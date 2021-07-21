@@ -10,14 +10,14 @@ export default class DevProject extends Component {
     const contributors = [];
     const description = [];
     Array.from(this.props.contributors).forEach((i) =>
-      contributors.push(<div key={i}>{i}</div>)
+      contributors.push(<div key={i}>{i}</div>),
     );
     Array.from(this.props.overlay_description || []).forEach((d) =>
       description.push(
         <div key={d} className={styles.overlay_about_paragraph}>
           {d}
-        </div>
-      )
+        </div>,
+      ),
     );
     return (
       <div className={styles.overlay}>
@@ -92,7 +92,7 @@ export default class DevProject extends Component {
     }
     const contributors = [];
     Array.from(this.props.contributors).forEach((i) =>
-      contributors.push(<div key={i}>{i}</div>)
+      contributors.push(<div key={i}>{i}</div>),
     );
     return (
       <div

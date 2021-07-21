@@ -20,7 +20,7 @@ export default class ScholarshipPage extends Component {
             className={styles.button}
             style={{
               background:
-                'linear-gradient(90.12deg, #2400FF 0.1%, #00FFC2 99.39%)'
+                'linear-gradient(90.12deg, #2400FF 0.1%, #00FFC2 99.39%)',
             }}
           >
             Apply now!
@@ -43,7 +43,7 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false
+    useCdn: false,
   });
   let registeredTeams;
   await client
@@ -59,6 +59,6 @@ export async function getStaticProps() {
     .then((page) => (data = page[0]));
 
   return {
-    props: { data, registeredTeams, registeredPrograms }
+    props: { data, registeredTeams, registeredPrograms },
   };
 }

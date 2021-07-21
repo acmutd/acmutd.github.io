@@ -6,35 +6,35 @@ export default {
     {
       title: 'Team Name',
       name: 'team',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Accent',
       name: 'accent',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Info',
       name: 'info',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'Artifcats',
       name: 'artifacts',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'project' }] }]
+      of: [{ type: 'reference', to: [{ type: 'project' }] }],
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }]
+      of: [{ type: 'image' }],
     },
     {
       title: 'Officers',
       name: 'officers',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'officer' }] }]
+      of: [{ type: 'reference', to: [{ type: 'officer' }] }],
     },
     {
       title: 'Timeline',
@@ -47,17 +47,17 @@ export default {
             {
               title: 'Semester',
               name: 'semester',
-              type: 'string'
+              type: 'string',
             },
             {
               title: 'Event Title',
               name: 'title',
-              type: 'string'
+              type: 'string',
             },
             {
               title: 'Description',
               name: 'description',
-              type: 'text'
+              type: 'text',
             },
             {
               title: 'Media',
@@ -70,7 +70,7 @@ export default {
                     {
                       title: 'Image',
                       name: 'image',
-                      type: 'image'
+                      type: 'image',
                     },
                     {
                       title: 'Style',
@@ -80,22 +80,22 @@ export default {
                         {
                           title: 'Width (%)',
                           name: 'width',
-                          type: 'string'
+                          type: 'string',
                         },
                         {
                           title: 'Aspect Ratio',
                           name: 'aspectRatio',
-                          type: 'string'
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                          type: 'string',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };

@@ -18,8 +18,8 @@ export class Event extends Component {
           className={styles.media}
           style={m.style}
           src={m.url}
-        ></img>
-      )
+        ></img>,
+      ),
     );
     const connectup = this.props.connectup ? (
       <div className={styles.connectorup}></div>
@@ -68,7 +68,7 @@ export default class Timeline extends Component {
           media={e.media}
           connectup={i === 0 ? false : true}
           connectdown={i === a.length - 1 ? false : true}
-        />
+        />,
       );
     });
     return <div className={styles.events}>{events}</div>;

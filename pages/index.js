@@ -10,7 +10,7 @@ import {
   LocalTime,
   ZonedDateTime,
   ZoneId,
-  ZoneOffset
+  ZoneOffset,
 } from '@js-joda/core';
 import '@js-joda/timezone';
 
@@ -438,7 +438,7 @@ export const teams = {
         </linearGradient>
       </defs>
     </svg>
-  )
+  ),
 };
 async function getSpreadsheet() {
   try {
@@ -447,12 +447,12 @@ async function getSpreadsheet() {
       process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
       null,
       process.env.GOOGLE_SHEETS_PRIVATE_KEY,
-      target
+      target,
     );
     const sheets = google.sheets({ version: 'v4', auth: jwt });
     const res = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.EVENT_SPREADSHEET_ID,
-      range: 'Events'
+      range: 'Events',
     });
     const sheet = res.data.values;
     function to24hour(time12) {
@@ -471,7 +471,7 @@ async function getSpreadsheet() {
         ldt.monthValue(),
         ldt.dayOfMonth(),
         ldt.hour(),
-        ldt.minute()
+        ldt.minute(),
       ];
     }
     function rowToEvent(row) {
@@ -486,7 +486,7 @@ async function getSpreadsheet() {
         'Location',
         'Division',
         'Collaborator(s)',
-        'Public'
+        'Public',
       ];
       function getValue(column) {
         return row[EXPECTED_COLUMNS.indexOf(column)];
@@ -497,7 +497,7 @@ async function getSpreadsheet() {
         const chicagoDateTime = ZonedDateTime.of(
           localDate,
           localTime,
-          ZoneId.of('America/Chicago')
+          ZoneId.of('America/Chicago'),
         );
         return chicagoDateTime.withZoneSameInstant(ZoneOffset.UTC);
       }
@@ -506,7 +506,7 @@ async function getSpreadsheet() {
         end: parseDate('End Date', 'End Time'),
         name: getValue('Name'),
         description: getValue('Description'),
-        public: getValue('Public') == 'TRUE'
+        public: getValue('Public') == 'TRUE',
       };
     }
     function spreadsheetToEvents(spreadsheet) {
@@ -526,9 +526,9 @@ async function getSpreadsheet() {
           startInputType: 'utc',
           endInputType: 'utc',
           startOutputType: 'utc',
-          endOutputType: 'utc'
+          endOutputType: 'utc',
         };
-      })
+      }),
     );
     return value;
   } catch (err) {
@@ -564,7 +564,7 @@ export async function getStaticProps() {
     projectId: 'l82yvvx0',
     dataset: 'production',
     apiVersion: '2019-01-29',
-    useCdn: false
+    useCdn: false,
   });
   let registeredTeams;
   await client
@@ -588,10 +588,10 @@ export async function getStaticProps() {
       name: value.summary,
       description: value.description || '',
       start: value.start.toISOString(),
-      end: value.end.toISOString()
+      end: value.end.toISOString(),
     });
   }
   return {
-    props: { data, registeredTeams, registeredPrograms, events }
+    props: { data, registeredTeams, registeredPrograms, events },
   };
 }

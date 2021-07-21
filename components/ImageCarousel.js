@@ -17,7 +17,7 @@ export default class ImageCarousel extends Component {
   }
   render() {
     Array.from(this.props.images).forEach((i) =>
-      this.images.push(<img src={i} />)
+      this.images.push(<img src={i} />),
     );
     return (
       <div id={this.props.id || ''} className={styles.container}>

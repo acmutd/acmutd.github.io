@@ -6,54 +6,54 @@ export default {
     {
       title: 'Program Name',
       name: 'program',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Accent',
       name: 'accent',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Gradient Left',
       name: 'left',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Gradient Right',
       name: 'right',
-      type: 'string'
+      type: 'string',
     },
     {
       title: 'Why us',
       name: 'why',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'Program Benefits',
       name: 'benefits',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'How to join',
       name: 'how',
-      type: 'text'
+      type: 'text',
     },
     {
       title: 'Application Link',
       name: 'link',
-      type: 'url'
+      type: 'url',
     },
     {
       title: 'Artifcats',
       name: 'artifacts',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'project' }] }]
+      of: [{ type: 'reference', to: [{ type: 'project' }] }],
     },
     {
       title: 'Images',
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }]
+      of: [{ type: 'image' }],
     },
     {
       title: 'Testimonials',
@@ -66,21 +66,21 @@ export default {
             {
               title: 'Name',
               name: 'name',
-              type: 'string'
+              type: 'string',
             },
             {
               title: 'Description',
               name: 'description',
-              type: 'text'
+              type: 'text',
             },
             {
               title: 'Image',
               name: 'image',
-              type: 'image'
-            }
-          ]
-        }
-      ]
-    }
-  ]
+              type: 'image',
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
