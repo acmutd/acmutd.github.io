@@ -5,7 +5,7 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <div id="app">
-      <Navigation />
+      <Navigation {...pageProps} />
       <Component {...pageProps} />
       <Footer />
     </div>

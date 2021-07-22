@@ -13,7 +13,6 @@
   margin: 6vh auto 10vh;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
   justify-content: center;
   width: 80%;
 }

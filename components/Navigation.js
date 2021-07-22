@@ -8,24 +8,27 @@ export default class Navigation extends Component {
     this.state = {};
   }
   render() {
-    const teamList = [
-      <Link key="team-dev" href="/team/dev">
-        {teams.dev}
-      </Link>,
-      teams.projects,
-      <Link key="team-education" href="/team/education">
-        {teams.education}
-      </Link>,
-      teams.research,
-      <Link key="team-media" href="/team/media">
-        {teams.media}
-      </Link>,
-      teams.community,
-      <Link key="team-industry" href="/team/industry">
-        {teams.industry}
-      </Link>,
-      teams.hackutd,
-    ];
+    const teamList = [];
+    const programList = [];
+    Array.from(this.props.registeredTeams || []).forEach((team) => {
+      team = team.team.toLowerCase();
+      teamList.push(
+        <Link
+          key={`team-${team}`}
+          href={`/team/${team === 'development' ? 'dev' : team}`}
+        >
+          {teams[team]}
+        </Link>,
+      );
+    });
+    Array.from(this.props.registeredPrograms || []).forEach((program) => {
+      program = program.program.toLowerCase();
+      programList.push(
+        <Link key={`program-${program}`} href={`/program/${program}`}>
+          {teams[program]}
+        </Link>,
+      );
+    });
     return (
       <div id="navigation">
         <ul className={styles.navbar}>
@@ -36,11 +39,14 @@ export default class Navigation extends Component {
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Join</div>
+            <Link href="/join">
+              <div className={styles.navtext}>Join</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
             <div className={styles.navtext}>Programs</div>
+            <div className={styles.programnav}>{programList}</div>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
@@ -77,19 +83,27 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Events</div>
+            <Link href="/events">
+              <div className={styles.navtext}>Events</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Sponsors</div>
+            <Link href="/sponsors">
+              <div className={styles.navtext}>Sponsors</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Scholarship</div>
+            <Link href="/scholarship">
+              <div className={styles.navtext}>Scholarship</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
-            <div className={styles.navtext}>Contact</div>
+            <Link href="/contact">
+              <div className={styles.navtext}>Contact</div>
+            </Link>
             <div className={styles.navunderline}></div>
           </li>
         </ul>

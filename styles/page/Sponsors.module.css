@@ -1,0 +1,57 @@
+.title {
+  margin-top: 20px;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+}
+.tagline {
+  font-size: 1.7em;
+  font-weight: 700;
+  text-align: center;
+}
+.info {
+  margin: 6vh auto 10vh;
+  font-size: 1.2em;
+  text-align: center;
+  width: 70%;
+}
+.infocontainer * {
+  max-width: 30em;
+}
+
+.sponsors {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.sponsors img {
+  margin: 2vw;
+  aspect-ratio: 16 / 9;
+  width: 27%;
+}
+.buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  font-size: 1.4em;
+  font-weight: 800;
+  max-width: 70vw;
+  text-align: center;
+}
+.button {
+  border-radius: 10vw;
+  margin: 20px 5vw;
+  padding: 0.5em 0;
+  min-width: 20vw;
+  transition: filter 0.25s;
+}
+.button:hover {
+  cursor: pointer;
+  filter: brightness(140%);
+}

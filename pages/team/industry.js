@@ -2,84 +2,48 @@ import { Component } from 'react';
 import TeamPage from '../../components/TeamPage';
 import { teams } from '../index';
 
-export default class DevPage extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-    render() {
-        return (
-            <TeamPage
-                accent='#aaaaaaaa'
-                team={teams.industry}
-                info="ACM Industry description goes here. In this paragraph, ACM Industry's purpose in and contributions to ACM will be described here. Until I get the details from Industry, this filler text will be displayed here instead. Hopefully by next week I've figured out which headless CMS to use so that I don't have to modify the content anymore."
-                images={[
-                    '/assets/carousel/a.png',
-                    '/assets/carousel/b.png',
-                    '/assets/carousel/c.png'
-                ]}
-                officers={[
-                    {
-                        name: 'Kendra Huang',
-                        position: 'Director of Industry',
-                        image: 'kendra',
-                        linkedin: 'https://www.linkedin.com/in/kendra-huang/'
-                    },
-                    {
-                        name: 'Vishvak Bandi',
-                        position: 'HackUTD Industry Lead',
-                        linkedin: 'https://www.linkedin.com/in/vishvak-bandi/'
-                    },
-                    {
-                        name: 'Abhitej Arora',
-                        position: 'HackUTD Industry Coordinator',
-                        image: 'abhitej',
-                        linkedin: 'https://www.linkedin.com/in/abhitejarora/'
-                    },
-                    {
-                        name: 'Alina Tieu',
-                        position: 'HackUTD Industry Coordinator'
-                    },
-                    {
-                        name: 'Nina Rao',
-                        position: 'ACM Industry Coordinator'
-                    },
-                    {
-                        name: 'Alvin Methoth',
-                        position: 'ACM Industry Coordinator'
-                    },
-                    {
-                        name: 'Ananya Sammidi',
-                        position: 'ACM Industry Coordinator'
-                    },
-                    {
-                        name: 'Riya Chakraborty',
-                        position: 'ACM Industry Coordinator'
-                    }
-                ]}
-                events={[
-                    {
-                        semester: 'Spring 2021',
-                        title: 'Something happened here',
-                        description: "While I'm unsure what exactly transpired during this time, I am confident in saying that something, if at the very least a miniscule amount, happened during the Spring 2021 semester of ACM Industry.",
-                        media: []
-                    },
-                    {
-                        semester: 'Fall 2021',
-                        title: 'ACM Kickoff Success',
-                        description: "Not really much to say since it hasn't been a success yet, but it will be...",
-                        media: [
-                            {
-                                url: '/assets/carousel/a.png',
-                                style: {
-                                    width: '80%',
-                                    aspectRatio: '4 / 3'
-                                }
-                            }
-                        ]
-                    }
-                ]}
-            />
-        )
-    }
+export default class IndustryPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    const { data } = this.props;
+    return (
+      <TeamPage
+        accent={data.accent}
+        team={teams[data.team.toLowerCase()]}
+        info={data.info}
+        images={data.images}
+        officers={data.officers}
+        events={data.events}
+      />
+    );
+  }
+}
+export async function getStaticProps() {
+  const sanity = require('@sanity/client');
+  const client = sanity({
+    projectId: 'l82yvvx0',
+    dataset: 'production',
+    apiVersion: '2019-01-29',
+    useCdn: false,
+  });
+  let data;
+  await client
+    .fetch(
+      '*[_type == "team" && lower(team) == "industry"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}',
+    )
+    .then((teams) => (data = teams[0]));
+  let registeredTeams;
+  await client
+    .fetch('*[_type == "team"]{team}')
+    .then((teams) => (registeredTeams = teams));
+  let registeredPrograms;
+  await client
+    .fetch('*[_type == "program"]{program}')
+    .then((programs) => (registeredPrograms = programs));
+  return {
+    props: { data, registeredTeams, registeredPrograms },
+  };
 }

@@ -11,7 +11,7 @@ export class Event extends Component {
   }
   render() {
     const media = [];
-    Array.from(this.props.media).forEach((m) =>
+    Array.from(this.props.media || []).forEach((m) =>
       media.push(
         <img
           key={m.url}

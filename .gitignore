@@ -3,3 +3,5 @@ node_modules
 build
 out
 package-lock.json
+calendar-converter.json
+.env

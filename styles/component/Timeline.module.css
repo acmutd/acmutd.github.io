@@ -8,7 +8,7 @@
   position: relative;
   margin: var(--margin-vert) 0;
   display: flex;
-  align-items: center;
+  align-items: center; /* TODO: Remove this and modify the lining accordingly */
   font-family: 'Poppins';
   color: white;
 }
@@ -40,7 +40,6 @@
   text-align: right;
   font-weight: 800;
   min-width: var(--diamond);
-  max-width: var(--diamond);
 }
 .title {
   font-size: 1em;

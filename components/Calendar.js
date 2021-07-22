@@ -86,79 +86,21 @@ export default class Calendar extends Component {
     date.setMonth(month);
     date.setFullYear(year);
     date.setDate(day);
-    if (
-      date.getDate() === 18 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Dev Meeting',
+    const cur = `${date.getFullYear()}-${Math.floor(
+      (date.getMonth() + 1) / 10,
+    )}${(date.getMonth() + 1) % 10}-${Math.floor(date.getDate() / 10)}${
+      date.getDate() % 10
+    }`;
+    const events = [];
+    for (const [key, value] of Object.entries(this.props.events)) {
+      if (value.start.startsWith(cur)) {
+        events.push({
+          event: value.name,
           color: '#9b43ffa2',
-        },
-        {
-          event: '3 Dev things Due xD',
-          color: '#fa4d4dad',
-        },
-      ];
-    } else if (
-      date.getDate() === 22 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Skip Work',
-          color: '#fa4d4dad',
-        },
-        {
-          event: 'Do Website',
-          color: '#55ff9c',
-        },
-        {
-          event: 'Board Meeting',
-          color: '#9b43ffa2',
-        },
-      ];
-    } else if (
-      date.getDate() === 23 &&
-      date.getMonth() === 5 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'An Event',
-          color: '#fa4d4dad',
-        },
-        {
-          event: 'Another Event',
-        },
-        {
-          event: 'A Third Event',
-          color: '#55ff9c',
-        },
-        {
-          event: 'Overflow Yet?',
-          color: '#9b43ffa2',
-        },
-        {
-          event: 'Now it did',
-          color: '#fa4d4dad',
-        },
-      ];
-    } else if (
-      date.getDate() === 1 &&
-      date.getMonth() === 7 &&
-      date.getFullYear() === 2021
-    ) {
-      return [
-        {
-          event: 'Doomsday :((',
-          color: '#55ff9c',
-        },
-      ];
+        });
+      }
     }
-    return [];
+    return events;
   }
   render() {
     const svg = (c, f) => (
