@@ -109,7 +109,7 @@ export default class ProgramPage extends Component {
             Apply now!
           </div>
         </div>
-        {this.props.projects.length > 0 ? (
+        {(this.props.projects && this.props.projects.length > 0) ? (
           <div className={styles.projects_container}>
             <div className={styles.projects_title}>Past Submissions</div>
             <div className={styles.projects}>{this.props.projects}</div>
