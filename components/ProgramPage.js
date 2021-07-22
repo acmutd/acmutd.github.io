@@ -119,9 +119,12 @@ export default class ProgramPage extends Component {
         )}
         {testimonials.length > 0 ? (
           <div className={styles.testimonials_container}>
-          <div className={styles.testimonials_title}>Testimonials</div>
-          <div className={styles.testimonials}>{testimonials}</div></div>) : <div />
-        }
+            <div className={styles.testimonials_title}>Testimonials</div>
+            <div className={styles.testimonials}>{testimonials}</div>
+          </div>
+        ) : (
+          <div />
+        )}
       </div>
     );
   }

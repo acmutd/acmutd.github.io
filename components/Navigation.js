@@ -46,12 +46,20 @@ export default class Navigation extends Component {
           </li>
           <li className={styles.navitem}>
             <div className={styles.navtext}>Programs</div>
-            {(programList.length > 0) ? <div className={styles.programnav}>{programList}</div> : <div />}
+            {programList.length > 0 ? (
+              <div className={styles.programnav}>{programList}</div>
+            ) : (
+              <div />
+            )}
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>
             <div className={styles.navtext}>Teams</div>
-            {(teamList.length > 0) ? <div className={styles.teamnav}>{teamList}</div> : <div />}
+            {teamList.length > 0 ? (
+              <div className={styles.teamnav}>{teamList}</div>
+            ) : (
+              <div />
+            )}
             <div className={styles.navunderline}></div>
           </li>
           <li className={styles.navitem}>

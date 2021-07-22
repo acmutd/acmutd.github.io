@@ -51,7 +51,9 @@ export default class DevProject extends Component {
             <div className={styles.overlay_about_container}>
               <div className={styles.overlay_about_title}>About</div>
               <div className={styles.overlay_about_paragraph_container}>
-                {(description.length > 0) ? description :  (
+                {description.length > 0 ? (
+                  description
+                ) : (
                   <div className={styles.overlay_about_paragraph}>
                     {this.props.description}
                   </div>
