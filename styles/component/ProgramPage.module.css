@@ -13,7 +13,7 @@
   justify-content: center;
 }
 .join {
-  margin: 20px 5vw 10em;
+  margin: 20px 5vw 5em;
   padding: 0.5em 0;
   min-width: 15vw;
   font-size: 1.2em;
@@ -81,12 +81,13 @@
 .testimonial_image {
   aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 1000vw;
+  border-radius: 1000px;
   width: 15%;
   margin-right: 15px;
 }
 .testimonial_image img {
   aspect-ratio: 1;
+  border-radius: 1000px;
   width: 100%;
 }
 .testimonial_name {

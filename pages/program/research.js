@@ -3,7 +3,7 @@ import ProgramPage from '../../components/ProgramPage';
 import DevProject from '../../components/DevProject';
 import { teams } from '../index';
 
-export default class ProjectsPage extends Component {
+export default class ResearchPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -11,7 +11,7 @@ export default class ProjectsPage extends Component {
   render() {
     const { data } = this.props;
     const projects = [];
-    Array.from(data.artifacts).forEach((p) =>
+    Array.from(data.artifacts || []).forEach((p) =>
       projects.push(
         <DevProject
           key={p.project}
@@ -53,7 +53,7 @@ export async function getStaticProps() {
   let data;
   await client
     .fetch(
-      '*[_type == "program" && lower(program) == "projects"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
+      '*[_type == "program" && lower(program) == "research"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
     )
     .then((teams) => (data = teams[0]));
   let registeredTeams;

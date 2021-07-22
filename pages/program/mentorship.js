@@ -1,30 +1,14 @@
 import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
-import DevProject from '../../components/DevProject';
 import { teams } from '../index';
 
-export default class ProjectsPage extends Component {
+export default class MentorPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
     const { data } = this.props;
-    const projects = [];
-    Array.from(data.artifacts).forEach((p) =>
-      projects.push(
-        <DevProject
-          key={p.project}
-          title={p.project}
-          tag={p.tag}
-          contributors={p.contributors}
-          description={p.description}
-          repo={p.repo.display}
-          link={p.repo.url}
-          overlay_description={p.overlay_description}
-        />,
-      ),
-    );
     return (
       <ProgramPage
         accent={data.accent}
@@ -37,7 +21,6 @@ export default class ProjectsPage extends Component {
         link={data.link}
         images={data.images}
         testimonials={data.testimonials}
-        projects={projects}
       />
     );
   }
@@ -53,7 +36,7 @@ export async function getStaticProps() {
   let data;
   await client
     .fetch(
-      '*[_type == "program" && lower(program) == "projects"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
+      '*[_type == "program" && lower(program) == "mentorship"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
     )
     .then((teams) => (data = teams[0]));
   let registeredTeams;

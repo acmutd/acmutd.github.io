@@ -31,6 +31,7 @@ export default class AboutPage extends Component {
             Join our Discord
           </div>
           <div
+            onClick={() => window.open('https://acmutd.co/mailing')}
             className={styles.button}
             style={{
               background:

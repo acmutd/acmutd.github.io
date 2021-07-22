@@ -10,10 +10,12 @@
   width: var(--width);
   height: calc(0.9 * var(--width));
   border-radius: 15px;
-  transition: transform 0.3s;
+  box-shadow: 7px 7px 7px 0 #000000;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
   cursor: pointer;
+  box-shadow: 7px 17px 7px 0 #000000;
   transform: translateY(-10px);
 }
 .title {

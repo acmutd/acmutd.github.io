@@ -109,16 +109,19 @@ export default class ProgramPage extends Component {
             Apply now!
           </div>
         </div>
-        {this.props.projects ? (
+        {this.props.projects.length > 0 ? (
           <div className={styles.projects_container}>
-            <div className={styles.projects_title}>Projects</div>
+            <div className={styles.projects_title}>Past Submissions</div>
             <div className={styles.projects}>{this.props.projects}</div>
           </div>
         ) : (
           <div />
         )}
-        <div className={styles.testimonials_title}>Testimonials</div>
-        <div className={styles.testimonials}>{testimonials}</div>
+        {testimonials.length > 0 ? (
+          <div className={styles.testimonials_container}>
+          <div className={styles.testimonials_title}>Testimonials</div>
+          <div className={styles.testimonials}>{testimonials}</div></div>) : <div />
+        }
       </div>
     );
   }
