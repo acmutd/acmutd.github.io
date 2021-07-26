@@ -16,7 +16,7 @@ export default class ImageCarousel extends Component {
     }, scrollSpeed);
   }
   render() {
-    Array.from(this.props.images).forEach((i) =>
+    Array.from(this.props.images || []).forEach((i) =>
       this.images.push(<img src={i} />),
     );
     return (

@@ -1,7 +1,11 @@
+.teampage {
+  --margin-bottom: 100px;
+}
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: var(--margin-bottom);
 }
 .logo svg {
   aspect-ratio: 889 / 200;
@@ -14,16 +18,25 @@
   justify-content: center;
   flex-wrap: wrap;
   width: clamp(60%, 70em, 90%);
+  margin-bottom: var(--margin-bottom);
 }
-.info_container {
+.info_container_center {
+  margin: auto;
   display: flex;
+  flex-wrap: none;
   align-items: center;
   justify-content: center;
+  max-width: 80%;
+  margin-bottom: var(--margin-bottom);
 }
 #team_info {
   width: 70%;
 }
-#team_info:nth-child(2) {
+#team_info_left {
+  width: 40%;
+}
+#team_info:nth-child(2),
+#team_info_left:nth-child(2) {
   text-align: left;
 }
 #images {
@@ -31,9 +44,13 @@
   margin: 9vh auto;
   border-radius: 15px;
 }
+#images_left {
+  width: 40%;
+}
 .projects_container {
   margin: auto;
   width: clamp(50%, 70%, 90%);
+  margin-bottom: var(--margin-bottom);
 }
 .projects_title {
   margin: 0;
@@ -47,11 +64,13 @@
   justify-content: center;
   flex-wrap: wrap;
   font-size: 0.8em;
+  margin-bottom: var(--margin-bottom);
 }
 .timeline {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: var(--margin-bottom);
 }
 
 .profile {

@@ -8,7 +8,10 @@ import scholarshippage from './scholarshippage';
 import team from './team';
 import program from './program';
 import project from './project';
+import projectlist from './projectlist';
 import officer from './officer';
+import officerlist from './officerlist';
+import imagelist from './imagelist';
 
 export default createSchema({
   name: 'default',
@@ -21,6 +24,9 @@ export default createSchema({
     team,
     program,
     officer,
+    officerlist,
     project,
+    projectlist,
+    imagelist,
   ]),
 });

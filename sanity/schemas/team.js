@@ -14,43 +14,64 @@ export default {
       type: 'string',
     },
     {
-      title: 'Info',
-      name: 'info',
-      type: 'text',
-    },
-    {
-      title: 'Artifcats',
-      name: 'artifacts',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'project' }] }],
-    },
-    {
-      title: 'Images',
-      name: 'images',
-      type: 'array',
-      of: [{ type: 'image' }],
-    },
-    {
-      title: 'Officers',
-      name: 'officers',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'officer' }] }],
-    },
-    {
-      title: 'Timeline',
-      name: 'timeline',
+      title: 'Content',
+      name: 'content',
       type: 'array',
       of: [
         {
+          title: 'Images',
+          name: 'images',
+          type: 'reference',
+          to: [
+            {
+              type: 'imagelist',
+            },
+          ],
+        },
+        {
+          title: 'Officers',
+          name: 'officers',
+          type: 'reference',
+          to: [
+            {
+              type: 'officerlist',
+            },
+          ],
+        },
+        {
+          title: 'Projects',
+          name: 'projects',
+          type: 'reference',
+          to: [
+            {
+              type: 'projectlist',
+            },
+          ],
+        },
+        {
+          title: 'Info Center',
+          name: 'info_center',
           type: 'object',
           fields: [
             {
-              title: 'Semester',
-              name: 'semester',
+              title: 'Title',
+              name: 'title',
               type: 'string',
             },
             {
-              title: 'Event Title',
+              title: 'Description',
+              name: 'description',
+              type: 'text',
+            },
+          ],
+        },
+        {
+          title: 'Info Left',
+          name: 'info_left',
+          type: 'object',
+          fields: [
+            {
+              title: 'Title',
               name: 'title',
               type: 'string',
             },
@@ -60,36 +81,39 @@ export default {
               type: 'text',
             },
             {
-              title: 'Media',
-              name: 'media',
-              type: 'array',
-              of: [
+              title: 'Images',
+              name: 'images',
+              type: 'reference',
+              to: [
                 {
-                  type: 'object',
-                  fields: [
-                    {
-                      title: 'Image',
-                      name: 'image',
-                      type: 'image',
-                    },
-                    {
-                      title: 'Style',
-                      name: 'style',
-                      type: 'object',
-                      fields: [
-                        {
-                          title: 'Width (%)',
-                          name: 'width',
-                          type: 'string',
-                        },
-                        {
-                          title: 'Aspect Ratio',
-                          name: 'aspectRatio',
-                          type: 'string',
-                        },
-                      ],
-                    },
-                  ],
+                  type: 'imagelist',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: 'Info Right',
+          name: 'info_right',
+          type: 'object',
+          fields: [
+            {
+              title: 'Title',
+              name: 'title',
+              type: 'string',
+            },
+            {
+              title: 'Description',
+              name: 'description',
+              type: 'text',
+            },
+            {
+              title: 'Images',
+              name: 'images',
+              type: 'reference',
+              to: [
+                {
+                  type: 'imagelist',
                 },
               ],
             },

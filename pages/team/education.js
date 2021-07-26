@@ -13,10 +13,7 @@ export default class EducationPage extends Component {
       <TeamPage
         accent={data.accent}
         team={teams[data.team.toLowerCase()]}
-        info={data.info}
-        images={data.images}
-        officers={data.officers}
-        events={data.events}
+        content={data.content}
       />
     );
   }
@@ -32,7 +29,7 @@ export async function getStaticProps() {
   let data;
   await client
     .fetch(
-      '*[_type == "team" && lower(team) == "education"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}',
+      '*[_type == "team" && lower(team) == "education"]{team, accent, "content": {"refs": content[]->{_type, "info": info[], "officers": officers[]->{github, linkedin, website, name, position, "image": image.asset->url}, "images": images[].asset->{url}, "projects": projects[]->{contributors, description, overlay_description, project, repo, tag}}, "raw": content[]{_type, title, description,  "images": images->images[].asset->url}}}',
     )
     .then((teams) => (data = teams[0]));
   let registeredTeams;

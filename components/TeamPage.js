@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Info from '../components/Info';
 import ImageCarousel from './ImageCarousel';
+import DevProject from './DevProject';
 import Timeline from './Timeline';
 import styles from '../styles/component/TeamPage.module.css';
 
@@ -90,7 +91,97 @@ export default class TeamPage extends Component {
     this.state = {};
   }
   render() {
-    const officers = [];
+    const content = [];
+    for (let i = 0; i < (this.props.content?.raw || []).length; i++) {
+      let c = this.props.content.raw[i];
+      switch (c._type) {
+        case 'officers':
+          c = this.props.content.refs[i];
+          const officers = [];
+          Array.from(c.officers || []).forEach((o) =>
+            officers.push(
+              <Profile
+                key={o.name}
+                name={o.name}
+                position={o.position}
+                image={o.image}
+                github={o.github}
+                linkedin={o.linkedin}
+                website={o.website}
+              />,
+            ),
+          );
+          content.push(
+            <div key={i} className={styles.officers}>
+              {officers}
+            </div>,
+          );
+          break;
+        case 'images':
+          c = this.props.content.refs[i];
+          const images = [];
+          Array.from(c.images || []).forEach((i) => images.push(i.url));
+          content.push(<ImageCarousel id={styles.images} images={images} />);
+          break;
+        case 'projects':
+          c = this.props.content.refs[i];
+          const projects = [];
+          Array.from(c.projects || []).forEach((p) =>
+            projects.push(
+              <DevProject
+                key={p.project}
+                title={p.project}
+                tag={p.tag}
+                contributors={p.contributors}
+                description={p.description}
+                repo={p.repo.display}
+                link={p.repo.url}
+                overlay_description={p.overlay_description}
+              />,
+            ),
+          );
+          content.push(<div className={styles.projects}>{projects}</div>);
+          break;
+        case 'info_center':
+          content.push(
+            <div key={i} className={styles.info_container_center}>
+              <Info
+                id={styles.team_info}
+                title={c.title}
+                body={c.description}
+              />
+            </div>,
+          );
+          break;
+        case 'info_left':
+          content.push(
+            <div key={i} className={styles.info_container_center}>
+              <Info
+                id={styles.team_info_left}
+                title={c.title}
+                body={c.description}
+              />
+              <ImageCarousel id={styles.images_left} images={c.images} />
+            </div>,
+          );
+          break;
+        case 'info_right':
+          content.push(
+            <div key={i} className={styles.info_container_center}>
+              <ImageCarousel id={styles.images_left} images={c.images} />
+              <Info
+                id={styles.team_info_left}
+                title={c.title}
+                body={c.description}
+              />
+            </div>,
+          );
+          break;
+        default:
+          break;
+      }
+    }
+    /*const officers = [];
     Array.from(this.props.officers).forEach((o) =>
       officers.push(
         <Profile
@@ -103,11 +194,15 @@ export default class TeamPage extends Component {
           website={o.website}
         />,
       ),
-    );
+    );*/
     return (
-      <div style={{ '--accent': this.props.accent || '#ff00ff' }}>
+      <div
+        style={{ '--accent': this.props.accent || '#ff00ff' }}
+        className={styles.teampage}
+      >
         <div className={styles.logo}>{this.props.team}</div>
-        <div className={styles.officers}>{officers}</div>
+        {content}
+        {/*<div className={styles.officers}>{officers}</div>
         <div className={styles.info_container}>
           <Info
             id={styles.team_info}
@@ -126,7 +221,7 @@ export default class TeamPage extends Component {
         )}
         <div className={styles.timeline}>
           <Timeline events={this.props.events} />
-        </div>
+        </div>*/}
       </div>
     );
   }
