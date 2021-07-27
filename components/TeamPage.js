@@ -121,7 +121,9 @@ export default class TeamPage extends Component {
           c = this.props.content.refs[i];
           const images = [];
           Array.from(c.images || []).forEach((i) => images.push(i.url));
-          content.push(<ImageCarousel id={styles.images} images={images} />);
+          content.push(
+            <ImageCarousel key={i} id={styles.images} images={images} />,
+          );
           break;
         case 'projects':
           c = this.props.content.refs[i];
@@ -140,7 +142,11 @@ export default class TeamPage extends Component {
               />,
             ),
           );
-          content.push(<div className={styles.projects}>{projects}</div>);
+          content.push(
+            <div key={i} className={styles.projects}>
+              {projects}
+            </div>,
+          );
           break;
         case 'info_center':
           content.push(
