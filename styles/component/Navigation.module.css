@@ -25,6 +25,7 @@
   cursor: pointer;
 }
 .navitem:hover .teamnav,
+.navitem::selection .teamnav,
 .navitem:hover .programnav {
   cursor: default;
   opacity: 1;
