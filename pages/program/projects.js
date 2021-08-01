@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import DevProject from '../../components/DevProject';
+import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
 import { teams } from '../index';
 
 export default class ProjectsPage extends Component {
@@ -56,14 +57,8 @@ export async function getStaticProps() {
       '*[_type == "program" && lower(program) == "projects"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
     )
     .then((teams) => (data = teams[0]));
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   return {
     props: { data, registeredTeams, registeredPrograms },
   };

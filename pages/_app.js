@@ -2,7 +2,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
+function Website({ Component, pageProps }) {
   return (
     <div id="app">
       <Navigation {...pageProps} />
@@ -12,4 +12,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default Website;

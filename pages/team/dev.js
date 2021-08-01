@@ -1,6 +1,11 @@
 import { Component } from 'react';
 import TeamPage from '../../components/TeamPage';
 import { teams } from '../index';
+import {
+  getRegisteredTeams,
+  getRegisteredPrograms,
+  getTeamInfo,
+} from '../../util/cms';
 
 export default class DevPage extends Component {
   constructor(props) {
@@ -19,42 +24,9 @@ export default class DevPage extends Component {
   }
 }
 export async function getStaticProps() {
-  const sanity = require('@sanity/client');
-  const client = sanity({
-    projectId: 'l82yvvx0',
-    dataset: 'production',
-    apiVersion: '2019-01-29',
-    useCdn: false,
-  });
-  let data;
-  await client
-    .fetch(
-      '*[_type == "team" && lower(team) == "development"]{team, accent, "content": {"refs": content[]->{_type, "info": info[], "officers": officers[]->{github, linkedin, website, name, position, "image": image.asset->url}, "images": images[].asset->{url}, "projects": projects[]->{contributors, description, overlay_description, project, repo, tag}}, "raw": content[]{_type, title, description,  "images": images->images[].asset->url}}}',
-    )
-    .then((teams) => (data = teams[0]));
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-
-  registeredTeams = [
-    { team: 'Development' },
-    { team: 'Media' },
-    { team: 'Projects' },
-    { team: 'Research' },
-    { team: 'Education' },
-    { team: 'Industry' },
-    { team: 'HackUTD' },
-  ].filter((val) => {
-    for (let x of registeredTeams) {
-      if (val.team === x.team) return true;
-    }
-    return false;
-  });
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const data = await getTeamInfo('development');
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   return {
     props: { data, registeredTeams, registeredPrograms },
   };

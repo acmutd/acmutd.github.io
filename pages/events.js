@@ -2,6 +2,7 @@ import { Component } from 'react';
 import ImageCarousel from '../components/ImageCarousel';
 import Info from '../components/Info';
 import Calendar from '../components/Calendar';
+import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
 import styles from '../styles/page/Events.module.css';
 import { google } from 'googleapis';
 import { createEvents } from 'ics';
@@ -138,14 +139,8 @@ export async function getStaticProps() {
     apiVersion: '2019-01-29',
     useCdn: false,
   });
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   let data;
   await client
     .fetch(

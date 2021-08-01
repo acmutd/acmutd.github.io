@@ -1,5 +1,5 @@
 .teampage {
-  --margin-bottom: 100px;
+  --margin-bottom: 3vmax;
 }
 .logo {
   display: flex;
@@ -12,7 +12,7 @@
   width: 30em;
 }
 .officers {
-  margin: 50px auto;
+  margin: 1vmax auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;

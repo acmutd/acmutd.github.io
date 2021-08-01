@@ -96,12 +96,12 @@ export default class Navigation extends Component {
             </Link>
             <div className={styles.navunderline}></div>
           </li>
-          <li className={styles.navitem}>
+          {/*<li className={styles.navitem}>
             <Link href="/sponsors">
               <div className={styles.navtext}>Sponsors</div>
             </Link>
             <div className={styles.navunderline}></div>
-          </li>
+            </li>*/}
           <li className={styles.navitem}>
             <Link href="/scholarship">
               <div className={styles.navtext}>Scholarship</div>

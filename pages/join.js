@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import ImageCarousel from '../components/ImageCarousel';
 import Info from '../components/Info';
+import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
 import styles from '../styles/page/Join.module.css';
 
 export default class AboutPage extends Component {
@@ -53,14 +54,8 @@ export async function getStaticProps() {
     apiVersion: '2019-01-29',
     useCdn: false,
   });
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   let data;
   await client
     .fetch('*[_type == "joinpage"]{how, when, "images": images[].asset->url}')
