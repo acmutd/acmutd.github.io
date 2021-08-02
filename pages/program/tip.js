@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
-import { teams } from '../index';
+import { getPageSVG } from '../../util/svg'
 
 export default class TIPPage extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class TIPPage extends Component {
         accent={data.accent}
         left={data.left}
         right={data.right}
-        program={teams[data.program.toLowerCase()]}
+        program={getPageSVG(data.program.toLowerCase())}
         why={data.why}
         benefits={data.benefits}
         how={data.how}

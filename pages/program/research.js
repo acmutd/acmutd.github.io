@@ -2,7 +2,7 @@ import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import DevProject from '../../components/DevProject';
 import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
-import { teams } from '../index';
+import { getPageSVG } from '../../util/svg'
 
 export default class ResearchPage extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class ResearchPage extends Component {
         accent={data.accent}
         left={data.left}
         right={data.right}
-        program={teams[data.program.toLowerCase()]}
+        program={getPageSVG(data.program.toLowerCase())}
         why={data.why}
         benefits={data.benefits}
         how={data.how}

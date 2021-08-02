@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import TeamPage from '../../components/TeamPage';
-import { teams } from '../index';
+import { getPageSVG } from '../../util/svg'
 import {
   getRegisteredTeams,
   getRegisteredPrograms,
@@ -17,7 +17,7 @@ export default class MediaPage extends Component {
     return (
       <TeamPage
         accent={data.accent}
-        team={teams[data.team.toLowerCase()]}
+        team={getPageSVG(data.team.toLowerCase())}
         content={data.content}
       />
     );
