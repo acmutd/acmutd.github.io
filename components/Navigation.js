@@ -30,7 +30,7 @@ export default class Navigation extends Component {
     });
     const navItemStyle = 'group transform relative text-base ml-8 mr-8 cursor-pointer'
     const navLineStyle = 'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100'
-    const navListStyle = 'absolute flex flex-col transform scale-0 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg transition group-hover:opacity-100 group-hover:scale-100'
+    const navListStyle = 'absolute flex flex-col transform scale-0 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg transition group-hover:opacity-100 group-hover:scale-100'
     return (
       <div id="navigation" className='center'>
         <ul className='flex flex-row flex-wrap justify-center items-center'>
