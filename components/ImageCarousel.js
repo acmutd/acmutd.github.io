@@ -1,4 +1,3 @@
-import { ArraySetLength } from 'es-abstract';
 import { Component } from 'react';
 import styles from '../styles/component/ImageCarousel.module.css';
 
@@ -20,11 +19,9 @@ export default class ImageCarousel extends Component {
       this.images.push(<img src={i} />),
     );
     return (
-      <div id={this.props.id || ''} className={styles.container}>
+      <div className={`m-auto w-3/4 rounded-3xl overflow-hidden${this.props.className ? ` ${this.props.className}` : ''}`
+  }>
         {this.images[this.state.image] || <div />}
-        <div className={styles.nav}>
-          {/* TODO: Add a manual interactive navigator */}
-        </div>
       </div>
     );
   }

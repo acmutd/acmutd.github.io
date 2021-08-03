@@ -13,12 +13,11 @@ export default class AboutPage extends Component {
     const { data } = this.props;
     return (
       <div>
-        <div className={styles.title}>Get Involved with ACM</div>
-        <div className={styles.tagline}>Join the group of people...</div>
-        <ImageCarousel id={styles.images} images={data.images} />
-        <div className={styles.infocontainer}>
-          <Info title="How to join" body={data.how} />
-          <Info title="When to join" body={data.when} />
+        <div className='mt-6 text-4xl font-black text-center'>Get Involved with ACM</div>
+        <ImageCarousel className='w-3/4 mx-auto my-8' images={data.images} />
+        <div className='mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 md:flex-no-wrap'>
+          <Info title='How to join' body={data.how} />
+          <Info title='When to join' body={data.when} />
         </div>
         <div className={styles.buttons}>
           <div

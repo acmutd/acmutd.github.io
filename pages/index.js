@@ -120,12 +120,12 @@ export default class AboutPage extends Component {
     const { events, data } = this.props;
     return (
       <div>
-        <div className={styles.title}>Association for Computing Machinery</div>
-        <div className={styles.tagline}>We're just a group of people...</div>
-        <ImageCarousel id={styles.images} images={data.images} />
-        <div className={styles.infocontainer}>
-          <Info title="Who we are" body={data.who} />
-          <Info title="What we do" body={data.what} />
+        <div className='mt-6 text-4xl font-black text-center'>Association for Computing Machinery</div>
+        <div className='text-2xl font-bold text-center'>We're just a group of people...</div>
+        <ImageCarousel className='w-3/4 mx-auto my-8' images={data.images} />
+        <div className='mx-auto mt-8 mb-10 flex justify-center w-4/5'>
+          <Info title='Who we are' body={data.who} />
+          <Info title='What we do' body={data.what} />
         </div>
         <Calendar events={events} />
       </div>

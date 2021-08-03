@@ -28,11 +28,11 @@ export default class Navigation extends Component {
         </Link>,
       );
     });
-    const navItemStyle = 'group transform relative text-base ml-8 mr-8 cursor-pointer'
+    const navItemStyle = 'group transform relative text-sm ml-8 mr-8 cursor-pointer md:text-lg'
     const navLineStyle = 'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100'
-    const navListStyle = 'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg transition group-hover:opacity-100 group-hover:scale-100'
+    const navListStyle = 'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg cursor-default transition group-hover:opacity-100 group-hover:scale-100'
     return (
-      <div id="navigation" className='center'>
+      <div id="navigation" className=''>
         <ul className='flex flex-row flex-wrap justify-center items-center'>
           <li className={`${navItemStyle}`}>
             <Link href="/">

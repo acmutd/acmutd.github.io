@@ -3,11 +3,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    screens: {
+      'xs': '375px'
+    },
+    maxWidth: {
+      '1/3': '33%',
+      '4/5': '80%'
+    }
   },
   variants: {
     extend: {
       scale: ['group-hover']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio')
+  ],
 };

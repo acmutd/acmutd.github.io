@@ -22,3 +22,13 @@ body {
   color: white;
   font-size: 1.5vmin;
 }
+.profile_svg {
+  color: white;
+  fill: white;
+  transition: color 0.25s, fill 0.25s;
+}
+.profile_svg:hover {
+  cursor: pointer;
+  color: var(--accent);
+  fill: var(--accent);
+}

@@ -4,7 +4,7 @@ import '../styles/globals.css';
 
 function Website({ Component, pageProps }) {
   return (
-    <div id="app">
+    <div id="app" className='relative'>
       <Navigation {...pageProps} />
       <Component {...pageProps} />
       <Footer />
