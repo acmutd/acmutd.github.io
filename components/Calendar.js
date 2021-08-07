@@ -118,7 +118,7 @@ export default class Calendar extends Component {
     const weekdays = [];
     Array.from(daysOfWeek).forEach((d) =>
       weekdays.push(
-        <div key={d} className='m-auto w-1/7 text-center'>
+        <div key={d} className='w-2/15 mx-calendar text-center'>
           {d}
         </div>,
       ),
@@ -157,7 +157,7 @@ export default class Calendar extends Component {
           )}
         </div>
         <div className='flex w-full m-auto text-puny font-bold lg:text-base'>{weekdays}</div>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap p-0'>
           {days}
         </div>
       </div>
