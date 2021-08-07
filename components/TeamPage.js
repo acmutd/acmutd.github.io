@@ -18,7 +18,7 @@ export class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.profileStyle = 'profile_svg m-auto mx-2 w-6 h-6';
+    this.profileStyle = 'profile_svg m-auto mx-1 w-3 h-3 md:mx-2 md:w-6 md:h-6';
   }
   github(link) {
     if (!link) return <div key="github" />;
@@ -76,8 +76,8 @@ export class Profile extends Component {
         >
           <img src={this.props.image} />
         </div>
-        <div className="text-md font-bold">{this.props.name}</div>
-        <div className="text-xs">{this.props.position}</div>
+        <div className="text-puny font-black md:text-sm">{this.props.name}</div>
+        <div className="text-puny md:text-xs">{this.props.position}</div>
         <div className="my-3 mx-auto flex flex-wrap items-center justify-center">
           {socials}
         </div>
@@ -91,7 +91,7 @@ export default class TeamPage extends Component {
     super(props);
     this.state = {};
     this.infoContainerStyle =
-      'm-auto flex no-wrap items-center justify-center max-w-4/5 mb-14';
+      'm-auto flex flex-wrap items-center justify-center max-w-4/5 mb-14 lg:flex-nowrap';
   }
   render() {
     const content = [];
@@ -167,16 +167,16 @@ export default class TeamPage extends Component {
         case 'info_left':
           content.push(
             <div key={i} className={this.infoContainerStyle}>
-              <Info className="w-2/5" title={c.title} body={c.description} />
-              <ImageCarousel className="w-1/2" images={c.images} />
+              <Info title={c.title} body={c.description} />
+              <ImageCarousel className="min-w-3/5" images={c.images} />
             </div>,
           );
           break;
         case 'info_right':
           content.push(
             <div key={i} className={this.infoContainerStyle}>
-              <ImageCarousel className="w-1/2" images={c.images} />
-              <Info className="w-2/5" title={c.title} body={c.description} />
+              <ImageCarousel className="min-w-3/5" images={c.images} />
+              <Info title={c.title} body={c.description} />
             </div>,
           );
           break;

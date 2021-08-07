@@ -20,7 +20,7 @@ export default class SponsorsPage extends Component {
         <div className={styles.sponsors}>{images}</div>
         <div className={styles.buttons}>
           <div
-            onClick={() => window.open('https://williecubed.me/')}
+            onClick={() => window.open('')}
             className={styles.button}
             style={{
               background:

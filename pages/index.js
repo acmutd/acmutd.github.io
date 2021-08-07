@@ -120,14 +120,14 @@ export default class AboutPage extends Component {
     const { events, data } = this.props;
     return (
       <div>
-        <div className="mt-6 text-4xl font-black text-center">
+        <div className="mt-6 text-2xl font-black text-center md:text-4xl">
           Association for Computing Machinery
         </div>
-        <div className="text-2xl font-bold text-center">
+        <div className="text-xl font-bold text-center md:text-2xl">
           We're just a group of people...
         </div>
         <ImageCarousel className="w-3/4 mx-auto my-8" images={data.images} />
-        <div className="mx-auto mt-8 mb-10 flex justify-center w-4/5">
+        <div className="mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 lg:flex-nowrap">
           <Info title="Who we are" body={data.who} />
           <Info title="What we do" body={data.what} />
         </div>

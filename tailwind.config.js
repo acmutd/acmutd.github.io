@@ -9,20 +9,26 @@ module.exports = {
     extend: {
       screens: {
         xs: '375px',
-        lg: '1030px'
+        lg: '1035px',
       },
       fontSize: {
-        puny: '0.5rem'
-      }
-    },
-    maxWidth: {
-      '1/3': '33%',
-      '4/5': '80%',
+        puny: ['0.5rem', '0.75rem'],
+      },
+      maxWidth: {
+        '1/3': '33%',
+        '4/5': '80%',
+      },
+      minWidth: {
+        '1/2': '50%',
+        '3/5': '60%',
+        '3/4': '75%',
+      },
     },
   },
   variants: {
     extend: {
       scale: ['group-hover'],
+      filter: ['hover'],
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],

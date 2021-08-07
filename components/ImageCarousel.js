@@ -16,13 +16,14 @@ export default class ImageCarousel extends Component {
   }
   render() {
     Array.from(this.props.images || []).forEach((i) =>
-      this.images.push(<img src={i} />),
+      this.images.push(<img className="w-full h-full" src={i} />),
     );
     return (
       <div
-        className={`m-auto w-3/4 rounded-3xl overflow-hidden${
+        className={`m-auto w-3/4 aspect-w-16 aspect-h-7 rounded-3xl overflow-hidden${
           this.props.className ? ` ${this.props.className}` : ''
         }`}
+        style={{ zIndex: -3 }}
       >
         {this.images[this.state.image] || <div />}
       </div>

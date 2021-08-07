@@ -119,9 +119,11 @@ export default class AboutPage extends Component {
     const { events, data } = this.props;
     return (
       <div>
-        <div className={styles.title}>Events at ACM</div>
-        <ImageCarousel id={styles.images} images={data.images} />
-        <div className={styles.infocontainer}>
+        <div className="mt-6 text-2xl font-black text-center md:text-4xl">
+          Events at ACM
+        </div>
+        <ImageCarousel className="mx-auto my-8" images={data.images} />
+        <div className="mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 lg:flex-nowrap">
           <Info title="Who can attend" body={data.who} />
           <Info title="Where to attend" body={data.where} />
         </div>

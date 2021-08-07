@@ -8,7 +8,7 @@ export default class ScholarshipPage extends Component {
     this.state = {};
   }
   render() {
-    const { events, data } = this.props;
+    const { data } = this.props;
     return (
       <div>
         <div className={styles.title}>ACM Scholarship</div>
@@ -17,7 +17,7 @@ export default class ScholarshipPage extends Component {
         </div>
         <div className={styles.buttons}>
           <div
-            onClick={() => window.open('https://williecubed.me/')}
+            onClick={() => window.open('')}
             className={styles.button}
             style={{
               background:
