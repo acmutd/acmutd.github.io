@@ -33,8 +33,8 @@ export class Event extends Component {
   render() {
     return (
       <div
-        className={styles.event}
-        style={{ '--color': this.props.color || '#00ffff77' }}
+        className='transition mx-0 my-1 px-1 py-0 text-puny text-left text-bold bg-custom rounded cursor-pointer hover:filter md:text-xs'
+        style={{ '--color': this.props.color || '#00ffff77', '--tw-brightness': 'brightness(110%)' }}
       >
         {this.props.event}
       </div>
@@ -60,11 +60,11 @@ export class Day extends Component {
       );
     return (
       <div
-        className={styles.daycontainer}
+        className='w-2/15 h-2/15 text-base text-black bg-white rounded m-calendar'
         style={{ opacity: this.props.hidden ? 0 : 1 }}
       >
-        <div className={styles.daydate}>{this.props.date}</div>
-        <div className={styles.events}>{events}</div>
+        <div className='px-1 py-0 w-min font-black text-lg'>{this.props.date}</div>
+        <div className='events flex flex-col h-calendar text-base overflow-auto overflow-x-hidden rounded'>{events}</div>
       </div>
     );
   }
@@ -105,14 +105,8 @@ export default class Calendar extends Component {
   render() {
     const svg = (c, f) => (
       <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        data-icon="chevron-up"
         className={c}
         onClick={f}
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
       >
         <path
@@ -124,7 +118,7 @@ export default class Calendar extends Component {
     const weekdays = [];
     Array.from(daysOfWeek).forEach((d) =>
       weekdays.push(
-        <div key={d} className={styles.weekday}>
+        <div key={d} className='m-auto w-1/7 text-center'>
           {d}
         </div>,
       ),
@@ -145,53 +139,25 @@ export default class Calendar extends Component {
         />,
       );
     return (
-      <div className={styles.calendar}>
-        <div className={styles.calendartitle}>Event Calendar</div>
-        <div className={styles.control}>
-          {svg(styles.left, () =>
+      <div className='w-4/5 m-auto'>
+        <div className='text-2xl font-black text-center'>Event Calendar</div>
+        <div className='flex justify-center items-center w-full'>
+          {svg('transition transform -rotate-90 my-0 mx-1 w-6 h-6 cursor-pointer hover:text-gray-500', () =>
             this.setState({
               offset: this.state.month - 1,
               month: this.state.month - 1 < 0 ? 11 : this.state.month - 1,
             }),
           )}
-          <div className={styles.controldate}>{this.getDate()}</div>
-          {svg(styles.right, () =>
+          <div className='text-lg text-center'>{this.getDate()}</div>
+          {svg('transition transform rotate-90 my-0 mx-1 w-6 h-6 cursor-pointer hover:text-gray-500', () =>
             this.setState({
               offset: this.state.month + 1,
               month: this.state.month + 1 > 11 ? 0 : this.state.month + 1,
             }),
           )}
         </div>
-        <div className={styles.weekdays}>{weekdays}</div>
-        <div className={styles.days}>
-          {/*<Day date='1' />
-                    <Day date='2' events={[
-                        {
-                            event: 'An Event'
-                        },
-                        {
-                            event: 'An Event',
-                            color: '#ff00ff77'
-                        },
-                        {
-                            event: 'An Event'
-                        },
-                        {
-                            event: 'An Event'
-                        },
-                        {
-                            event: 'An Event'
-                        },
-                        {
-                            event: 'An Event'
-                        }
-                    ]}/>
-                    <Day date='3' />
-                    <Day date='4' />
-                    <Day date='5' />
-                    <Day date='6' />
-                    <Day date='7' />
-                <Day date='8' />*/}
+        <div className='flex w-full m-auto text-puny font-bold lg:text-base'>{weekdays}</div>
+        <div className='flex flex-wrap'>
           {days}
         </div>
       </div>

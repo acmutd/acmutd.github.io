@@ -32,3 +32,11 @@ body {
   color: var(--accent);
   fill: var(--accent);
 }
+.events::-webkit-scrollbar {
+  overflow: scroll;
+  width: 0.2vw;
+}
+.events::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 150px;
+}
