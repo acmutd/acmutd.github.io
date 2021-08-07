@@ -11,27 +11,28 @@ export default class ScholarshipPage extends Component {
     const { data } = this.props;
     return (
       <div>
-        <div className={styles.title}>ACM Scholarship</div>
-        <div className={styles.tagline}>
+        <div className='mt-6 text-2xl font-black text-center md:text-4xl'>ACM Scholarship</div>
+        <div className='text-xl font-bold text-center md:text-2xl'>
           Dr. Gopal Gupta Undergraduate Scholarship for Computer Science...
         </div>
-        <div className={styles.buttons}>
+        <div className='relative flex flex-wrap justify-center items-center mx-auto my-0 text-base text-bold max-w-3/5 text-center md:text-lg'>
           <div
-            onClick={() => window.open('')}
-            className={styles.button}
+            onClick={() => window.open('https://engineering.utdallas.edu/engineering/academics/undergraduate-majors/scholarships/')}
+            className='transition cursor-pointer rounded-2xl p-2 px-12 mx-24 my-3 hover:filter'
             style={{
               background:
                 'linear-gradient(90.12deg, #2400FF 0.1%, #00FFC2 99.39%)',
+              '--tw-brightness': 'brightness(140%)',
             }}
           >
             Apply now!
           </div>
         </div>
-        <div className={styles.infocontainer}>
+        <div className='mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 lg:flex-nowrap'>
           <Info title="Who it's for" body={data.who} />
           <Info title="How to apply" body={data.how} />
         </div>
-        <div className={styles.infocontainer_2}>
+        <div className='mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 lg:flex-nowrap'>
           <Info title="Inspiration" body={data.inspiration} />
         </div>
       </div>

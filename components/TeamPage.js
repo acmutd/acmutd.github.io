@@ -128,7 +128,7 @@ export default class TeamPage extends Component {
           const images = [];
           Array.from(c.images || []).forEach((i) => images.push(i.url));
           content.push(
-            <ImageCarousel key={i} id={styles.images} images={images} />,
+            <ImageCarousel key={i} images={images} />,
           );
           break;
         case 'projects':

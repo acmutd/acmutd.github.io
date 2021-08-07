@@ -148,7 +148,7 @@ export default class Calendar extends Component {
               month: this.state.month - 1 < 0 ? 11 : this.state.month - 1,
             }),
           )}
-          <div className='text-lg text-center'>{this.getDate()}</div>
+          <div className='text-lg text-center w-40'>{this.getDate()}</div>
           {svg('transition transform rotate-90 my-0 mx-1 w-6 h-6 cursor-pointer hover:text-gray-500', () =>
             this.setState({
               offset: this.state.month + 1,
