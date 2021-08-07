@@ -7,7 +7,7 @@ import {
   getTeamInfo,
 } from '../../util/cms';
 
-export default class MediaPage extends Component {
+export default class ProjectsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -24,7 +24,7 @@ export default class MediaPage extends Component {
   }
 }
 export async function getStaticProps() {
-  const data = await getTeamInfo('media');
+  const data = await getTeamInfo('projects');
   const registeredTeams = await getRegisteredTeams();
   const registeredPrograms = await getRegisteredPrograms();
   return {

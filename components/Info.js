@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import styles from '../styles/component/Info.module.css';
 
 export default class Info extends Component {
   constructor(props) {
@@ -8,9 +7,15 @@ export default class Info extends Component {
   }
   render() {
     return (
-      <div id={this.props.id || ''} className={styles.info}>
-        <div className={styles.title}>{this.props.title}</div>
-        <div className={styles.body}>{this.props.body}</div>
+      <div
+        className={`m-8 max-w-2xl${
+          this.props.className ? ` ${this.props.className}` : ''
+        }`}
+      >
+        <div className="text-center font-bold text-xl mb-2 sm:text-2xl">
+          {this.props.title}
+        </div>
+        <div className="text-base">{this.props.body}</div>
       </div>
     );
   }

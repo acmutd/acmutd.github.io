@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
-  --bg-color: #161616;
+  --bg-color: #131313;
   --accent: gray;
 }
 body::-webkit-scrollbar {
@@ -21,4 +20,15 @@ body {
   background-color: var(--bg-color);
   font-family: 'Poppins';
   color: white;
+  font-size: 1.5vmin;
+}
+.profile_svg {
+  color: white;
+  fill: white;
+  transition: color 0.25s, fill 0.25s;
+}
+.profile_svg:hover {
+  cursor: pointer;
+  color: var(--accent);
+  fill: var(--accent);
 }

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import ImageCarousel from '../components/ImageCarousel';
 import Info from '../components/Info';
+import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
 import styles from '../styles/page/Join.module.css';
 
 export default class AboutPage extends Component {
@@ -12,10 +13,11 @@ export default class AboutPage extends Component {
     const { data } = this.props;
     return (
       <div>
-        <div className={styles.title}>Get Involved with ACM</div>
-        <div className={styles.tagline}>Join the group of people...</div>
-        <ImageCarousel id={styles.images} images={data.images} />
-        <div className={styles.infocontainer}>
+        <div className="mt-6 text-4xl font-black text-center">
+          Get Involved with ACM
+        </div>
+        <ImageCarousel className="w-3/4 mx-auto my-8" images={data.images} />
+        <div className="mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 md:flex-nowrap">
           <Info title="How to join" body={data.how} />
           <Info title="When to join" body={data.when} />
         </div>
@@ -53,14 +55,8 @@ export async function getStaticProps() {
     apiVersion: '2019-01-29',
     useCdn: false,
   });
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   let data;
   await client
     .fetch('*[_type == "joinpage"]{how, when, "images": images[].asset->url}')

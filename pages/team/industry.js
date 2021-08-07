@@ -1,6 +1,11 @@
 import { Component } from 'react';
 import TeamPage from '../../components/TeamPage';
-import { teams } from '../index';
+import { getPageSVG } from '../../util/svg';
+import {
+  getRegisteredTeams,
+  getRegisteredPrograms,
+  getTeamInfo,
+} from '../../util/cms';
 
 export default class IndustryPage extends Component {
   constructor(props) {
@@ -12,37 +17,16 @@ export default class IndustryPage extends Component {
     return (
       <TeamPage
         accent={data.accent}
-        team={teams[data.team.toLowerCase()]}
-        info={data.info}
-        images={data.images}
-        officers={data.officers}
-        events={data.events}
+        team={getPageSVG(data.team.toLowerCase())}
+        content={data.content}
       />
     );
   }
 }
 export async function getStaticProps() {
-  const sanity = require('@sanity/client');
-  const client = sanity({
-    projectId: 'l82yvvx0',
-    dataset: 'production',
-    apiVersion: '2019-01-29',
-    useCdn: false,
-  });
-  let data;
-  await client
-    .fetch(
-      '*[_type == "team" && lower(team) == "industry"]{team, accent, info, "artifacts": artifacts[]->{project, tag, contributors, description, repo}, "images": images[].asset->url, "officers": officers[]->{name, position, linkedin, github, website, "image": image.asset->url}, "events": timeline[]{semester, title, description, "media": media[]{style, "url": image.asset->url}}}',
-    )
-    .then((teams) => (data = teams[0]));
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const data = await getTeamInfo('industry');
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   return {
     props: { data, registeredTeams, registeredPrograms },
   };

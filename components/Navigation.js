@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
-import { teams } from '../pages/index';
-import styles from '../styles/component/Navigation.module.css';
+import { getListSVG } from '../util/svg';
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +16,7 @@ export default class Navigation extends Component {
           key={`team-${team}`}
           href={`/team/${team === 'development' ? 'dev' : team}`}
         >
-          {teams[team]}
+          {getListSVG(team)}
         </Link>,
       );
     });
@@ -25,47 +24,53 @@ export default class Navigation extends Component {
       program = program.program.toLowerCase();
       programList.push(
         <Link key={`program-${program}`} href={`/program/${program}`}>
-          {teams[program]}
+          {getListSVG(program)}
         </Link>,
       );
     });
+    const navItemStyle =
+      'group transform relative text-xs ml-1 mr-1 cursor-pointer md:text-lg md:ml-8 md:mr-8';
+    const navLineStyle =
+      'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100';
+    const navListStyle =
+      'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg cursor-default transition group-hover:opacity-100 group-hover:scale-100';
     return (
-      <div id="navigation">
-        <ul className={styles.navbar}>
-          <li className={styles.navitem}>
+      <div id="navigation" className="">
+        <ul className="flex flex-row flex-wrap justify-center items-center">
+          <li className={`${navItemStyle}`}>
             <Link href="/">
-              <div className={styles.navtext}>About</div>
+              <div>About</div>
             </Link>
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
+          <li className={`${navItemStyle}`}>
             <Link href="/join">
-              <div className={styles.navtext}>Join</div>
+              <div>Join</div>
             </Link>
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
-            <div className={styles.navtext}>Programs</div>
+          <li className={`${navItemStyle}`}>
+            <div>Programs</div>
             {programList.length > 0 ? (
-              <div className={styles.programnav}>{programList}</div>
+              <div className={navListStyle}>{programList}</div>
             ) : (
               <div />
             )}
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
-            <div className={styles.navtext}>Teams</div>
+          <li className={`${navItemStyle}`}>
+            <div>Teams</div>
             {teamList.length > 0 ? (
-              <div className={styles.teamnav}>{teamList}</div>
+              <div className={navListStyle}>{teamList}</div>
             ) : (
               <div />
             )}
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
+          <li className={`${navItemStyle}`}>
             <Link href="/">
               <svg
-                className={[styles.acm]}
+                className="w-10 h-10"
                 viewBox="0 0 240 165"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,29 +95,29 @@ export default class Navigation extends Component {
               </svg>
             </Link>
           </li>
-          <li className={styles.navitem}>
+          <li className={`${navItemStyle}`}>
             <Link href="/events">
-              <div className={styles.navtext}>Events</div>
+              <div>Events</div>
             </Link>
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
+          {/*<li className={styles.navitem}>
             <Link href="/sponsors">
               <div className={styles.navtext}>Sponsors</div>
             </Link>
             <div className={styles.navunderline}></div>
-          </li>
-          <li className={styles.navitem}>
+            </li>*/}
+          <li className={`${navItemStyle}`}>
             <Link href="/scholarship">
-              <div className={styles.navtext}>Scholarship</div>
+              <div>Scholarship</div>
             </Link>
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
-          <li className={styles.navitem}>
+          <li className={`${navItemStyle}`}>
             <Link href="/contact">
-              <div className={styles.navtext}>Contact</div>
+              <div>Contact</div>
             </Link>
-            <div className={styles.navunderline}></div>
+            <div className={navLineStyle}></div>
           </li>
         </ul>
       </div>

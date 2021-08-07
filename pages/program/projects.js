@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import DevProject from '../../components/DevProject';
-import { teams } from '../index';
+import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
+import { getPageSVG } from '../../util/svg';
 
 export default class ProjectsPage extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export default class ProjectsPage extends Component {
         accent={data.accent}
         left={data.left}
         right={data.right}
-        program={teams[data.program.toLowerCase()]}
+        program={getPageSVG(data.program.toLowerCase())}
         why={data.why}
         benefits={data.benefits}
         how={data.how}
@@ -56,14 +57,8 @@ export async function getStaticProps() {
       '*[_type == "program" && lower(program) == "projects"]{program, accent, left, right, why, benefits, link, how, "artifacts": artifacts[]->{project, tag, contributors, description, repo, overlay_description}, "images": images[].asset->url, "testimonials": testimonials[]{name, description, "image": image.asset->url}}',
     )
     .then((teams) => (data = teams[0]));
-  let registeredTeams;
-  await client
-    .fetch('*[_type == "team"]{team}')
-    .then((teams) => (registeredTeams = teams));
-  let registeredPrograms;
-  await client
-    .fetch('*[_type == "program"]{program}')
-    .then((programs) => (registeredPrograms = programs));
+  const registeredTeams = await getRegisteredTeams();
+  const registeredPrograms = await getRegisteredPrograms();
   return {
     props: { data, registeredTeams, registeredPrograms },
   };
