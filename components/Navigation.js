@@ -29,7 +29,7 @@ export default class Navigation extends Component {
       );
     });
     const navItemStyle =
-      'group transform relative text-xs ml-1 mr-1 cursor-pointer md:text-lg md:ml-8 md:mr-8';
+      'group transform relative text-puny ml-1 mr-1 cursor-pointer md:text-sm md:ml-3 md:mr-3 lg:text-lg lg:ml-8 lg:mr-8';
     const navLineStyle =
       'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100';
     const navListStyle =
@@ -70,7 +70,7 @@ export default class Navigation extends Component {
           <li className={`${navItemStyle}`}>
             <Link href="/">
               <svg
-                className="w-10 h-10"
+                className="w-5 h-5 md:w-10 md:h-10"
                 viewBox="0 0 240 165"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

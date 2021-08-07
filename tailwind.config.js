@@ -9,7 +9,11 @@ module.exports = {
     extend: {
       screens: {
         xs: '375px',
+        lg: '1030px'
       },
+      fontSize: {
+        puny: '0.5rem'
+      }
     },
     maxWidth: {
       '1/3': '33%',
