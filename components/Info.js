@@ -7,9 +7,15 @@ export default class Info extends Component {
   }
   render() {
     return (
-      <div className={`m-8 max-w-2xl${this.props.className ? ` ${this.props.className}` : ''}`}>
-        <div className='text-center font-bold text-xl mb-2 sm:text-2xl'>{this.props.title}</div>
-        <div className='text-base'>{this.props.body}</div>
+      <div
+        className={`m-8 max-w-2xl${
+          this.props.className ? ` ${this.props.className}` : ''
+        }`}
+      >
+        <div className="text-center font-bold text-xl mb-2 sm:text-2xl">
+          {this.props.title}
+        </div>
+        <div className="text-base">{this.props.body}</div>
       </div>
     );
   }

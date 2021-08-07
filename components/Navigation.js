@@ -28,12 +28,15 @@ export default class Navigation extends Component {
         </Link>,
       );
     });
-    const navItemStyle = 'group transform relative text-xs ml-1 mr-1 cursor-pointer md:text-lg md:ml-8 md:mr-8'
-    const navLineStyle = 'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100'
-    const navListStyle = 'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg cursor-default transition group-hover:opacity-100 group-hover:scale-100'
+    const navItemStyle =
+      'group transform relative text-xs ml-1 mr-1 cursor-pointer md:text-lg md:ml-8 md:mr-8';
+    const navLineStyle =
+      'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100';
+    const navListStyle =
+      'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg cursor-default transition group-hover:opacity-100 group-hover:scale-100';
     return (
-      <div id="navigation" className=''>
-        <ul className='flex flex-row flex-wrap justify-center items-center'>
+      <div id="navigation" className="">
+        <ul className="flex flex-row flex-wrap justify-center items-center">
           <li className={`${navItemStyle}`}>
             <Link href="/">
               <div>About</div>
@@ -67,7 +70,7 @@ export default class Navigation extends Component {
           <li className={`${navItemStyle}`}>
             <Link href="/">
               <svg
-                className='w-10 h-10'
+                className="w-10 h-10"
                 viewBox="0 0 240 165"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

@@ -19,8 +19,11 @@ export default class ImageCarousel extends Component {
       this.images.push(<img src={i} />),
     );
     return (
-      <div className={`m-auto w-3/4 rounded-3xl overflow-hidden${this.props.className ? ` ${this.props.className}` : ''}`
-  }>
+      <div
+        className={`m-auto w-3/4 rounded-3xl overflow-hidden${
+          this.props.className ? ` ${this.props.className}` : ''
+        }`}
+      >
         {this.images[this.state.image] || <div />}
       </div>
     );

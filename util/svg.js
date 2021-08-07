@@ -1,5 +1,6 @@
 export function getListSVG(team) {
-  const svgStyle = 'transition w-40 h-11 mb-1 rounded-lg hover:bg-gray-800 cursor-pointer'
+  const svgStyle =
+    'transition w-40 h-11 mb-1 rounded-lg hover:bg-gray-800 cursor-pointer';
   const teams = {
     board: (
       <svg
@@ -467,10 +468,10 @@ export function getListSVG(team) {
       </svg>
     ),
   };
-  return teams[team]
+  return teams[team];
 }
 export function getPageSVG(team) {
-  const svgStyle = 'w-80 h-30 m-auto'
+  const svgStyle = 'w-80 h-30 m-auto';
   const teams = {
     board: (
       <svg
@@ -938,5 +939,5 @@ export function getPageSVG(team) {
       </svg>
     ),
   };
-  return teams[team]
+  return teams[team];
 }

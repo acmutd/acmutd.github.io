@@ -18,7 +18,7 @@ export class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.profileStyle = 'profile_svg m-auto mx-2 w-6 h-6'
+    this.profileStyle = 'profile_svg m-auto mx-2 w-6 h-6';
   }
   github(link) {
     if (!link) return <div key="github" />;
@@ -69,13 +69,18 @@ export class Profile extends Component {
       this.website(this.props.website),
     ];
     return (
-      <div className='flex flex-col items-center justify-center m-8 w-1/6 text-center text-sm'>
-        <div className='mb-4 w-full aspect-w-1 aspect-h-1 rounded-full overflow-hidden' style={{ zIndex: -10 }}>
+      <div className="flex flex-col items-center justify-center m-8 w-1/6 text-center text-sm">
+        <div
+          className="mb-4 w-full aspect-w-1 aspect-h-1 rounded-full overflow-hidden"
+          style={{ zIndex: -10 }}
+        >
           <img src={this.props.image} />
         </div>
-        <div className='text-md font-bold'>{this.props.name}</div>
-        <div className='text-xs'>{this.props.position}</div>
-        <div className='my-3 mx-auto flex flex-wrap items-center justify-center'>{socials}</div>
+        <div className="text-md font-bold">{this.props.name}</div>
+        <div className="text-xs">{this.props.position}</div>
+        <div className="my-3 mx-auto flex flex-wrap items-center justify-center">
+          {socials}
+        </div>
       </div>
     );
   }
@@ -85,7 +90,8 @@ export default class TeamPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.infoContainerStyle = 'm-auto flex no-wrap items-center justify-center max-w-4/5 mb-14'
+    this.infoContainerStyle =
+      'm-auto flex no-wrap items-center justify-center max-w-4/5 mb-14';
   }
   render() {
     const content = [];
@@ -109,7 +115,10 @@ export default class TeamPage extends Component {
             ),
           );
           content.push(
-            <div key={i} className='mx-auto flex items-start justify-center flex-wrap w-2/3 mb-12'>
+            <div
+              key={i}
+              className="mx-auto flex items-start justify-center flex-wrap w-2/3 mb-12"
+            >
               {officers}
             </div>,
           );
@@ -140,7 +149,10 @@ export default class TeamPage extends Component {
             ),
           );
           content.push(
-            <div key={i} className='flex items-center justify-center flex-wrap text-sm mb-14'>
+            <div
+              key={i}
+              className="flex items-center justify-center flex-wrap text-sm mb-14"
+            >
               {projects}
             </div>,
           );
@@ -148,35 +160,23 @@ export default class TeamPage extends Component {
         case 'info_center':
           content.push(
             <div key={i} className={this.infoContainerStyle}>
-              <Info
-                className='w-3/4'
-                title={c.title}
-                body={c.description}
-              />
+              <Info className="w-3/4" title={c.title} body={c.description} />
             </div>,
           );
           break;
         case 'info_left':
           content.push(
             <div key={i} className={this.infoContainerStyle}>
-              <Info
-                className='w-2/5'
-                title={c.title}
-                body={c.description}
-              />
-              <ImageCarousel className='w-1/2' images={c.images} />
+              <Info className="w-2/5" title={c.title} body={c.description} />
+              <ImageCarousel className="w-1/2" images={c.images} />
             </div>,
           );
           break;
         case 'info_right':
           content.push(
             <div key={i} className={this.infoContainerStyle}>
-              <ImageCarousel className='w-1/2' images={c.images} />
-              <Info
-                className='w-2/5'
-                title={c.title}
-                body={c.description}
-              />
+              <ImageCarousel className="w-1/2" images={c.images} />
+              <Info className="w-2/5" title={c.title} body={c.description} />
             </div>,
           );
           break;
@@ -185,9 +185,10 @@ export default class TeamPage extends Component {
       }
     }
     return (
-      <div
-        style={{ '--accent': this.props.accent || '#ff00ff' }}>
-        <div className='flex items-center justify-center mb-14'>{this.props.team}</div>
+      <div style={{ '--accent': this.props.accent || '#ff00ff' }}>
+        <div className="flex items-center justify-center mb-14">
+          {this.props.team}
+        </div>
         {content}
       </div>
     );

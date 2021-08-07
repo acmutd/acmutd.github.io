@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import TeamPage from '../../components/TeamPage';
-import { getPageSVG } from '../../util/svg'
+import { getPageSVG } from '../../util/svg';
 import {
   getRegisteredTeams,
   getRegisteredPrograms,

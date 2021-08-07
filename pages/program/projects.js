@@ -2,7 +2,7 @@ import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import DevProject from '../../components/DevProject';
 import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
-import { getPageSVG } from '../../util/svg'
+import { getPageSVG } from '../../util/svg';
 
 export default class ProjectsPage extends Component {
   constructor(props) {

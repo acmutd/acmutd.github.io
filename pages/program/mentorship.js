@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import ProgramPage from '../../components/ProgramPage';
 import { getRegisteredTeams, getRegisteredPrograms } from '../../util/cms';
-import { getPageSVG } from '../../util/svg'
+import { getPageSVG } from '../../util/svg';
 
 export default class MentorPage extends Component {
   constructor(props) {
