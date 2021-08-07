@@ -15,7 +15,7 @@ export default class AboutPage extends Component {
       <div>
         <div className='mt-6 text-4xl font-black text-center'>Get Involved with ACM</div>
         <ImageCarousel className='w-3/4 mx-auto my-8' images={data.images} />
-        <div className='mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 md:flex-no-wrap'>
+        <div className='mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 md:flex-nowrap'>
           <Info title='How to join' body={data.how} />
           <Info title='When to join' body={data.when} />
         </div>

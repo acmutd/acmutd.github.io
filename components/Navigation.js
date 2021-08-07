@@ -28,7 +28,7 @@ export default class Navigation extends Component {
         </Link>,
       );
     });
-    const navItemStyle = 'group transform relative text-sm ml-8 mr-8 cursor-pointer md:text-lg'
+    const navItemStyle = 'group transform relative text-xs ml-1 mr-1 cursor-pointer md:text-lg md:ml-8 md:mr-8'
     const navLineStyle = 'transition w-full h-0.5 bg-white opacity-0 group-hover:opacity-100'
     const navListStyle = 'absolute flex flex-col left-1/2 transform scale-0 -translate-x-1/2 z-10 opacity-0 scale-0 bg-gray-900 p-3 rounded-lg cursor-default transition group-hover:opacity-100 group-hover:scale-100'
     return (
