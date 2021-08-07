@@ -23,7 +23,7 @@ export default class AboutPage extends Component {
           <Info title="How to join" body={data.how} />
           <Info title="When to join" body={data.when} />
         </div>
-        <div className="relative flex flex-wrap justify-center items-center mx-auto my-0 text-lg text-bold max-w-sm text-center">
+        <div className="relative flex flex-wrap justify-center items-center mx-auto my-0 text-base text-bold max-w-3/5 text-center md:text-lg">
           <div
             onClick={() => window.open('https://acmutd.co/discord')}
             className={this.buttonStyle}
