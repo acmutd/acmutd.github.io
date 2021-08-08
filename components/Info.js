@@ -8,7 +8,7 @@ export default class Info extends Component {
   render() {
     return (
       <div
-        className={`m-8 max-w-2xl${
+        className={`m-8 max-w-3/5${
           this.props.className ? ` ${this.props.className}` : ''
         }`}
       >
