@@ -10,27 +10,21 @@ export default class DevProject extends Component {
     const contributors = [];
     const description = [];
     Array.from(this.props.contributors).forEach((i) =>
-      contributors.push(<div key={i}>{i}</div>),
+      contributors.push(<div key={i} className='mb-3'>{i}</div>),
     );
     Array.from(this.props.overlay_description || []).forEach((d) =>
       description.push(
-        <div key={d} className={styles.overlay_about_paragraph}>
+        <div key={d} className='text-base mb-4 font-medium'>
           {d}
         </div>,
       ),
     );
     return (
-      <div className={styles.overlay}>
-        <div className={styles.overlay_card}>
-          <div className={styles.overlay_exit}>
+      <div className='fixed flex items-center justify-center top-0 left-0 w-full h-full bg-overlay z-10'>
+        <div className='relative m-auto w-4/5 h-5/6 bg-overlay-card rounded-2xl'>
+          <div className='overlay_exit'>
             <svg
               onClick={() => this.setState({ overlay: false })}
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="times"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 352 512"
             >
               <path
@@ -39,37 +33,31 @@ export default class DevProject extends Component {
               ></path>
             </svg>
           </div>
-          <div className={styles.overlay_title}>{this.props.title}</div>
-          <div className={styles.overlay_tag}>{this.props.tag}</div>
-          <div className={styles.overlay_container}>
-            <div className={styles.overlay_contributors_container}>
-              <div className={styles.overlay_contributors_title}>
+          <div className='mt-8 text-3xl font-black text-center'>{this.props.title}</div>
+          <div className='mt-3 text-base font-bold text-center'>{this.props.tag}</div>
+          <div className='m-auto flex items-baseline justify-center w-full'>
+            <div className='flex flex-col justify-center text-base max-w-1/4 m-4 ml-1'>
+              <div className='text-2xl font-bold'>
                 Contributors
               </div>
-              <div className={styles.overlay_contributors}>{contributors}</div>
+              <div>{contributors}</div>
             </div>
-            <div className={styles.overlay_about_container}>
-              <div className={styles.overlay_about_title}>About</div>
-              <div className={styles.overlay_about_paragraph_container}>
+            <div className='relative flex flex-col justify-center max-w-3/5 m-8 ml-10 mr-3'>
+              <div className='text-2xl font-bold'>About</div>
+              <div className='overlay_about_paragraph_container'>
                 {description.length > 0 ? (
                   description
                 ) : (
-                  <div className={styles.overlay_about_paragraph}>
+                  <div className='text-base mb-3'>
                     {this.props.description}
                   </div>
                 )}
               </div>
             </div>
           </div>
-          <div className={styles.overlay_repo_container}>
+          <div className='overlay_repo_container'>
             <svg
-              className={styles.overlay_github}
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="github"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
+              className='overlay_github'
               viewBox="0 0 496 512"
             >
               <path
@@ -78,7 +66,7 @@ export default class DevProject extends Component {
               ></path>
             </svg>
             <div
-              className={styles.overlay_repo}
+              className='overlay_repo'
               onClick={() => window.open(this.props.link)}
             >
               {this.props.repo}
@@ -99,23 +87,17 @@ export default class DevProject extends Component {
     return (
       <div
         onClick={() => this.setState({ overlay: true })}
-        className={styles.card}
+        className='transition relative m-8 p-3 text-lg bg-black w-96 h-80 rounded-lg cursor-pointer card'
       >
-        <div className={styles.title}>{this.props.title}</div>
-        <div className={styles.tag}>{this.props.tag}</div>
-        <div className={styles.container}>
-          <div className={styles.contributors}>{contributors}</div>
-          <div className={styles.description}>{this.props.description}</div>
+        <div className='text-lg font-black text-center'>{this.props.title}</div>
+        <div className='text-sm mt-1 font-medium text-center'>{this.props.tag}</div>
+        <div className='flex justify-center my-3 mx-1 h-3/5'>
+          <div className='text-base font-bold min-w-2/5'>{contributors}</div>
+          <div className='text-base font-medium'>{this.props.description}</div>
         </div>
-        <div className={styles.repocontainer}>
+        <div className='repocontainer'>
           <svg
-            className={styles.github}
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fab"
-            data-icon="github"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
+            className='github'
             viewBox="0 0 496 512"
           >
             <path
@@ -124,7 +106,7 @@ export default class DevProject extends Component {
             ></path>
           </svg>
           <div
-            className={styles.repo}
+            className='repo'
             onClick={() => window.open(this.props.link)}
           >
             {this.props.repo}

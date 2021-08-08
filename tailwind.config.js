@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        custom: 'var(--color)'
+        custom: 'var(--color)',
+        overlay: '#0000007e',
+        'overlay-card': '#000000ef'
       },
       screens: {
         xs: '375px',
@@ -29,14 +31,19 @@ module.exports = {
       },
       maxWidth: {
         '1/3': '33%',
+        '1/4': '25%',
         '3/5': '60%',
         '4/5': '80%',
       },
       minWidth: {
         '1/2': '50%',
+        '2/5': '40%',
         '3/5': '60%',
         '4/5': '80%',
         '3/4': '75%',
+      },
+      maxHeight: {
+        '1/2': '50%'
       },
       margin: {
         calendar: 'calc((80% - (7 * (80% / 7.5))) / 14)'

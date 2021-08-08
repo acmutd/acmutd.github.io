@@ -42,3 +42,88 @@ body {
 .join {
   background: linear-gradient(90.12deg, var(--left) 0.1%, var(--right) 99.39%);
 }
+.card {
+  box-shadow: 7px 7px 7px 0 #000000;
+}
+.card:hover {
+  box-shadow: 7px 17px 7px 0 #000000;
+  transform: translateY(-10px);
+}
+.repocontainer {
+  position: absolute;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+.github {
+  margin: 0 0.5vw;
+  --size: 0.9em;
+  width: var(--size);
+  height: var(--size);
+}
+.repo {
+  margin: 0 0.5vw;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+.repo:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+.overlay_repo_container {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.overlay_github {
+  margin: 0 0.5vw;
+  --size: 0.9em;
+  width: var(--size);
+  height: var(--size);
+}
+.overlay_repo {
+  margin: 0 0.5vw;
+  font-size: 0.6em;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+.overlay_repo:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+.overlay_exit {
+  --size: 1.3em;
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+  color: white;
+  width: var(--size);
+  height: var(--size);
+}
+.overlay_exit svg {
+  transition: transform 0.2s, color 0.2s;
+}
+.overlay_exit svg:hover {
+  cursor: pointer;
+  color: var(--accent);
+  transform: scale(120%) rotateZ(180deg);
+}
+.overlay_about_paragraph_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 50vh;
+}
+.overlay_about_paragraph_container::-webkit-scrollbar {
+  overflow: scroll;
+  width: 0.4vw;
+}
+.overlay_about_paragraph_container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 150px;
+}
