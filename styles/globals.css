@@ -49,6 +49,13 @@ body {
   box-shadow: 7px 17px 7px 0 #000000;
   transform: translateY(-10px);
 }
+.contact-card {
+  box-shadow: 7px 7px 7px 0 #000000;
+}
+.contact-card:hover {
+  box-shadow: 7px 17px 7px 0 #000000;
+  transform: translateY(-10px);
+}
 .repocontainer {
   position: absolute;
   bottom: 3%;
