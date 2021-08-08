@@ -2,7 +2,6 @@ import { Component } from 'react';
 import ImageCarousel from '../components/ImageCarousel';
 import Info from '../components/Info';
 import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
-import styles from '../styles/page/Join.module.css';
 
 export default class AboutPage extends Component {
   constructor(props) {

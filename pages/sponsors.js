@@ -15,16 +15,21 @@ export default class SponsorsPage extends Component {
     );
     return (
       <div>
-        <div className={styles.title}>ACM Sponsors</div>
-        <div className={styles.info}>{data.description}</div>
+        <div className="mt-6 text-2xl font-black text-center md:text-4xl">
+          ACM Sponsors
+        </div>
+        <div className="m-auto mt-6 text-base font-medium text-center max-w-3/5 md:text-lg">
+          {data.description}
+        </div>
         <div className={styles.sponsors}>{images}</div>
-        <div className={styles.buttons}>
+        <div className="flex flex-wrap justify-center items-center mx-auto my-0 text-base text-bold max-w-3/5 text-center md:text-lg">
           <div
             onClick={() => window.open('')}
-            className={styles.button}
+            className="transition cursor-pointer rounded-2xl p-2 px-12 mx-24 my-3 hover:filter"
             style={{
               background:
                 'linear-gradient(90.12deg, #FF00E5 0.1%, #FFA800 99.39%)',
+              '--tw-brightness': 'brightness(140%)',
             }}
           >
             Sponsor ACM!

@@ -3,7 +3,6 @@ import Info from '../components/Info';
 import ImageCarousel from './ImageCarousel';
 import DevProject from './DevProject';
 import Timeline from './Timeline';
-import styles from '../styles/component/TeamPage.module.css';
 
 /**
  * Component for an individual Officer on each team page.
@@ -127,9 +126,7 @@ export default class TeamPage extends Component {
           c = this.props.content.refs[i];
           const images = [];
           Array.from(c.images || []).forEach((i) => images.push(i.url));
-          content.push(
-            <ImageCarousel key={i} images={images} />,
-          );
+          content.push(<ImageCarousel key={i} images={images} />);
           break;
         case 'projects':
           c = this.props.content.refs[i];

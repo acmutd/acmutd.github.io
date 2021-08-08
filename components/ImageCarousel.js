@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import styles from '../styles/component/ImageCarousel.module.css';
 
 const scrollSpeed = 7 /* seconds */ * 1000;
 

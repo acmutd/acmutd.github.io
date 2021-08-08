@@ -3,7 +3,6 @@ import ImageCarousel from '../components/ImageCarousel';
 import Info from '../components/Info';
 import Calendar from '../components/Calendar';
 import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
-import styles from '../styles/page/Events.module.css';
 import { google } from 'googleapis';
 import { createEvents } from 'ics';
 import {
@@ -59,7 +58,7 @@ async function getSpreadsheet() {
         'Description',
         'Location',
         'Division',
-        'Collaborator(s)',
+        'Collaborators',
         'Public',
       ];
       function getValue(column) {
@@ -75,6 +74,8 @@ async function getSpreadsheet() {
         );
         return chicagoDateTime.withZoneSameInstant(ZoneOffset.UTC);
       }
+      if (!row || row[EXPECTED_COLUMNS.indexOf('Public')] != 'TRUE')
+        return undefined;
       return {
         start: parseDate('Date', 'Start Time'),
         end: parseDate('End Date', 'End Time'),
@@ -88,7 +89,7 @@ async function getSpreadsheet() {
       return spreadsheet.map(rowToEvent);
     }
     let events = spreadsheetToEvents(sheet);
-    const includedEvents = events.filter((e) => e.public);
+    const includedEvents = events.filter((e) => e && e.public);
     const { error, value } = createEvents(
       includedEvents.map((e) => {
         return {
@@ -149,7 +150,7 @@ export async function getStaticProps() {
       '*[_type == "eventspage"]{who, where, "images": images[].asset->url}',
     )
     .then((page) => (data = page[0]));
-  const icsdata = await getSpreadsheet();
+  let icsdata = await getSpreadsheet();
   const eventdata = ical.sync.parseICS(icsdata);
   const events = [];
   for (const [key, value] of Object.entries(eventdata)) {

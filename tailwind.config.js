@@ -10,7 +10,7 @@ module.exports = {
       backgroundColor: {
         custom: 'var(--color)',
         overlay: '#0000007e',
-        'overlay-card': '#000000ef'
+        'overlay-card': '#000000ef',
       },
       screens: {
         xs: '375px',
@@ -22,12 +22,12 @@ module.exports = {
       width: {
         '1/7': '14.2857143%',
         '1/15': '6.66666666667%',
-        '2/15': '13.3333333333%'
+        '2/15': '13.3333333333%',
       },
       height: {
         '1/15': '6.66666666667%',
         '2/15': '13.3333333333%',
-        calendar: 'calc(80vw * (8 / 100))'
+        calendar: 'calc(80vw * (8 / 100))',
       },
       maxWidth: {
         '1/3': '33%',
@@ -43,18 +43,18 @@ module.exports = {
         '3/4': '75%',
       },
       maxHeight: {
-        '1/2': '50%'
+        '1/2': '50%',
       },
       margin: {
-        calendar: 'calc((80% - (7 * (80% / 7.5))) / 14)'
-      }
+        calendar: 'calc((80% - (7 * (80% / 7.5))) / 14)',
+      },
     },
   },
   variants: {
     extend: {
       scale: ['group-hover'],
       filter: ['hover'],
-      fill: ['hover']
+      fill: ['hover'],
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],

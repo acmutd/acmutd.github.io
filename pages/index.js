@@ -3,7 +3,6 @@ import Info from '../components/Info';
 import Calendar from '../components/Calendar';
 import ImageCarousel from '../components/ImageCarousel';
 import { getRegisteredTeams, getRegisteredPrograms } from '../util/cms';
-import styles from '../styles/page/Index.module.css';
 import { google } from 'googleapis';
 import { createEvents } from 'ics';
 import {
@@ -89,7 +88,7 @@ async function getSpreadsheet() {
       return spreadsheet.map(rowToEvent);
     }
     let events = spreadsheetToEvents(sheet);
-    const includedEvents = events.filter((e) => e.public);
+    const includedEvents = events.filter((e) => e && e.public);
     const { error, value } = createEvents(
       includedEvents.map((e) => {
         return {
