@@ -13,11 +13,11 @@ export class Testimonial extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.mainStyle = 'flex flex-wrap items-top mb-5 text-base min-w-4/5 max-w-4/5 lg:flex-nowrap'
+    this.mainStyle = 'flex flex-wrap items-center mb-5 text-base min-w-4/5 max-w-4/5 lg:flex-nowrap'
     this.containerStyle = 'flex flex-col max-w-3/5'
     this.titleStyle = 'text-base font-black'
     this.descriptionStyle = 'text-sm'
-    this.imageStyle = 'rounded-full w-1/5 m-5 lg:w-1/3'
+    this.imageStyle = 'rounded-full w-1/5 m-5'
   }
   render() {
     if (this.props.right) {
