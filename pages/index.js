@@ -75,6 +75,8 @@ async function getSpreadsheet() {
         );
         return chicagoDateTime.withZoneSameInstant(ZoneOffset.UTC);
       }
+      if (!row || row[EXPECTED_COLUMNS.indexOf('Public')] != 'TRUE')
+        return undefined;
       return {
         start: parseDate('Date', 'Start Time'),
         end: parseDate('End Date', 'End Time'),
