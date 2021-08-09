@@ -125,7 +125,7 @@ export default class AboutPage extends Component {
           Association for Computing Machinery
         </div>
         <div className="text-xl font-bold text-center md:text-2xl">
-          We're just a group of people...
+          We&apos;re just a group of people...
         </div>
         <ImageCarousel className="w-3/4 mx-auto my-8" images={data.images} />
         <div className="mx-auto mt-8 mb-10 flex flex-wrap justify-center w-4/5 lg:flex-nowrap">
