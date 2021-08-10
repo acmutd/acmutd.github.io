@@ -29,6 +29,10 @@ export default function ImageCarousel({
 
   React.useEffect(() => {
     const timer = setInterval(() => {
+      if (images.length === 0) {
+        setCurrentImageIndex(0);
+        return;
+      }
       const nextImage = (currentImageIndex + 1) % images.length;
       setCurrentImageIndex(nextImage);
     }, scrollSpeed);
@@ -39,25 +43,27 @@ export default function ImageCarousel({
     };
   }, [images, currentImageIndex, scrollSpeed]);
 
-  // TODO: give all images meaningful alt props to make them accessible.
-  const displayImages = images.map((imageUrl, index) => (
-    <Image
-      className="w-full h-full"
-      key={`${imageUrl}-${index}`}
-      src={imageUrl}
-      layout="fill"
-      objectFit="cover"
-      alt="A glimpse of ACM."
-    />
-  ));
-
   return (
     // TODO: Possibly use React.forwardRef to allow setting additional classes
     <div
       className="m-auto w-3/4 aspect-w-16 aspect-h-7 rounded-3xl overflow-hidden"
       style={{ zIndex: -3 }}
     >
-      {displayImages}
+      {images.length > 0 &&
+        (() => {
+          // TODO: give all images meaningful alt props to make them accessible.
+          const imageUrl = images[currentImageIndex];
+          const imageAlt = 'A glimpse of ACM.';
+          return (
+            <Image
+              className="w-full h-full"
+              src={imageUrl}
+              layout="fill"
+              objectFit="cover"
+              alt={imageAlt}
+            />
+          );
+        })()}
     </div>
   );
 }
