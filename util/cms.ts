@@ -27,6 +27,7 @@ const ALL_TEAMS = [
   { team: 'Education' },
   { team: 'Industry' },
   { team: 'HackUTD' },
+  { team: 'Board' },
 ];
 
 /**
