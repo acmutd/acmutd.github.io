@@ -45,8 +45,8 @@ type NavigationProps = {
 };
 
 export default function Navigation({
-  registeredTeams,
-  registeredPrograms,
+  registeredTeams = [],
+  registeredPrograms = [],
 }: NavigationProps) {
   const teamList = registeredTeams.map((team) => {
     const teamId = team.team.toLowerCase();
