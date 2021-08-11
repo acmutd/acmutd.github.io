@@ -45,7 +45,7 @@ type DevProjectProps = {
   /**
    * True if this should show a project details overlay, false otherwise.
    */
-  showOverlay: boolean;
+  showOverlay?: boolean;
 
   /**
    * A callback triggered when the parent component should hide the overlay.
