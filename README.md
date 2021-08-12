@@ -4,7 +4,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create a `.env` located in the project root with the following fields:
+
+- `EVENT_SPREADSHEET_ID` the ID of the Google Sheets calendar
+- `GOOGLE_SHEETS_PRIVATE_KEY` the private key of a valid Google Sheets API service account
+- `GOOGLE_SHEETS_CLIENT_EMAIL` the email of the valid Google Sheets API service account
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -22,7 +28,7 @@ sanity login # Must have a valid account with access to the CMS workspace.
 sanity start
 ```
 
-Open [http://localhost:333](http://localhost:3333) with your browser to begin interacting with the CMS backend.
+Open [http://localhost:3333](http://localhost:3333) with your browser to begin interacting with the CMS backend.
 
 ## Sanity Schemas
 
