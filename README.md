@@ -4,16 +4,30 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, create a `.env` located in the project root with the following fields:
+### Setting up the Calendar
+
+To set up the calendar for the website, create a `.env` in the root project directory and fill out the following key-value pairs:
 
 - `EVENT_SPREADSHEET_ID` the ID of the Google Sheets calendar
 - `GOOGLE_SHEETS_PRIVATE_KEY` the private key of a valid Google Sheets API service account
 - `GOOGLE_SHEETS_CLIENT_EMAIL` the email of the valid Google Sheets API service account
+  To setup the Google Sheets authentication, navigate to the Google Cloud Platform, and select **Calendar Converter** as the current project context. Navigate to **IAM & Admin -> Service Accounts**. Next, select the `calendar-converter@...` service account. Click **Keys** at the top and create a new key with **ADD KEY -> Create new key**. Select _JSON_ and create the key. The authentication file will download automatically. After the download has completed, copy the _entire_ value of **private_key** and assign the value to `GOOGLE_SHEETS_PRIVATE_KEY`. Next, copy the _entire_ value of **client_email** and assign the value to `GOOGLE_SHEETS_CLIENT_EMAIL`.
 
-Second, run the development server:
+Once the Google Sheets authentication is complete, navigate to the appropriate event calendar spreadsheet. Copy the spreadsheet ID and assign the value to `EVENT_SPREADSHEET_ID`. To locate the spreadsheet ID, use the spreadsheet URL. Example: _https://docs.google.com/spreadsheets/d/1YcW-iqI6eWZ3vr8lhtLC9M5A8Qg4BBp9_BH0IaR2vXM/edit#gid=2041651241_ where the spreadsheet ID is `1YcW-iqI6eWZ3vr8lhtLC9M5A8Qg4BBp9_BH0IaR2vXM`.
+
+### Running Locally
+
+To run the website locally, clone the repository and install the NodeJS dependencies:
 
 ```bash
-npm run dev
+git clone https://github.com/acmutd/acmutd.github.io.git acmwebsite && cd acmwebsite # Clone the repo and change your working directory
+npm i # Install the NodeJS dependencies
+```
+
+After you have installed the dependencies and set up the calendar, run the development server:
+
+```bash
+npm run dev # Run the development server
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
