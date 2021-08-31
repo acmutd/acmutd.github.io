@@ -1,8 +1,8 @@
 ---
 name: "David Richey"
-role: "Vice President"
+role: "President"
 category: board
-filter: "board,education,projects,hackutd,research,development,industry"
+filter: "board,education,projects,hackutd,research,development,industry,media"
 photo: "team-hackutd-davidr"
 link: "https://www.linkedin.com/in/darichey/"
 ---
