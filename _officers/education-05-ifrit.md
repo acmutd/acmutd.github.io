@@ -3,6 +3,6 @@ name: "Ifrit Maruf"
 role: "Education Officer"
 category: education
 filter: "education"
-photo: "dallas"
+photo: "team-education-ifrit"
 link: "https://www.linkedin.com/in/ifrit-maruf/"
 ---
