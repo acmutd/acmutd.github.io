@@ -2,7 +2,7 @@
 name: "Saksham Sangraula"
 role: "Vice President"
 category: board
-filter: "board,education,projects,hackutd,research,development,industry,media"
+filter: "board,education,projects,hackutd,research,engineering,industry,media"
 photo: "team-education-saksham"
 link: "https://www.linkedin.com/in/sakshamsangraula/"
 ---

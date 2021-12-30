@@ -1,7 +1,7 @@
 ---
 name: "Steven Nguyen"
-role: "Development Officer"
-category: development
-filter: "development"
+role: "Member Portal Project Lead"
+category: engineering
+filter: "enginerring"
 photo: "dallas"
 ---

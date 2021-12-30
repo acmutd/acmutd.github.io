@@ -1,7 +1,7 @@
 ---
 name: "Nam Truong"
-role: "Development Officer"
-category: development
-filter: "development"
+role: "Engineering Officer"
+category: engineering
+filter: "engineering,hackutd"
 photo: "dallas"
 ---
