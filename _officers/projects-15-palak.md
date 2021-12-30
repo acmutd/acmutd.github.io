@@ -4,5 +4,5 @@ role: "ACM Projects Officer"
 category: projects
 filter: "projects"
 photo: "team-projects-palak"
-link: "https://www.linkedin.com/in/palak-bhargava01//
+link: "https://www.linkedin.com/in/palak-bhargava01/"
 ---
