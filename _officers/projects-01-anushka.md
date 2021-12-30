@@ -1,7 +1,8 @@
 ---
 name: "Anushka Pimple"
-role: "ACM Projects Officer"
+role: "Director of Projects"
 category: projects
-filter: "projects"
+filter: "projects,board"
 photo: "team-projects-anushka"
+link: "https://www.linkedin.com/in/anushkapimple/"
 ---

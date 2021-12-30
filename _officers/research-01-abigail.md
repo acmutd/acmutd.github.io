@@ -1,8 +1,8 @@
 ---
 name: "Abigail Thomas"
-role: "Research Officer"
+role: "Director of Research"
 category: research
-filter: "research"
+filter: "research,board"
 photo: "team-research-abby"
 link: "https://www.linkedin.com/in/abigailthomas2020/"
 ---
