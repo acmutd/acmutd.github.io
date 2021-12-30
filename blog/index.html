@@ -2,76 +2,108 @@
 layout: none
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>The Association for Computing Machinery at UTD</title>
-    <meta name="description" content="We're officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
-    <meta property="og:title" content="The Association for Computing Machinery at UTD"/>
-    <meta property="og:description" content="We're a team of officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
-    <meta property="og:image" content="../png/team-hero1.jpg"/>
+    <meta
+      name="description"
+      content="We're officers with one goal: building a greater, more collaborative computing community at UT Dallas."
+    />
+    <meta
+      property="og:title"
+      content="The Association for Computing Machinery at UTD"
+    />
+    <meta
+      property="og:description"
+      content="We're a team of officers with one goal: building a greater, more collaborative computing community at UT Dallas."
+    />
+    <meta property="og:image" content="../png/team-hero1.jpg" />
     {% include common-head.html %}
   </head>
   <body>
-		{% include common-nav.html %}
-		
-		<div class="main-container">
-		  <section class="hero-slider large-image">
-				<ul class="slides">
-					<li>
-						<div class="background-image-holder overlay">
-							<img alt="Slide Background" class="background-image" src="../png/team-hero5.jpg">
+    {% include common-nav.html %}
+
+    <div class="main-container">
+      <section class="hero-slider large-image">
+        <ul class="slides">
+          <li>
+            <div class="background-image-holder overlay">
+              <img
+                alt="Slide Background"
+                class="background-image"
+                src="../png/team-hero5.jpg"
+              />
             </div>
-            
+
             <div class="container vertical-align">
               <div class="row">
                 <div class="col-xs-12">
                   <div class="text-block">
                     <div class="detail-line contrast-white-detail"></div>
-                    <h1 class="contrast-h1 contrast-white"><strong>Blog.</strong></h1>
+                    <h1 class="contrast-h1 contrast-white">
+                      <strong>Blog.</strong>
+                    </h1>
                   </div>
                 </div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-6">
-                    <p class="lead contrast-white-p">
-                      We're a team of students with one goal — a greater, more collaborative engineering community at The University of Texas at Dallas. See what we're up to.</p>
-                  </div>
-                </div>
-            </div>            
-					</li>				
-				</ul>
-      </section>
- 
-      <section>    
-        <div class="container">
-          {% assign posts = paginator.posts %}
-          {% for post in posts %}
-            <div class="feed-item col-md-offset-2 col-md-8">
-              <div class="row mb16 mb-xs-0">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
-                  <h6 class="uppercase mb16 mb-xs-8">{{ post.date | date: '%B %-d %Y' }}</h6>
-                  <h3>{{ post.title }}</h3>
-                </div>
-              </div>
-              
-              <div class="row mb32 mb-xs-16">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                  <div class="blog-post-image" style="background-image: url({{post.image}}"></div>
-                  <p class="lead">
-                    {{ post.excerpt }}
+                <div class="col-sm-6">
+                  <p class="lead contrast-white-p">
+                    We're a team of students with one goal: building a greater,
+                    more collaborative computing community at The University of
+                    Texas at Dallas. See what we're up to.
                   </p>
                 </div>
               </div>
-              
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
-                  <a class="mb48 mb-xs-32 btn btn-lg" href="{{ post.url }}">Read</a>
-                  <hr>
-                </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="container">
+          {% assign posts = paginator.posts %} {% for post in posts %}
+          <div class="feed-item col-md-offset-2 col-md-8">
+            <div class="row mb16 mb-xs-0">
+              <div
+                class="
+                  col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1
+                  text-center
+                "
+              >
+                <h6 class="uppercase mb16 mb-xs-8">
+                  {{ post.date | date: '%B %-d %Y' }}
+                </h6>
+                <h3>{{ post.title }}</h3>
               </div>
             </div>
+
+            <div class="row mb32 mb-xs-16">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div
+                  class="blog-post-image"
+                  style="background-image: url({{post.image}}"
+                ></div>
+                <p class="lead">{{ post.excerpt }}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div
+                class="
+                  col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1
+                  text-center
+                "
+              >
+                <a class="mb48 mb-xs-32 btn btn-lg" href="{{ post.url }}"
+                  >Read</a
+                >
+                <hr />
+              </div>
+            </div>
+          </div>
           {% endfor %}
         </div>
       </section>
@@ -79,22 +111,31 @@ layout: none
       <section>
         <div class="blog-pagination">
           {% if paginator.previous_page %}
-            <a class="text-link text-black previous-page" href="{{ paginator.previous_page_path }}">Previous</a>
+          <a
+            class="text-link text-black previous-page"
+            href="{{ paginator.previous_page_path }}"
+            >Previous</a
+          >
           {% endif %}
-          <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+          <span class="page-number"
+            >Page {{ paginator.page }} of {{ paginator.total_pages }}</span
+          >
           {% if paginator.next_page %}
-            <a class="text-link text-black next-page" href="{{ paginator.next_page_path }}">Next</a>
+          <a
+            class="text-link text-black next-page"
+            href="{{ paginator.next_page_path }}"
+            >Next</a
+          >
           {% endif %}
-          </div>
+        </div>
       </section>
-                
-			{% include common-footer.html %}
-		</div>
-		
-				
+
+      {% include common-footer.html %}
+    </div>
+
     <script src="/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/flexslider.min.js"></script>
     <script src="/js/lightbox.min.js"></script>
@@ -104,6 +145,6 @@ layout: none
     <script src="/js/jquery.plugin.min.js"></script>
     <script src="/js/placeholders.min.js"></script>
     <script src="/js/countdown.min.js"></script>
-   	<script src="/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

@@ -1,33 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>The Association for Computing Machinery at UTD</title>
-        <meta name="description" content="We're officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
-        <meta property="og:title" content="The Association for Computing Machinery at UTD"/>
-        <meta property="og:description" content="We're a team of officers with one goal — a greater, more collaborative engineering community at UT Dallas.">
-        <meta property="og:image" content="png/team-hero1.jpg"/>
-        {% include common-head.html %}
-    </head>
-    <body>
-      {% include common-nav.html %}
-      <div class="main-container"> 
-        {{ content }}
+  <head>
+    <title>The Association for Computing Machinery at UTD</title>
+    <meta
+      name="description"
+      content="We're officers with one goal: building a greater, more collaborative computing community at UT Dallas."
+    />
+    <meta
+      property="og:title"
+      content="The Association for Computing Machinery at UTD"
+    />
+    <meta
+      property="og:description"
+      content="We're a team of officers with one goal: building a greater, more collaborative computing community at UT Dallas."
+    />
+    <meta property="og:image" content="png/team-hero1.jpg" />
+    {% include common-head.html %}
+  </head>
+  <body>
+    {% include common-nav.html %}
+    <div class="main-container">
+      {{ content }} {% include common-footer.html %}
+    </div>
 
-        {% include common-footer.html %}
-      </div>
-
-      <script src="/js/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-      <script src="/js/bootstrap.min.js"></script>
-      <script src="/js/flexslider.min.js"></script>
-      <script src="/js/lightbox.min.js"></script>
-      <script src="/js/twitterfetcher.min.js"></script>
-      <script src="/js/spectragram.min.js"></script>
-      <script src="/js/smooth-scroll.min.js"></script>
-      <script src="/js/jquery.plugin.min.js"></script>
-      <script src="/js/placeholders.min.js"></script>
-      <script src="/js/countdown.min.js"></script>
-      <script src="/js/scripts.js"></script>
-    </body>
+    <script src="/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/flexslider.min.js"></script>
+    <script src="/js/lightbox.min.js"></script>
+    <script src="/js/twitterfetcher.min.js"></script>
+    <script src="/js/spectragram.min.js"></script>
+    <script src="/js/smooth-scroll.min.js"></script>
+    <script src="/js/jquery.plugin.min.js"></script>
+    <script src="/js/placeholders.min.js"></script>
+    <script src="/js/countdown.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>
