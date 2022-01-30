@@ -1,6 +1,6 @@
 ---
 name: "Trevor Tomer"
-role: "Director of Mentorship"
+role: "Co-Director of Education"
 category: education
 filter: "education,board"
 photo: "team-education-trevor-tomer"

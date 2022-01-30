@@ -1,6 +1,6 @@
 ---
 name: "Varun Joshi"
-role: "Director of Technical Interview Prep Program"
+role: "Co-Director of Education"
 category: education
 filter: "education,board"
 photo: "team-education-varun"

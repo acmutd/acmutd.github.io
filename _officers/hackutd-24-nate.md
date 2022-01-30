@@ -1,6 +1,7 @@
 ---
-name: "Dylan Nguyen"
+name: "Nathaniel Brown"
 role: "HackUTD Marketing Coordinator"
 category: hackutd
 filter: "hackutd"
-photo: "team-hackutd-dylan"
+photo: "team-hackutd-nate"
+---
