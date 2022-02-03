@@ -63,41 +63,6 @@ layout: none
         </ul>
       </section>
 
-      <section class="text-hero">
-        {% assign events = site.events %} {% for event in events %} {% if
-        event.featured %}
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="text-block">
-                <div class="detail-line"></div>
-                <h5>Featured Event</h5>
-                <h1 class="contrast-h1">{{ event.name }}</h1>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <p class="lead">
-                {{ event.date | date: '%B %-d %Y %I:%M %p' }}<br />
-                {{ event.location }}<br />
-                {{ event.extra }}
-              </p>
-            </div>
-            <div class="col-sm-6">
-              <p class="lead">{{ event.description }}</p>
-              <p>
-                <a href="{{ event.link }}" target="_blank">
-                  {{ event.link }}
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        {% endif %} {% endfor %}
-      </section>
-
       <section class="main-hero">
         <div class="container">
           <div class="row">
