@@ -4,3 +4,4 @@ _site/
 docker-compose.yml
 .jekyll-cache
 .vscode
+.DS_Store
