@@ -218,7 +218,7 @@ layout: none
 				
 					<div class="row">
 
-						{% assign officers = site.officers | where: "category", "board" %}
+						{% assign officers = site.officers | where: "category", "executive" %}
 						{% for officer in officers %}
 						<div class="col-md-3 col-sm-4 project team-2 officers" data-filter="{{ officer.filter }}">
 							<div class="background-image-holder">
@@ -230,7 +230,7 @@ layout: none
 						</div>
 						{% endfor %}
 
-						{% assign officers = site.officers | where: "category", "engineering" %}
+						{% assign officers = site.officers | where: "category", "development" %}
 						{% for officer in officers %}
 						<div class="col-md-3 col-sm-4 project team-2 officers" data-filter="{{ officer.filter }}">
 							<div class="background-image-holder">
