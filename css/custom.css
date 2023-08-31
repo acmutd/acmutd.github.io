@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "erbos-draco";
+  src: local("../fonts/ErbosDraco1StNbpRegular-99V5.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .nav-1:hover {
   background: rgba(0, 0, 0, 0);
 }
@@ -174,3 +181,97 @@
 .zoom:hover {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.dark-back {
+  background-color: #2f2f2f;
+}
+
+.tables-h1 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 0px;
+  color: #ffffff;
+}
+
+.sch-box {
+  background-color: #151515;
+  border-radius: 25px;
+  border: 2px solid #999999;
+  width:30%;
+  height:170px;
+  font-size: 2.5vw;
+  line-height: 7vh;
+}
+
+.flex-sch-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 50px;
+  align-items: top;
+  justify-content: space-around;
+}
+
+@media (max-width: 550px){
+  .sch-box {
+    width:100%;
+    font-size: 5.75vw;
+    line-height: 8vh;
+  }
+  .flex-sch-container{
+    flex-direction: column;
+  }
+}
+
+.events-box {
+  width: 100%;
+  float: right;
+  border: 0px;
+  margin-top: 10px;
+}
+
+.sch-table{
+  width:100%;
+  margin-left:5px;
+}
+
+.fri-box {
+  height: 43vh;
+}
+
+.sat-box { 
+  height: 70vh;
+}
+
+.sun-box {
+  height: 43vh;
+}
+
+.sch-head {
+  color: #d1ce20;
+  font-size: 4.5 vw;
+  text-align: center;
+  line-height: 7vh;
+}
+
+.event-div {
+  color: #d1ce20;
+  font-weight: 400;
+  font-family: 'Handjet', cursive;
+  font-weight: normal;
+  font-style: normal;
+  border-radius: 25px;
+  border: none;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.sch-orange {
+  color: #ca5400;
+  display: inline;
+  float: right;
+  text-align:right;
+  margin-right: 5px;
+}
+
